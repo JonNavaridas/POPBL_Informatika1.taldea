@@ -1,0 +1,10 @@
+﻿  ebentoak.c
+  graphics.c
+  imagen.c
+  soinua.c
+  text.c
+  01simpleStaticDemoMain.c
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(82,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generando código...
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : vea la declaración de 'sprintf'
+  01simpleStaticDemo.vcxproj -> C:\Users\Jon\Desktop\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe
