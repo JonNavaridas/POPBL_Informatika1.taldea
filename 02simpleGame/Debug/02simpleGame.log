@@ -1,3 +1,11 @@
-﻿  02simpleGameMain.c
-C:\Users\oierb\Desktop\sdlExamplesVcWS\02simpleGame\02simpleGameMain.c(47,22): warning C4013: 'kredituak' sin definir; se supone que extern devuelve como resultado int
-  02simpleGame.vcxproj -> C:\Users\oierb\Desktop\sdlExamplesVcWS\Debug\02simpleGame.exe
+﻿  ebentoak.c
+  graphics.c
+  imagen.c
+  soinua.c
+  text.c
+  02simpleGameMain.c
+  game02.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\02simpleGameMain.c(47,22): warning C4013: 'kredituak' sin definir; se supone que extern devuelve como resultado int
+  Generando código...
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(39,42): warning C4013: 'HASIERA_irudiaBistaratu' sin definir; se supone que extern devuelve como resultado int
+  02simpleGame.vcxproj -> C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe
