@@ -19,7 +19,7 @@
 
 
 int main(int argc, char * str[]) {
-  int jarraitu = 0, ebentu;
+  int jarraitu = 0, ebentu, irten = 0;
   EGOERA egoera, egoera2;
  
   if (sgHasieratu() == -1) 
@@ -33,18 +33,19 @@ int main(int argc, char * str[]) {
     ebentu = jokoaAurkeztu();
     if (ebentu == TECLA_1)
     {
-       // do
-      //  {
-            egoera = jokatu1();
-           /* jarraitu =*/ jokoAmaierakoa1(egoera);
+
+        egoera = jokatu1();
+        jokoAmaierakoa1(egoera);
            if (egoera == IRABAZI)
            {
                egoera2 = jokatu2();
                jokoAmaierakoa2(egoera2);
+               irten = 1;
            }
-           
-       // } while (jarraitu);
-        //jarraitu = 0;
+           else
+           {
+               irten = 1;
+           }
 }
     else
     {
@@ -53,7 +54,7 @@ int main(int argc, char * str[]) {
             kredituak();
         }
     }
-  } while (/*!jarraitu && */(ebentu != TECLA_ESCAPE));
+  } while (ebentu != TECLA_ESCAPE && irten == 0);
   sgItxi();
   return 0;
 }
