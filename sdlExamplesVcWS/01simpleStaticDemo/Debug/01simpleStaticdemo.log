@@ -1,2 +1,3 @@
 ﻿  01simpleStaticDemoMain.c
+C:\Users\Jon\Desktop\Mondragón\Oinarri metodologikoak\Git\Repositorio Froga\POPBL_Informatika1.taldea\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(155,11): warning C4101: 'dif': variable local sin referencia
   01simpleStaticDemo.vcxproj -> C:\Users\Jon\Desktop\Mondragón\Oinarri metodologikoak\Git\Repositorio Froga\POPBL_Informatika1.taldea\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe

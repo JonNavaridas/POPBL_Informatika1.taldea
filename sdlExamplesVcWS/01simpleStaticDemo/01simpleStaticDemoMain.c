@@ -17,13 +17,13 @@ int buildMageTower(int posX, int posY);
 int buildBomberTower(int posX, int posY);
 int buildMiningTower(int posX, int posY);
 //Targeting de las torres
-int towerTarget(int x, int y, int positionX, int positionY, int radius, int time);
+int towerTarget(int x, int y, int positionX, int positionY, int radius, int changer);
 POSIZIOA diferentziaPos(POSIZIOA posTower, POSIZIOA posEnemy);
 
 
 int main(int argc, char * str[]) 
 {
-	int ebentu = 0, irten = 0, mugitu = 0, tmp = 0;
+	int ebentu = 0, irten = 0, mugitu = 0, tmp = 0, changer = 0;
 	int tower = 0, time = 0, towerRadius = 0, towerRadiusTmp = 0;
 	POSIZIOA enemyPos,towerPos;
 	 
@@ -36,7 +36,8 @@ int main(int argc, char * str[])
 	
 	while(irten == 0)
 	{
-		Sleep(5);
+		Sleep(1);
+		if (time > 30000) time = 0;
 		time++;
 		ebentu = ebentuaJasoGertatuBada();
 		tower = ebentu;
@@ -161,22 +162,21 @@ int towerTarget(int x, int y, int positionX, int positionY, int radius, int time
 
 	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
 	{
+
 		zuzenaMarraztu(positionX, positionY, x, y);
 		arkatzKoloreaEzarri(0, 0, 0);
-		dif = diferentziaPos(tower, enemy);
-		bullet.x += dif.x;
-		bullet.y += dif.y;
-		zirkuluaMarraztu(bullet.x, bullet.y, 2);
+		//dif = diferentziaPos(tower, enemy);
+		if (time % 100 == 0) zirkuluaMarraztu(bullet.x, bullet.y, 4);
 	}
 	pantailaBerriztu();
 
 	return 0;
 }
 
-POSIZIOA diferentziaPos(POSIZIOA posTower, POSIZIOA posEnemy)
+/*POSIZIOA diferentziaPos(POSIZIOA posTower, POSIZIOA posEnemy)
 {
 	POSIZIOA diferentzia;
 	diferentzia.x = posTower.x - posEnemy.x;
 	diferentzia.y = posTower.y - posEnemy.y;
 	return diferentzia;
-}
+}*/
