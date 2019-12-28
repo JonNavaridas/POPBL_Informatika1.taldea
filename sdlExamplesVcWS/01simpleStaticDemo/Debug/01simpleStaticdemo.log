@@ -1,0 +1,16 @@
+﻿  ebentoak.c
+  graphics.c
+  imagen.c
+  soinua.c
+  text.c
+  01simpleStaticDemoMain.c
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(36,28): warning C4013: 'towerCreate' sin definir; se supone que extern devuelve como resultado int
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(37,19): warning C4013: 'backgroundCreate' sin definir; se supone que extern devuelve como resultado int
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(52,14): warning C4013: 'towerTarget' sin definir; se supone que extern devuelve como resultado int
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(87,19): warning C4013: 'buildArcherTower' sin definir; se supone que extern devuelve como resultado int
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(91,17): warning C4013: 'buildMageTower' sin definir; se supone que extern devuelve como resultado int
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(95,19): warning C4013: 'buildBomberTower' sin definir; se supone que extern devuelve como resultado int
+  Generando código...
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(99,19): warning C4013: 'buildMiningTower' sin definir; se supone que extern devuelve como resultado int
+C:\Users\Jon\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(149): warning C4700: se utilizó la variable local 'div' sin inicializar
+  01simpleStaticDemo.vcxproj -> C:\Users\Jon\Desktop\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe
