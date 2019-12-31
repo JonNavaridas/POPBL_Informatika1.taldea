@@ -1,7 +1,4 @@
 Cosas por hcer:
-	-Terminar la animación del disparo
-	-Establecer un timing en el main para calcular la latencia de disparo
 	-Crear la función de recolección de dinero de la mina
 	-Crear la función de mejora
-	-Crear un modo de quitar vida cada vez que un disparo impacte
-	-Crear una forma en la que el enemigo al tener la vida a cero desaparezca
+	-Crear daño en area del bombardero

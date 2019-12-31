@@ -39,6 +39,9 @@
     <ClCompile Include="..\simpleSdlWrapper\text.c">
       <Filter>Source Files\simpleSdlWrapper</Filter>
     </ClCompile>
+    <ClCompile Include="Functionality.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OurTypes.h">
@@ -58,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="..\simpleSdlWrapper\text.h">
       <Filter>Header Files\simpleSdlWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerFunctionality.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
