@@ -29,7 +29,7 @@ void backgroundCreate(void)
 	pantailaBerriztu();
 }
 //Dorreak sortu
-ACTION towerCreate(int towerX, int towerY, int ebentu, int enemyX, int enemyY, int time, int upgrade)
+ACTION towerCreate(int towerX, int towerY, int ebentu, int enemyX, int enemyY, int time, float upgrade)
 {
 	int tower = 0, radius = 0;
 	ACTION action;
@@ -50,21 +50,22 @@ ACTION towerCreate(int towerX, int towerY, int ebentu, int enemyX, int enemyY, i
 		action.damage = bomberTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
 	}
 	if (ebentu == TECLA_4) {
-		radius = buildMiningTower(towerX, towerY, upgrade);
+		radius = buildMiningTower(towerX, towerY);
+		action.resource = mineRecolection(time, upgrade);
 	}
 	return action;
 }
 //Torre de arquero
-int buildArcherTower(int posX, int posY, int upgrade)
+int buildArcherTower(int posX, int posY, float upgrade)
 {
-	int radius = 105;
+	float radius = (110 * (1 + upgrade / 10));
 	arkatzKoloreaEzarri(0, 50, 50);
 	zirkuluaMarraztu(posX, posY, radius);
 	pantailaBerriztu();
 	return radius;
 }
 //Ataque de torre de arquero
-int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, int upgrade)
+int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade)
 {
 	POSIZIOA tower, enemy, bullet;
 	int damage = 0;
@@ -82,7 +83,7 @@ int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, in
 		arkatzKoloreaEzarri(255, 0, 0);
 		if ((time % 100 >= 90 && time % 100 < 100) || (time % 100 > 0 && time % 100 <= 10) || time % 100 == 0) {
 			zirkuluaMarraztu(bullet.x, bullet.y, 4);
-			if (time % 100 == 0) damage = 100;
+			if (time % 100 == 0) damage = (100 * (1 + upgrade / 10));
 		}
 	}
 	pantailaBerriztu();
@@ -90,16 +91,16 @@ int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, in
 	return damage;
 }
 //Torre de mago
-int buildMageTower(int posX, int posY, int upgrade)
+int buildMageTower(int posX, int posY, float upgrade)
 {
-	int radius = 75;
+	int radius = (80 * (1 + upgrade / 10));
 	arkatzKoloreaEzarri(100, 0, 100);
 	zirkuluaMarraztu(posX, posY, radius);
 	pantailaBerriztu();
 	return radius;
 }
 //Ataque de torre de mago
-ACTION mageTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, int upgrade)
+ACTION mageTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade)
 {
 	POSIZIOA tower, enemy;
 	ACTION action;
@@ -115,7 +116,7 @@ ACTION mageTowerTarget(int x, int y, int positionX, int positionY, int radius, i
 	{
 		if ((time % 200 >= 180 && time % 200 < 200) || (time % 200 > 0 && time % 200 <= 20) || time % 200 == 0) {
 			arkatzKoloreaEzarri(0, 0, 255);
-			if (time % 200 == 0) { action.damage = 30; action.freeze = 1; }
+			if (time % 200 == 0) { action.damage = (30 * (1 + upgrade / 10)); action.freeze = 1; }
 		}
 		else arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
@@ -125,16 +126,16 @@ ACTION mageTowerTarget(int x, int y, int positionX, int positionY, int radius, i
 	return action;
 }
 //Torre de bombardero
-int buildBomberTower(int posX, int posY, int upgrade)
+int buildBomberTower(int posX, int posY, float upgrade)
 {
-	int radius = 150;
+	int radius = (150 * (1 + upgrade / 10));
 	arkatzKoloreaEzarri(150, 150, 0);
 	zirkuluaMarraztu(posX, posY, radius);
 	pantailaBerriztu();
 	return radius;
 }
 //Ataque torre de bombardero
-int bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, int upgrade)
+int bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade)
 {
 	POSIZIOA tower, enemy, bullet;
 	int damage = 0;
@@ -151,23 +152,31 @@ int bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, in
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
 		arkatzKoloreaEzarri(255, 0, 0);
 		if ((time % 300 >= 280 && time % 300 < 300) || (time % 300 > 0 && time % 400 <= 20) || time % 300 == 0) {
-			zirkuluaMarraztu(bullet.x, bullet.y, 20);
-			if (time % 300 == 0) damage = 60;
+			zirkuluaMarraztu(bullet.x, bullet.y, 30);
+			if (time % 300 == 0) damage = (60 * (1 + upgrade / 10));
 		}//Falta ponerle daño en area
 	}
 	pantailaBerriztu();
 
 	return damage;
 }
-
-int buildMiningTower(int posX, int posY, int upgrade) //Mina de recursos
+//Mina de recursos
+int buildMiningTower(int posX, int posY)
 {
+	int radius = 0;
 	arkatzKoloreaEzarri(200, 200, 200);
-	zirkuluaMarraztu(posX, posY, 20);
+	zirkuluaMarraztu(posX, posY, radius);
 	pantailaBerriztu();
-	return 20;
+	return radius;
 }
-
+//Recolección de la mina
+int mineRecolection(int time, float upgrade)
+{
+	int resource = 0;
+	if (time % 100 == 0) resource = 3 + upgrade;
+	return resource;
+}
+//Muerte del enemigo, detectando la vida total
 int enemyDeath(int lifeTotal)
 {
 	int death = 0;

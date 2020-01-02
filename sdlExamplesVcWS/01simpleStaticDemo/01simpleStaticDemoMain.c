@@ -11,7 +11,8 @@
 int main(int argc, char * str[]) 
 {
 	int ebentu = 0, irten = 0, mugitu = 0, tmp = 0, changer = 0, lifeTotal = 100, stop = 0;
-	int tower = 0, time = 0, towerRadius = 0, towerRadiusTmp = 0, upgrade = 0, timer = 0;
+	int tower = 0, time = 0, towerRadius = 0, towerRadiusTmp = 0, timer = 0;
+	float upgrade = 0;
 	POSIZIOA enemyPos,towerPos;
 	ACTION action;
 	
@@ -34,12 +35,14 @@ int main(int argc, char * str[])
 		ebentu = ebentuaJasoGertatuBada();
 		tower = ebentu;
 		if (tower != TECLA_1 && tower != TECLA_2 && tower != TECLA_3 && tower != TECLA_4) { tower = tmp; }
+		if (tower != tmp) upgrade = 0;
 		tmp = tower;
 
 		//Hasieratu, berriztu eta amaitu (No necesario)
 		if (ebentu == TECLA_ESCAPE) irten = 1;
 		if (ebentu == TECLA_RETURN && mugitu == 0) mugitu = 1;
-		if (ebentu == TECLA_SPACE) lifeTotal = 200;
+		if (ebentu == TECLA_r) lifeTotal = 200;
+		if (ebentu == TECLA_u && upgrade < 2) upgrade++;
 
 		//Dorre motak eta haien akzioak (IMPORTANTE)
 		action = towerCreate(towerPos.x, towerPos.y, tower, enemyPos.x, enemyPos.y, time, upgrade);
@@ -48,7 +51,7 @@ int main(int argc, char * str[])
 		if (action.freeze == 1) stop = 1;
 		if (stop == 1) {
 			timer++;
-			if (timer == 100) { stop = 0; timer = 0; }
+			if (timer == 100 + (20 * upgrade)) { stop = 0; timer = 0; }
 		}
 
 		//Bolaren mugimendua (No necesario, solo la parte de freeze)

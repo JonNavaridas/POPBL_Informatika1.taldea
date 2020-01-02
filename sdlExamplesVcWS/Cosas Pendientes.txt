@@ -1,4 +1,2 @@
 Cosas por hcer:
-	-Crear la función de recolección de dinero de la mina
-	-Crear la función de mejora
 	-Crear daño en area del bombardero
