@@ -47,7 +47,7 @@ ACTION towerCreate(int towerX, int towerY, int ebentu, int enemyX, int enemyY, i
 	}
 	if (ebentu == TECLA_3) {
 		radius = buildBomberTower(towerX, towerY, upgrade);
-		action.damage = bomberTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
+		action = bomberTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
 	}
 	if (ebentu == TECLA_4) {
 		radius = buildMiningTower(towerX, towerY);
@@ -81,8 +81,8 @@ int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, in
 		arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
 		arkatzKoloreaEzarri(255, 0, 0);
-		if ((time % 100 >= 90 && time % 100 < 100) || (time % 100 > 0 && time % 100 <= 10) || time % 100 == 0) {
-			zirkuluaMarraztu(bullet.x, bullet.y, 4);
+		if ((time % 100 >= 85 && time % 100 < 100) || (time % 100 > 0 && time % 100 <= 15) || time % 100 == 0) {
+			zirkuluaMarraztu(bullet.x, bullet.y, 5);
 			if (time % 100 == 0) damage = (100 * (1 + upgrade / 10));
 		}
 	}
@@ -135,16 +135,19 @@ int buildBomberTower(int posX, int posY, float upgrade)
 	return radius;
 }
 //Ataque torre de bombardero
-int bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade)
+ACTION bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade)
 {
 	POSIZIOA tower, enemy, bullet;
-	int damage = 0;
+	ACTION action;
 	enemy.x = x;
 	enemy.y = y;
 	bullet.x = enemy.x;
 	bullet.y = enemy.y;
 	tower.x = positionX;
 	tower.y = positionY;
+	action.damage = 0;
+	action.freeze = 0;
+	action.resource = 0;
 
 	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
 	{
@@ -152,13 +155,14 @@ int bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, in
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
 		arkatzKoloreaEzarri(255, 0, 0);
 		if ((time % 300 >= 280 && time % 300 < 300) || (time % 300 > 0 && time % 400 <= 20) || time % 300 == 0) {
-			zirkuluaMarraztu(bullet.x, bullet.y, 30);
-			if (time % 300 == 0) damage = (60 * (1 + upgrade / 10));
-		}//Falta ponerle daño en area
+			action.resource = 30;
+			zirkuluaMarraztu(bullet.x, bullet.y, action.resource);
+			if (time % 300 == 0) action.damage = (60 * (1 + upgrade / 10));
+		}
 	}
 	pantailaBerriztu();
 
-	return damage;
+	return action;
 }
 //Mina de recursos
 int buildMiningTower(int posX, int posY)
@@ -172,9 +176,9 @@ int buildMiningTower(int posX, int posY)
 //Recolección de la mina
 int mineRecolection(int time, float upgrade)
 {
-	int resource = 0;
-	if (time % 100 == 0) resource = 3 + upgrade;
-	return resource;
+	int money = 0;
+	if (time % 100 == 0) money = 3 + upgrade;
+	return money;
 }
 //Muerte del enemigo, detectando la vida total
 int enemyDeath(int lifeTotal)

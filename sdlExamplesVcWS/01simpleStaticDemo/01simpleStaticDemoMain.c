@@ -26,7 +26,7 @@ int main(int argc, char * str[])
 	
 	while (irten == 0)
 	{
-		Sleep(30);
+		Sleep(32);
 		//Denbora kontagailua (Importante, pero no es algo propio)
 		if (time == 1000) { time = 0; }
 		time++;
@@ -53,17 +53,22 @@ int main(int argc, char * str[])
 			timer++;
 			if (timer == 100 + (20 * upgrade)) { stop = 0; timer = 0; }
 		}
+		//Daño en area
+		if (tower == TECLA_3 && enemyPos.x <= enemyPos.x + action.resource && enemyPos.x > enemyPos.x - action.resource && enemyPos.y < enemyPos.y + action.resource && enemyPos.y > enemyPos.y - action.resource)
+		{//El enemyPos del primer if sera el enemigo que la torre este targeteando
+			if (enemyPos.x != enemyPos.x && enemyPos.y != enemyPos.y) lifeTotal -= action.damage;
+		}//El segundo if sirve para que la torre no haga el doble del daño al que esta targeteando
 
 		//Bolaren mugimendua (No necesario, solo la parte de freeze)
 		arkatzKoloreaEzarri(255, 255, 255);
 		if (mugitu == 1 && !enemyDeath(lifeTotal)) { //Eskuineko mugimendua
 			zirkuluaMarraztu(enemyPos.x, enemyPos.y, 10);
-			if (stop == 0) enemyPos.x += 1;
+			if (stop == 0) enemyPos.x += 2;
 			if (enemyPos.x >= SCREEN_WIDTH) mugitu = 2;
 		}
 		if (mugitu == 2 && !enemyDeath(lifeTotal)) { //Ezkerreko mugimendua
 			zirkuluaMarraztu(enemyPos.x, enemyPos.y, 10);
-			if (stop == 0) enemyPos.x -= 1;
+			if (stop == 0) enemyPos.x -= 2;
 			if (enemyPos.x <= 0) mugitu = 1;
 		}
 		//Etsaia hasierako puntura bidali (No necesario)

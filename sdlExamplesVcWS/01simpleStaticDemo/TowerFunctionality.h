@@ -15,7 +15,7 @@ int buildMiningTower(int posX, int posY);
 //Targeting de las torres (IMPORTANTE)
 int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade);
 ACTION mageTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade);
-int bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade);
+ACTION bomberTowerTarget(int x, int y, int positionX, int positionY, int radius, int time, float upgrade);
 int mineRecolection(int time, float upgrade);
 //Muerte de enemigo (IMPORTANTE)
 int enemyDeath(int lifeTotal);
