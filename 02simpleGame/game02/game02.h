@@ -6,7 +6,6 @@
 int jokoaAurkeztu(void);
 EGOERA jokatu1(void);
 EGOERA jokatu2(void);
-//int  jokoAmaierakoa1(EGOERA egoera);
 void  jokoAmaierakoa1(EGOERA egoera);
 void  jokoAmaierakoa2(EGOERA egoera);
 

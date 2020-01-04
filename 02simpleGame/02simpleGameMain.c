@@ -36,7 +36,8 @@ int main(int argc, char * str[]) {
 
         egoera = jokatu1();
         jokoAmaierakoa1(egoera);
-           if (egoera == IRABAZI)
+          
+        if (egoera == IRABAZI)
            {
                egoera2 = jokatu2();
                jokoAmaierakoa2(egoera2);
