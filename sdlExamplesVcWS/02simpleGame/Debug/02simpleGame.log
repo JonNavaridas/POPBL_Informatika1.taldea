@@ -1,11 +1,65 @@
-﻿  game02.c
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(209,44): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(209,60): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(223,21): warning C4013: 'Olatua3' sin definir; se supone que extern devuelve como resultado int
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(698,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(699,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(704,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(724,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(725,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\02simpleGame\game02\game02.c(730,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-  02simpleGame.vcxproj -> C:\Users\svequ\Desktop\prueba\sdlExamplesVcWS\Debug\02simpleGame.exe
+﻿  ebentoak.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\simpleSdlWrapper\ebentoak.c(52,32): warning C4244: '=': conversión de 'Sint32' a 'float'; posible pérdida de datos
+  graphics.c
+  imagen.c
+  soinua.c
+  text.c
+  45.c
+  game02.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\simpleSdlWrapper\ebentoak.c(53,31): warning C4244: '=': conversión de 'Sint32' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(209,44): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(209,60): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(223,21): warning C4013: 'Olatua3' sin definir; se supone que extern devuelve como resultado int
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(699,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(700,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(705,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(725,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(726,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  olatuak.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\game02\game02.c(731,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(15,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(15,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(16,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(16,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(17,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(17,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(18,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(18,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(19,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(19,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(20,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(20,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(25,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(25,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(26,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(26,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(27,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(27,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(28,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(28,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(29,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(29,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(30,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(30,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(31,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(31,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(32,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(32,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(33,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(33,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(34,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(34,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(39,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(39,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(40,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(40,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(41,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(41,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(42,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(42,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(43,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(43,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(44,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  Generando código...
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\02simpleGame\olatuak.c(44,46): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  02simpleGame.vcxproj -> C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\sdlExamplesVcWS\Debug\02simpleGame.exe

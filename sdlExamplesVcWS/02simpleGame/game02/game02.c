@@ -72,95 +72,95 @@ EGOERA jokatu(void)
         zirkulua.pos.y = 200;
         //Uint32 time01 = SDL_GetTicks(), time02;
 
-        P1.pos.x = -130;
-        P1.pos.y = 670;
+        P1.pos.x = -10;
+        P1.pos.y = 480;
 
         P2.pos.x = -40;
-        P2.pos.y = 670;
+        P2.pos.y = 480;
 
-        P3.pos.x = -190;
-        P3.pos.y = 650;
+        P3.pos.x = -70;
+        P3.pos.y = 480;
 
-        P4.pos.x = -310;
-        P4.pos.y = 650;
+        P4.pos.x = -100;
+        P4.pos.y = 480;
 
-        P5.pos.x = -10;
-        P5.pos.y = 650;
+        P5.pos.x = -130;
+        P5.pos.y = 480;
 
         P6.pos.x = -160;
-        P6.pos.y = 650;
+        P6.pos.y = 480;
 
-        P7.pos.x = -70;
-        P7.pos.y = 650;
+        P7.pos.x = -190;
+        P7.pos.y = 480;
 
         P8.pos.x = -220;
-        P8.pos.y = 650;
+        P8.pos.y = 480;
 
-        P9.pos.x = -370;
-        P9.pos.y = 650;
+        P9.pos.x = -250;
+        P9.pos.y = 480;
 
         P10.pos.x = -280;
-        P10.pos.y = 650;
+        P10.pos.y = 480;
 
-        P11.pos.x = -100;
-        P11.pos.y = 650;
+        P11.pos.x = -310;
+        P11.pos.y = 480;
 
         P12.pos.x = -340;
-        P12.pos.y = 650;
+        P12.pos.y = 480;
 
-        P13.pos.x = -250;
-        P13.pos.y = 650;
+        P13.pos.x = -370;
+        P13.pos.y = 480;
 
         P14.pos.x = -400;
-        P14.pos.y = 650;
+        P14.pos.y = 480;
 
-        P15.pos.x = -550;
-        P15.pos.y = 650;
+        P15.pos.x = -430;
+        P15.pos.y = 480;
 
         P16.pos.x = -460;
-        P16.pos.y = 650;
+        P16.pos.y = 480;
 
         P17.pos.x = -490;
-        P17.pos.y = 650;
+        P17.pos.y = 480;
 
         P18.pos.x = -520;
-        P18.pos.y = 650;
+        P18.pos.y = 480;
 
-        P19.pos.x = -430;
-        P19.pos.y = 650;
+        P19.pos.x = -550;
+        P19.pos.y = 480;
 
         P20.pos.x = -580;
-        P20.pos.y = 650;
+        P20.pos.y = 480;
 
-        P21.pos.x = -850;
-        P21.pos.y = 650;
+        P21.pos.x = -610;
+        P21.pos.y = 480;
 
         P22.pos.x = -640;
-        P22.pos.y = 650;
+        P22.pos.y = 480;
 
-        P23.pos.x = -760;
-        P23.pos.y = 650;
+        P23.pos.x = -670;
+        P23.pos.y = 480;
 
-        P24.pos.x = -700;
-        P24.pos.y = 650;
+        P24.pos.x = -540;
+        P24.pos.y = 480;
 
-        P25.pos.x = -880;
-        P25.pos.y = 650;
+        P25.pos.x = -730;
+        P25.pos.y = 480;
 
-        P26.pos.x = -670;
-        P26.pos.y = 650;
+        P26.pos.x = -760;
+        P26.pos.y = 480;
 
         P27.pos.x = -790;
-        P27.pos.y = 650;
+        P27.pos.y = 480;
 
         P28.pos.x = -820;
-        P28.pos.y = 650;
+        P28.pos.y = 480;
 
-        P29.pos.x = -610;
-        P29.pos.y = 650;
+        P29.pos.x = -850;
+        P29.pos.y = 480;
 
-        P30.pos.x = -730;
-        P30.pos.y = 650;
+        P30.pos.x = -880;
+        P30.pos.y = 480;
 
         fondoa2.pos.x = 0;
         fondoa2.pos.y = 0;
@@ -316,315 +316,316 @@ EGOERA jokatu(void)
                 aux59 = ERREALITATE_FISIKOA3_mugimendua(P30.pos);
                 aux60 = ERREALITATE_FISIKOA4_mugimendua(P30.pos);
 
-                if (aux.x < 280) P1.pos.x = aux.x;
-                if (aux3.x < 280) P2.pos.x = aux3.x;
-                if (aux5.x < 280) P3.pos.x = aux5.x;
-                if (aux7.x < 280) P4.pos.x = aux7.x;
-                if (aux9.x < 280) P5.pos.x = aux9.x;
-                if (aux11.x < 280) P6.pos.x = aux11.x;
-                if (aux13.x < 280) P7.pos.x = aux13.x;
-                if (aux15.x < 280) P8.pos.x = aux15.x;
-                if (aux17.x < 280) P9.pos.x = aux17.x;
-                if (aux19.x < 280) P10.pos.x = aux19.x;
-                if (aux21.x < 280) P11.pos.x = aux21.x;
-                if (aux23.x < 280) P12.pos.x = aux23.x;
-                if (aux25.x < 280) P13.pos.x = aux25.x;
-                if (aux27.x < 280) P14.pos.x = aux27.x;
-                if (aux29.x < 280) P15.pos.x = aux29.x;
-                if (aux31.x < 280) P16.pos.x = aux31.x;
-                if (aux33.x < 280) P17.pos.x = aux33.x;
-                if (aux35.x < 280) P18.pos.x = aux35.x;
-                if (aux37.x < 280) P19.pos.x = aux37.x;
-                if (aux39.x < 280) P20.pos.x = aux39.x;
-                if (aux41.x < 280) P21.pos.x = aux41.x;
-                if (aux43.x < 280) P22.pos.x = aux43.x;
-                if (aux45.x < 280) P23.pos.x = aux45.x;
-                if (aux47.x < 280) P24.pos.x = aux47.x;
-                if (aux49.x < 280) P25.pos.x = aux49.x;
-                if (aux51.x < 280) P26.pos.x = aux51.x;
-                if (aux53.x < 280) P27.pos.x = aux53.x;
-                if (aux55.x < 280) P28.pos.x = aux55.x;
-                if (aux57.x < 280) P29.pos.x = aux57.x;
-                if (aux59.x < 280) P30.pos.x = aux59.x;
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux11.x < 200) P6.pos.x = aux11.x;
+                if (aux13.x < 200) P7.pos.x = aux13.x;
+                if (aux15.x < 200) P8.pos.x = aux15.x;
+                if (aux17.x < 200) P9.pos.x = aux17.x;
+                if (aux19.x < 200) P10.pos.x = aux19.x;
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux25.x < 200) P13.pos.x = aux25.x;
+                if (aux27.x < 200) P14.pos.x = aux27.x;
+                if (aux29.x < 200) P15.pos.x = aux29.x;
+                if (aux31.x < 200) P16.pos.x = aux31.x;
+                if (aux33.x < 200) P17.pos.x = aux33.x;
+                if (aux35.x < 200) P18.pos.x = aux35.x;
+                if (aux37.x < 200) P19.pos.x = aux37.x;
+                if (aux39.x < 200) P20.pos.x = aux39.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
+                if (aux53.x < 200) P27.pos.x = aux53.x;
+                if (aux55.x < 200) P28.pos.x = aux55.x;
+                if (aux57.x < 200) P29.pos.x = aux57.x;
+                if (aux59.x < 200) P30.pos.x = aux59.x;
 
-                if (aux.x == 280) P1.pos.y = aux.y;
-                if (aux3.x == 280) P2.pos.y = aux3.y;
-                if (aux5.x == 280) P3.pos.y = aux5.y;
-                if (aux7.x == 280) P4.pos.y = aux7.y;
-                if (aux9.x == 280) P5.pos.y = aux9.y;
-                if (aux11.x == 280) P6.pos.y = aux11.y;
-                if (aux13.x == 280) P7.pos.y = aux13.y;
-                if (aux15.x == 280) P8.pos.y = aux15.y;
-                if (aux17.x == 280) P9.pos.y = aux17.y;
-                if (aux19.x == 280) P10.pos.y = aux19.y;
-                if (aux21.x == 280) P11.pos.y = aux21.y;
-                if (aux23.x == 280) P12.pos.y = aux23.y;
-                if (aux25.x == 280) P13.pos.y = aux25.y;
-                if (aux27.x == 280) P14.pos.y = aux27.y;
-                if (aux29.x == 280) P15.pos.y = aux29.y;
-                if (aux31.x == 280) P16.pos.y = aux31.y;
-                if (aux33.x == 280) P17.pos.y = aux33.y;
-                if (aux35.x == 280) P18.pos.y = aux35.y;
-                if (aux37.x == 280) P19.pos.y = aux37.y;
-                if (aux39.x == 280) P20.pos.y = aux39.y;
-                if (aux41.x == 280) P21.pos.y = aux41.y;
-                if (aux43.x == 280) P22.pos.y = aux43.y;
-                if (aux45.x == 280) P23.pos.y = aux45.y;
-                if (aux47.x == 280) P24.pos.y = aux47.y;
-                if (aux49.x == 280) P25.pos.y = aux49.y;
-                if (aux51.x == 280) P26.pos.y = aux51.y;
-                if (aux53.x == 280) P27.pos.y = aux53.y;
-                if (aux55.x == 280) P28.pos.y = aux55.y;
-                if (aux57.x == 280) P29.pos.y = aux57.y;
-                if (aux59.x == 280) P30.pos.y = aux59.y;
+                if (aux.x == 200) P1.pos.y = aux.y;
+                if (aux3.x == 200) P2.pos.y = aux3.y;
+                if (aux5.x == 200) P3.pos.y = aux5.y;
+                if (aux7.x == 200) P4.pos.y = aux7.y;
+                if (aux9.x == 200) P5.pos.y = aux9.y;
+                if (aux11.x == 200) P6.pos.y = aux11.y;
+                if (aux13.x == 200) P7.pos.y = aux13.y;
+                if (aux15.x == 200) P8.pos.y = aux15.y;
+                if (aux17.x == 200) P9.pos.y = aux17.y;
+                if (aux19.x == 200) P10.pos.y = aux19.y;
+                if (aux21.x == 200) P11.pos.y = aux21.y;
+                if (aux23.x == 200) P12.pos.y = aux23.y;
+                if (aux25.x == 200) P13.pos.y = aux25.y;
+                if (aux27.x == 200) P14.pos.y = aux27.y;
+                if (aux29.x == 200) P15.pos.y = aux29.y;
+                if (aux31.x == 200) P16.pos.y = aux31.y;
+                if (aux33.x == 200) P17.pos.y = aux33.y;
+                if (aux35.x == 200) P18.pos.y = aux35.y;
+                if (aux37.x == 200) P19.pos.y = aux37.y;
+                if (aux39.x == 200) P20.pos.y = aux39.y;
+                if (aux41.x == 200) P21.pos.y = aux41.y;
+                if (aux43.x == 200) P22.pos.y = aux43.y;
+                if (aux45.x == 200) P23.pos.y = aux45.y;
+                if (aux47.x == 200) P24.pos.y = aux47.y;
+                if (aux49.x == 200) P25.pos.y = aux49.y;
+                if (aux51.x == 200) P26.pos.y = aux51.y;
+                if (aux53.x == 200) P27.pos.y = aux53.y;
+                if (aux55.x == 200) P28.pos.y = aux55.y;
+                if (aux57.x == 200) P29.pos.y = aux57.y;
+                if (aux59.x == 200) P30.pos.y = aux59.y;
 
 
-                if (aux.x >= 280 && aux.x < 920 && aux.y < 200) P1.pos.x = aux.x;
-                if (aux3.x >= 280 && aux3.x < 920 && aux3.y < 200) P2.pos.x = aux3.x;
-                if (aux5.x >= 280 && aux5.x < 920 && aux5.y < 200) P3.pos.x = aux5.x;
-                if (aux7.x >= 280 && aux7.x < 920 && aux7.y < 200) P4.pos.x = aux7.x;
-                if (aux9.x >= 280 && aux9.x < 920 && aux9.y < 200) P5.pos.x = aux9.x;
-                if (aux11.x >= 280 && aux11.x < 920 && aux11.y < 200) P6.pos.x = aux11.x;
-                if (aux13.x >= 280 && aux13.x < 920 && aux13.y < 200) P7.pos.x = aux13.x;
-                if (aux15.x >= 280 && aux15.x < 920 && aux15.y < 200) P8.pos.x = aux15.x;
-                if (aux17.x >= 280 && aux17.x < 920 && aux17.y < 200) P9.pos.x = aux17.x;
-                if (aux19.x >= 280 && aux19.x < 920 && aux19.y < 200) P10.pos.x = aux19.x;
-                if (aux21.x >= 280 && aux21.x < 920 && aux21.y < 200) P11.pos.x = aux21.x;
-                if (aux23.x >= 280 && aux23.x < 920 && aux23.y < 200) P12.pos.x = aux23.x;
-                if (aux25.x >= 280 && aux25.x < 920 && aux25.y < 200) P13.pos.x = aux25.x;
-                if (aux27.x >= 280 && aux27.x < 920 && aux27.y < 200) P14.pos.x = aux27.x;
-                if (aux29.x >= 280 && aux29.x < 920 && aux29.y < 200) P15.pos.x = aux29.x;
-                if (aux31.x >= 280 && aux31.x < 920 && aux31.y < 200) P16.pos.x = aux31.x;
-                if (aux33.x >= 280 && aux33.x < 920 && aux33.y < 200) P17.pos.x = aux33.x;
-                if (aux35.x >= 280 && aux35.x < 920 && aux35.y < 200) P18.pos.x = aux35.x;
-                if (aux37.x >= 280 && aux37.x < 920 && aux37.y < 200) P19.pos.x = aux37.x;
-                if (aux39.x >= 280 && aux39.x < 920 && aux39.y < 200) P20.pos.x = aux39.x;
-                if (aux41.x >= 280 && aux41.x < 920 && aux41.y < 200) P21.pos.x = aux41.x;
-                if (aux43.x >= 280 && aux43.x < 920 && aux43.y < 200) P22.pos.x = aux43.x;
-                if (aux45.x >= 280 && aux45.x < 920 && aux45.y < 200) P23.pos.x = aux45.x;
-                if (aux47.x >= 280 && aux47.x < 920 && aux47.y < 200) P24.pos.x = aux47.x;
-                if (aux49.x >= 280 && aux49.x < 920 && aux49.y < 200) P25.pos.x = aux49.x;
-                if (aux51.x >= 280 && aux51.x < 920 && aux51.y < 200) P26.pos.x = aux51.x;
-                if (aux53.x >= 280 && aux53.x < 920 && aux53.y < 200) P27.pos.x = aux53.x;
-                if (aux55.x >= 280 && aux55.x < 920 && aux55.y < 200) P28.pos.x = aux55.x;
-                if (aux57.x >= 280 && aux57.x < 920 && aux57.y < 200) P29.pos.x = aux57.x;
-                if (aux59.x >= 280 && aux59.x < 920 && aux59.y < 200) P30.pos.x = aux59.x;
+                if (aux.x >= 200 && aux.x < 640 && aux.y < 100) P1.pos.x = aux.x;
+                if (aux3.x >= 200 && aux3.x < 640 && aux3.y < 100) P2.pos.x = aux3.x;
+                if (aux5.x >= 200 && aux5.x < 640 && aux5.y < 100) P3.pos.x = aux5.x;
+                if (aux7.x >= 200 && aux7.x < 640 && aux7.y < 100) P4.pos.x = aux7.x;
+                if (aux9.x >= 200 && aux9.x < 640 && aux9.y < 100) P5.pos.x = aux9.x;
+                if (aux11.x >= 200 && aux11.x < 640 && aux11.y < 100) P6.pos.x = aux11.x;
+                if (aux13.x >= 200 && aux13.x < 640 && aux13.y < 100) P7.pos.x = aux13.x;
+                if (aux15.x >= 200 && aux15.x < 640 && aux15.y < 100) P8.pos.x = aux15.x;
+                if (aux17.x >= 200 && aux17.x < 640 && aux17.y < 100) P9.pos.x = aux17.x;
+                if (aux19.x >= 200 && aux19.x < 640 && aux19.y < 100) P10.pos.x = aux19.x;
+                if (aux21.x >= 200 && aux21.x < 640 && aux21.y < 100) P11.pos.x = aux21.x;
+                if (aux23.x >= 200 && aux23.x < 640 && aux23.y < 100) P12.pos.x = aux23.x;
+                if (aux25.x >= 200 && aux25.x < 640 && aux25.y < 100) P13.pos.x = aux25.x;
+                if (aux27.x >= 200 && aux27.x < 640 && aux27.y < 100) P14.pos.x = aux27.x;
+                if (aux29.x >= 200 && aux29.x < 640 && aux29.y < 100) P15.pos.x = aux29.x;
+                if (aux31.x >= 200 && aux31.x < 640 && aux31.y < 100) P16.pos.x = aux31.x;
+                if (aux33.x >= 200 && aux33.x < 640 && aux33.y < 100) P17.pos.x = aux33.x;
+                if (aux35.x >= 200 && aux35.x < 640 && aux35.y < 100) P18.pos.x = aux35.x;
+                if (aux37.x >= 200 && aux37.x < 640 && aux37.y < 100) P19.pos.x = aux37.x;
+                if (aux39.x >= 200 && aux39.x < 640 && aux39.y < 100) P20.pos.x = aux39.x;
+                if (aux41.x >= 200 && aux41.x < 640 && aux41.y < 100) P21.pos.x = aux41.x;
+                if (aux43.x >= 200 && aux43.x < 640 && aux43.y < 100) P22.pos.x = aux43.x;
+                if (aux45.x >= 200 && aux45.x < 640 && aux45.y < 100) P23.pos.x = aux45.x;
+                if (aux47.x >= 200 && aux47.x < 640 && aux47.y < 100) P24.pos.x = aux47.x;
+                if (aux49.x >= 200 && aux49.x < 640 && aux49.y < 100) P25.pos.x = aux49.x;
+                if (aux51.x >= 200 && aux51.x < 640 && aux51.y < 100) P26.pos.x = aux51.x;
+                if (aux53.x >= 200 && aux53.x < 640 && aux53.y < 100) P27.pos.x = aux53.x;
+                if (aux55.x >= 200 && aux55.x < 640 && aux55.y < 100) P28.pos.x = aux55.x;
+                if (aux57.x >= 200 && aux57.x < 640 && aux57.y < 100) P29.pos.x = aux57.x;
+                if (aux59.x >= 200 && aux59.x < 640 && aux59.y < 100) P30.pos.x = aux59.x;
 
-                if (aux.x == 920) P1.pos.y = aux2.y;
-                if (aux3.x == 920) P2.pos.y = aux4.y;
-                if (aux5.x == 920) P3.pos.y = aux6.y;
-                if (aux7.x == 920) P4.pos.y = aux8.y;
-                if (aux9.x == 920) P5.pos.y = aux10.y;
-                if (aux11.x == 920) P6.pos.y = aux12.y;
-                if (aux13.x == 920) P7.pos.y = aux14.y;
-                if (aux15.x == 920) P8.pos.y = aux16.y;
-                if (aux17.x == 920) P9.pos.y = aux18.y;
-                if (aux19.x == 920) P10.pos.y = aux20.y;
-                if (aux21.x == 920) P11.pos.y = aux22.y;
-                if (aux23.x == 920) P12.pos.y = aux24.y;
-                if (aux25.x == 920) P13.pos.y = aux26.y;
-                if (aux27.x == 920) P14.pos.y = aux28.y;
-                if (aux29.x == 920) P15.pos.y = aux30.y;
-                if (aux31.x == 920) P16.pos.y = aux32.y;
-                if (aux33.x == 920) P17.pos.y = aux34.y;
-                if (aux35.x == 920) P18.pos.y = aux36.y;
-                if (aux37.x == 920) P19.pos.y = aux38.y;
-                if (aux39.x == 920) P20.pos.y = aux40.y;
-                if (aux41.x == 920) P21.pos.y = aux42.y;
-                if (aux43.x == 920) P22.pos.y = aux44.y;
-                if (aux45.x == 920) P23.pos.y = aux46.y;
-                if (aux47.x == 920) P24.pos.y = aux48.y;
-                if (aux49.x == 920) P25.pos.y = aux50.y;
-                if (aux51.x == 920) P26.pos.y = aux52.y;
-                if (aux53.x == 920) P27.pos.y = aux54.y;
-                if (aux55.x == 920) P28.pos.y = aux56.y;
-                if (aux57.x == 920) P29.pos.y = aux58.y;
-                if (aux59.x == 920) P30.pos.y = aux60.y;
+                if (aux.x == 640) P1.pos.y = aux2.y;
+                if (aux3.x == 640) P2.pos.y = aux4.y;
+                if (aux5.x == 640) P3.pos.y = aux6.y;
+                if (aux7.x == 640) P4.pos.y = aux8.y;
+                if (aux9.x == 640) P5.pos.y = aux10.y;
+                if (aux11.x == 640) P6.pos.y = aux12.y;
+                if (aux13.x == 640) P7.pos.y = aux14.y;
+                if (aux15.x == 640) P8.pos.y = aux16.y;
+                if (aux17.x == 640) P9.pos.y = aux18.y;
+                if (aux19.x == 640) P10.pos.y = aux20.y;
+                if (aux21.x == 640) P11.pos.y = aux22.y;
+                if (aux23.x == 640) P12.pos.y = aux24.y;
+                if (aux25.x == 640) P13.pos.y = aux26.y;
+                if (aux27.x == 640) P14.pos.y = aux28.y;
+                if (aux29.x == 640) P15.pos.y = aux30.y;
+                if (aux31.x == 640) P16.pos.y = aux32.y;
+                if (aux33.x == 640) P17.pos.y = aux34.y;
+                if (aux35.x == 640) P18.pos.y = aux36.y;
+                if (aux37.x == 640) P19.pos.y = aux38.y;
+                if (aux39.x == 640) P20.pos.y = aux40.y;
+                if (aux41.x == 640) P21.pos.y = aux42.y;
+                if (aux43.x == 640) P22.pos.y = aux44.y;
+                if (aux45.x == 640) P23.pos.y = aux46.y;
+                if (aux47.x == 640) P24.pos.y = aux48.y;
+                if (aux49.x == 640) P25.pos.y = aux50.y;
+                if (aux51.x == 640) P26.pos.y = aux52.y;
+                if (aux53.x == 640) P27.pos.y = aux54.y;
+                if (aux55.x == 640) P28.pos.y = aux56.y;
+                if (aux57.x == 640) P29.pos.y = aux58.y;
+                if (aux59.x == 640) P30.pos.y = aux60.y;
 
-                if (aux.x >= 920 && aux.x < 1270 && aux.y > 700) P1.pos.x = aux.x;
-                if (aux3.x >= 920 && aux3.x < 1270 && aux3.y > 700) P2.pos.x = aux3.x;
-                if (aux5.x >= 920 && aux5.x < 1270 && aux5.y > 700) P3.pos.x = aux5.x;
-                if (aux7.x >= 920 && aux7.x < 1270 && aux7.y > 700) P4.pos.x = aux7.x;
-                if (aux9.x >= 920 && aux9.x < 1270 && aux9.y > 700) P5.pos.x = aux9.x;
-                if (aux11.x >= 920 && aux11.x < 1270 && aux11.y > 700) P6.pos.x = aux11.x;
-                if (aux13.x >= 920 && aux13.x < 1270 && aux13.y > 700) P7.pos.x = aux13.x;
-                if (aux15.x >= 920 && aux15.x < 1270 && aux15.y > 700) P8.pos.x = aux15.x;
-                if (aux17.x >= 920 && aux17.x < 1270 && aux17.y > 700) P9.pos.x = aux17.x;
-                if (aux19.x >= 920 && aux19.x < 1270 && aux19.y > 700) P10.pos.x = aux19.x;
-                if (aux21.x >= 920 && aux21.x < 1270 && aux21.y > 700) P11.pos.x = aux21.x;
-                if (aux23.x >= 920 && aux23.x < 1270 && aux23.y > 700) P12.pos.x = aux23.x;
-                if (aux25.x >= 920 && aux25.x < 1270 && aux25.y > 700) P13.pos.x = aux25.x;
-                if (aux27.x >= 920 && aux27.x < 1270 && aux27.y > 700) P14.pos.x = aux27.x;
-                if (aux29.x >= 920 && aux29.x < 1270 && aux29.y > 700) P15.pos.x = aux29.x;
-                if (aux31.x >= 920 && aux31.x < 1270 && aux31.y > 700) P16.pos.x = aux31.x;
-                if (aux33.x >= 920 && aux33.x < 1270 && aux33.y > 700) P17.pos.x = aux33.x;
-                if (aux35.x >= 920 && aux35.x < 1270 && aux35.y > 700) P18.pos.x = aux35.x;
-                if (aux37.x >= 920 && aux37.x < 1270 && aux37.y > 700) P19.pos.x = aux37.x;
-                if (aux39.x >= 920 && aux39.x < 1270 && aux39.y > 700) P20.pos.x = aux39.x;
-                if (aux41.x >= 920 && aux41.x < 1270 && aux41.y > 700) P21.pos.x = aux41.x;
-                if (aux43.x >= 920 && aux43.x < 1270 && aux43.y > 700) P22.pos.x = aux43.x;
-                if (aux45.x >= 920 && aux45.x < 1270 && aux45.y > 700) P23.pos.x = aux45.x;
-                if (aux47.x >= 920 && aux47.x < 1270 && aux47.y > 700) P24.pos.x = aux47.x;
-                if (aux49.x >= 920 && aux49.x < 1270 && aux49.y > 700) P25.pos.x = aux49.x;
-                if (aux51.x >= 920 && aux51.x < 1270 && aux51.y > 700) P26.pos.x = aux51.x;
-                if (aux53.x >= 920 && aux53.x < 1270 && aux53.y > 700) P27.pos.x = aux53.x;
-                if (aux55.x >= 920 && aux55.x < 1270 && aux55.y > 700) P28.pos.x = aux55.x;
-                if (aux57.x >= 920 && aux57.x < 1270 && aux57.y > 700) P29.pos.x = aux57.x;
-                if (aux59.x >= 920 && aux59.x < 1270 && aux59.y > 700) P30.pos.x = aux59.x;
+                if (aux.x >= 640 && aux.x < 920 && aux.y > 500) P1.pos.x = aux.x;
+                if (aux3.x >= 640 && aux3.x < 920 && aux3.y > 500) P2.pos.x = aux3.x;
+                if (aux5.x >= 640 && aux5.x < 920 && aux5.y > 500) P3.pos.x = aux5.x;
+                if (aux7.x >= 640 && aux7.x < 920 && aux7.y > 500) P4.pos.x = aux7.x;
+                if (aux9.x >= 640 && aux9.x < 920 && aux9.y > 500) P5.pos.x = aux9.x;
+                if (aux11.x >= 640 && aux11.x < 920 && aux11.y > 500) P6.pos.x = aux11.x;
+                if (aux13.x >= 640 && aux13.x < 920 && aux13.y > 500) P7.pos.x = aux13.x;
+                if (aux15.x >= 640 && aux15.x < 920 && aux15.y > 500) P8.pos.x = aux15.x;
+                if (aux17.x >= 640 && aux17.x < 920 && aux17.y > 500) P9.pos.x = aux17.x;
+                if (aux19.x >= 640 && aux19.x < 920 && aux19.y > 500) P10.pos.x = aux19.x;
+                if (aux21.x >= 640 && aux21.x < 920 && aux21.y > 500) P11.pos.x = aux21.x;
+                if (aux23.x >= 640 && aux23.x < 920 && aux23.y > 500) P12.pos.x = aux23.x;
+                if (aux25.x >= 640 && aux25.x < 920 && aux25.y > 500) P13.pos.x = aux25.x;
+                if (aux27.x >= 640 && aux27.x < 920 && aux27.y > 500) P14.pos.x = aux27.x;
+                if (aux29.x >= 640 && aux29.x < 920 && aux29.y > 500) P15.pos.x = aux29.x;
+                if (aux31.x >= 640 && aux31.x < 920 && aux31.y > 500) P16.pos.x = aux31.x;
+                if (aux33.x >= 640 && aux33.x < 920 && aux33.y > 500) P17.pos.x = aux33.x;
+                if (aux35.x >= 640 && aux35.x < 920 && aux35.y > 500) P18.pos.x = aux35.x;
+                if (aux37.x >= 640 && aux37.x < 920 && aux37.y > 500) P19.pos.x = aux37.x;
+                if (aux39.x >= 640 && aux39.x < 920 && aux39.y > 500) P20.pos.x = aux39.x;
+                if (aux41.x >= 640 && aux41.x < 920 && aux41.y > 500) P21.pos.x = aux41.x;
+                if (aux43.x >= 640 && aux43.x < 920 && aux43.y > 500) P22.pos.x = aux43.x;
+                if (aux45.x >= 640 && aux45.x < 920 && aux45.y > 500) P23.pos.x = aux45.x;
+                if (aux47.x >= 640 && aux47.x < 920 && aux47.y > 500) P24.pos.x = aux47.x;
+                if (aux49.x >= 640 && aux49.x < 920 && aux49.y > 500) P25.pos.x = aux49.x;
+                if (aux51.x >= 640 && aux51.x < 920 && aux51.y > 500) P26.pos.x = aux51.x;
+                if (aux53.x >= 640 && aux53.x < 920 && aux53.y > 500) P27.pos.x = aux53.x;
+                if (aux55.x >= 640 && aux55.x < 920 && aux55.y > 500) P28.pos.x = aux55.x;
+                if (aux57.x >= 640 && aux57.x < 920 && aux57.y > 500) P29.pos.x = aux57.x;
+                if (aux59.x >= 640 && aux59.x < 920 && aux59.y > 500) P30.pos.x = aux59.x;
                 
-                if (aux.x == 1270) P1.pos.y = aux.y;
-                if (aux3.x == 1270) P2.pos.y = aux3.y;
-                if (aux5.x == 1270) P3.pos.y = aux5.y;
-                if (aux7.x == 1270) P4.pos.y = aux7.y;
-                if (aux9.x == 1270) P5.pos.y = aux9.y;
-                if (aux11.x == 1270) P6.pos.y = aux11.y;
-                if (aux13.x == 1270) P7.pos.y = aux13.y;
-                if (aux15.x == 1270) P8.pos.y = aux15.y;
-                if (aux17.x == 1270) P9.pos.y = aux17.y;
-                if (aux19.x == 1270) P10.pos.y = aux19.y;
-                if (aux21.x == 1270) P11.pos.y = aux21.y;
-                if (aux23.x == 1270) P12.pos.y = aux23.y;
-                if (aux25.x == 1270) P13.pos.y = aux25.y;
-                if (aux27.x == 1270) P14.pos.y = aux27.y;
-                if (aux29.x == 1270) P15.pos.y = aux29.y;
-                if (aux31.x == 1270) P16.pos.y = aux31.y;
-                if (aux33.x == 1270) P17.pos.y = aux33.y;
-                if (aux35.x == 1270) P18.pos.y = aux35.y;
-                if (aux37.x == 1270) P19.pos.y = aux37.y;
-                if (aux39.x == 1270) P20.pos.y = aux39.y;
-                if (aux41.x == 1270) P21.pos.y = aux41.y;
-                if (aux43.x == 1270) P22.pos.y = aux43.y;
-                if (aux45.x == 1270) P23.pos.y = aux45.y;
-                if (aux47.x == 1270) P24.pos.y = aux47.y;
-                if (aux49.x == 1270) P25.pos.y = aux49.y;
-                if (aux51.x == 1270) P26.pos.y = aux51.y;
-                if (aux53.x == 1270) P27.pos.y = aux53.y;
-                if (aux55.x == 1270) P28.pos.y = aux55.y;
-                if (aux57.x == 1270) P29.pos.y = aux57.y;
-                if (aux59.x == 1270) P30.pos.y = aux59.y;
+                if (aux.x == 920) P1.pos.y = aux.y;
+                if (aux3.x == 920) P2.pos.y = aux3.y;
+                if (aux5.x == 920) P3.pos.y = aux5.y;
+                if (aux7.x == 920) P4.pos.y = aux7.y;
+                if (aux9.x == 920) P5.pos.y = aux9.y;
+                if (aux11.x == 920) P6.pos.y = aux11.y;
+                if (aux13.x == 920) P7.pos.y = aux13.y;
+                if (aux15.x == 920) P8.pos.y = aux15.y;
+                if (aux17.x == 920) P9.pos.y = aux17.y;
+                if (aux19.x == 920) P10.pos.y = aux19.y;
+                if (aux21.x == 920) P11.pos.y = aux21.y;
+                if (aux23.x == 920) P12.pos.y = aux23.y;
+                if (aux25.x == 920) P13.pos.y = aux25.y;
+                if (aux27.x == 920) P14.pos.y = aux27.y;
+                if (aux29.x == 920) P15.pos.y = aux29.y;
+                if (aux31.x == 920) P16.pos.y = aux31.y;
+                if (aux33.x == 920) P17.pos.y = aux33.y;
+                if (aux35.x == 920) P18.pos.y = aux35.y;
+                if (aux37.x == 920) P19.pos.y = aux37.y;
+                if (aux39.x == 920) P20.pos.y = aux39.y;
+                if (aux41.x == 920) P21.pos.y = aux41.y;
+                if (aux43.x == 920) P22.pos.y = aux43.y;
+                if (aux45.x == 920) P23.pos.y = aux45.y;
+                if (aux47.x == 920) P24.pos.y = aux47.y;
+                if (aux49.x == 920) P25.pos.y = aux49.y;
+                if (aux51.x == 920) P26.pos.y = aux51.y;
+                if (aux53.x == 920) P27.pos.y = aux53.y;
+                if (aux55.x == 920) P28.pos.y = aux55.y;
+                if (aux57.x == 920) P29.pos.y = aux57.y;
+                if (aux59.x == 920) P30.pos.y = aux59.y;
 
-                if (aux.x >= 1270 && aux.x < 1800 && aux.y < 450) P1.pos.x = aux.x;
-                if (aux3.x >= 1270 && aux3.x < 1800 && aux3.y < 450) P2.pos.x = aux3.x;
-                if (aux5.x >= 1270 && aux5.x < 1800 && aux5.y < 450) P3.pos.x = aux5.x;
-                if (aux7.x >= 1270 && aux7.x < 1800 && aux7.y < 450) P4.pos.x = aux7.x;
-                if (aux9.x >= 1270 && aux9.x < 1800 && aux9.y < 450) P5.pos.x = aux9.x;
-                if (aux11.x >= 1270 && aux11.x < 1800 && aux11.y < 450) P6.pos.x = aux11.x;
-                if (aux13.x >= 1270 && aux13.x < 1800 && aux13.y < 450) P7.pos.x = aux13.x;
-                if (aux15.x >= 1270 && aux15.x < 1800 && aux15.y < 450) P8.pos.x = aux15.x;
-                if (aux17.x >= 1270 && aux17.x < 1800 && aux17.y < 450) P9.pos.x = aux17.x;
-                if (aux19.x >= 1270 && aux19.x < 1800 && aux19.y < 450) P10.pos.x = aux19.x;
-                if (aux21.x >= 1270 && aux21.x < 1800 && aux21.y < 450) P11.pos.x = aux21.x;
-                if (aux23.x >= 1270 && aux23.x < 1800 && aux23.y < 450) P12.pos.x = aux23.x;
-                if (aux25.x >= 1270 && aux25.x < 1800 && aux25.y < 450) P13.pos.x = aux25.x;
-                if (aux27.x >= 1270 && aux27.x < 1800 && aux27.y < 450) P14.pos.x = aux27.x;
-                if (aux29.x >= 1270 && aux29.x < 1800 && aux29.y < 450) P15.pos.x = aux29.x;
-                if (aux31.x >= 1270 && aux31.x < 1800 && aux31.y < 450) P16.pos.x = aux31.x;
-                if (aux33.x >= 1270 && aux33.x < 1800 && aux33.y < 450) P17.pos.x = aux33.x;
-                if (aux35.x >= 1270 && aux35.x < 1800 && aux35.y < 450) P18.pos.x = aux35.x;
-                if (aux37.x >= 1270 && aux37.x < 1800 && aux37.y < 450) P19.pos.x = aux37.x;
-                if (aux39.x >= 1270 && aux39.x < 1800 && aux39.y < 450) P20.pos.x = aux39.x;
-                if (aux41.x >= 1270 && aux41.x < 1800 && aux41.y < 450) P21.pos.x = aux41.x;
-                if (aux43.x >= 1270 && aux43.x < 1800 && aux43.y < 450) P22.pos.x = aux43.x;
-                if (aux45.x >= 1270 && aux45.x < 1800 && aux45.y < 450) P23.pos.x = aux45.x;
-                if (aux47.x >= 1270 && aux47.x < 1800 && aux47.y < 450) P24.pos.x = aux47.x;
-                if (aux49.x >= 1270 && aux49.x < 1800 && aux49.y < 450) P25.pos.x = aux49.x;
-                if (aux51.x >= 1270 && aux51.x < 1800 && aux51.y < 450) P26.pos.x = aux51.x;
-                if (aux53.x >= 1270 && aux53.x < 1800 && aux53.y < 450) P27.pos.x = aux53.x;
-                if (aux55.x >= 1270 && aux55.x < 1800 && aux55.y < 450) P28.pos.x = aux55.x;
-                if (aux57.x >= 1270 && aux57.x < 1800 && aux57.y < 450) P29.pos.x = aux57.x;
-                if (aux59.x >= 1270 && aux59.x < 1800 && aux59.y < 450) P30.pos.x = aux59.x;
+                if (aux.x >= 920 && aux.x < 1109 && aux.y < 300) P1.pos.x = aux.x;
+                if (aux3.x >= 920 && aux3.x < 1109 && aux3.y < 300) P2.pos.x = aux3.x;
+                if (aux5.x >= 920 && aux5.x < 1109 && aux5.y < 300) P3.pos.x = aux5.x;
+                if (aux7.x >= 920 && aux7.x < 1109 && aux7.y < 300) P4.pos.x = aux7.x;
+                if (aux9.x >= 920 && aux9.x < 1109 && aux9.y < 300) P5.pos.x = aux9.x;
+                if (aux11.x >= 920 && aux11.x < 1109 && aux11.y < 300) P6.pos.x = aux11.x;
+                if (aux13.x >= 920 && aux13.x < 1109 && aux13.y < 300) P7.pos.x = aux13.x;
+                if (aux15.x >= 920 && aux15.x < 1109 && aux15.y < 300) P8.pos.x = aux15.x;
+                if (aux17.x >= 920 && aux17.x < 1109 && aux17.y < 300) P9.pos.x = aux17.x;
+                if (aux19.x >= 920 && aux19.x < 1109 && aux19.y < 300) P10.pos.x = aux19.x;
+                if (aux21.x >= 920 && aux21.x < 1109 && aux21.y < 300) P11.pos.x = aux21.x;
+                if (aux23.x >= 920 && aux23.x < 1109 && aux23.y < 300) P12.pos.x = aux23.x;
+                if (aux25.x >= 920 && aux25.x < 1109 && aux25.y < 300) P13.pos.x = aux25.x;
+                if (aux27.x >= 920 && aux27.x < 1109 && aux27.y < 300) P14.pos.x = aux27.x;
+                if (aux29.x >= 920 && aux29.x < 1109 && aux29.y < 300) P15.pos.x = aux29.x;
+                if (aux31.x >= 920 && aux31.x < 1109 && aux31.y < 300) P16.pos.x = aux31.x;
+                if (aux33.x >= 920 && aux33.x < 1109 && aux33.y < 300) P17.pos.x = aux33.x;
+                if (aux35.x >= 920 && aux35.x < 1109 && aux35.y < 300) P18.pos.x = aux35.x;
+                if (aux37.x >= 920 && aux37.x < 1109 && aux37.y < 300) P19.pos.x = aux37.x;
+                if (aux39.x >= 920 && aux39.x < 1109 && aux39.y < 300) P20.pos.x = aux39.x;
+                if (aux41.x >= 920 && aux41.x < 1109 && aux41.y < 300) P21.pos.x = aux41.x;
+                if (aux43.x >= 920 && aux43.x < 1109 && aux43.y < 300) P22.pos.x = aux43.x;
+                if (aux45.x >= 920 && aux45.x < 1109 && aux45.y < 300) P23.pos.x = aux45.x;
+                if (aux47.x >= 920 && aux47.x < 1109 && aux47.y < 300) P24.pos.x = aux47.x;
+                if (aux49.x >= 920 && aux49.x < 1109 && aux49.y < 300) P25.pos.x = aux49.x;
+                if (aux51.x >= 920 && aux51.x < 1109 && aux51.y < 300) P26.pos.x = aux51.x;
+                if (aux53.x >= 920 && aux53.x < 1109 && aux53.y < 300) P27.pos.x = aux53.x;
+                if (aux55.x >= 920 && aux55.x < 1109 && aux55.y < 300) P28.pos.x = aux55.x;
+                if (aux57.x >= 920 && aux57.x < 1109 && aux57.y < 300) P29.pos.x = aux57.x;
+                if (aux59.x >= 920 && aux59.x < 1109 && aux59.y < 300) P30.pos.x = aux59.x;
 
-                if(kont1 % 30000 == 0){
-                
+                if (kont1 % 30000 == 0)
+                {
+
                     P1.pos.x = -10;
-                    P1.pos.y = 670;
+                    P1.pos.y = 480;
 
                     P2.pos.x = -40;
-                    P2.pos.y = 670;
+                    P2.pos.y = 480;
 
                     P3.pos.x = -70;
-                    P3.pos.y = 650;
+                    P3.pos.y = 480;
 
                     P4.pos.x = -100;
-                    P4.pos.y = 650;
+                    P4.pos.y = 480;
 
                     P5.pos.x = -130;
-                    P5.pos.y = 650;
+                    P5.pos.y = 480;
 
                     P6.pos.x = -160;
-                    P6.pos.y = 650;
+                    P6.pos.y = 480;
 
                     P7.pos.x = -190;
-                    P7.pos.y = 650;
+                    P7.pos.y = 480;
 
                     P8.pos.x = -220;
-                    P8.pos.y = 650;
+                    P8.pos.y = 480;
 
                     P9.pos.x = -250;
-                    P9.pos.y = 650;
+                    P9.pos.y = 480;
 
                     P10.pos.x = -280;
-                    P10.pos.y = 650;
+                    P10.pos.y = 480;
 
                     P11.pos.x = -310;
-                    P11.pos.y = 650;
+                    P11.pos.y = 480;
 
                     P12.pos.x = -340;
-                    P12.pos.y = 650;
+                    P12.pos.y = 480;
 
                     P13.pos.x = -370;
-                    P13.pos.y = 650;
+                    P13.pos.y = 480;
 
                     P14.pos.x = -400;
-                    P14.pos.y = 650;
+                    P14.pos.y = 480;
 
                     P15.pos.x = -430;
-                    P15.pos.y = 650;
+                    P15.pos.y = 480;
 
                     P16.pos.x = -460;
-                    P16.pos.y = 650;
+                    P16.pos.y = 480;
 
                     P17.pos.x = -490;
-                    P17.pos.y = 650;
+                    P17.pos.y = 480;
 
                     P18.pos.x = -520;
-                    P18.pos.y = 650;
+                    P18.pos.y = 480;
 
                     P19.pos.x = -550;
-                    P19.pos.y = 650;
+                    P19.pos.y = 480;
 
                     P20.pos.x = -580;
-                    P20.pos.y = 650;
+                    P20.pos.y = 480;
 
                     P21.pos.x = -610;
-                    P21.pos.y = 650;
+                    P21.pos.y = 480;
 
                     P22.pos.x = -640;
-                    P22.pos.y = 650;
+                    P22.pos.y = 480;
 
                     P23.pos.x = -670;
-                    P23.pos.y = 650;
+                    P23.pos.y = 480;
 
-                    P24.pos.x = -700;
-                    P24.pos.y = 650;
+                    P24.pos.x = -540;
+                    P24.pos.y = 480;
 
                     P25.pos.x = -730;
-                    P25.pos.y = 650;
+                    P25.pos.y = 480;
 
                     P26.pos.x = -760;
-                    P26.pos.y = 650;
+                    P26.pos.y = 480;
 
                     P27.pos.x = -790;
-                    P27.pos.y = 650;
+                    P27.pos.y = 480;
 
                     P28.pos.x = -820;
-                    P28.pos.y = 650;
+                    P28.pos.y = 480;
 
                     P29.pos.x = -850;
-                    P29.pos.y = 650;
+                    P29.pos.y = 480;
 
                     P30.pos.x = -880;
-                    P30.pos.y = 650;
+                    P30.pos.y = 480;
                 
                 
                 
