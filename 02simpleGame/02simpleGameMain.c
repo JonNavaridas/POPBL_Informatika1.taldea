@@ -1,9 +1,3 @@
-/*#include "orokorrak.h"
-#include "sarrera.h"
-#include "errealitateFisikoa.h"
-#include "jokoa.h"
-#include "bukaera.h"*/
-
 //---------------------------------------------------------------------------------
 #include "imagen.h"
 #include "graphics.h"
@@ -30,10 +24,9 @@ int main(int argc, char * str[]) {
  
   do
   {
-    ebentu = jokoaAurkeztu();
+	ebentu = jokoaAurkeztu();
     if (ebentu == TECLA_1)
-    {
-
+	{
         egoera = jokatu1();
         jokoAmaierakoa1(egoera);
           
@@ -43,20 +36,14 @@ int main(int argc, char * str[]) {
                jokoAmaierakoa2(egoera2);
                irten = 1;
            }
-           else
-           {
-               irten = 1;
-           }
-}
+		else { irten = 1; }
+	}
+
     else
     {
-        if(ebentu == TECLA_3)
-        {
-            kredituak();
-        }
+		if (ebentu == TECLA_3) { kredituak(); }
     }
   } while (ebentu != TECLA_ESCAPE && irten == 0);
   sgItxi();
   return 0;
 }
-

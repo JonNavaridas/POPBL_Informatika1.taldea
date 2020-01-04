@@ -13,8 +13,6 @@
 #define JOKOA_PLAYER_IMAGE ".\\img\\invader.bmp"
 #define JOKOA_SOUND_WIN ".\\sound\\win.wav"
 #define JOKOA_SOUND_LOOSE ".\\sound\\fail.wav" 
-//#define BUKAERA_SOUND_1 ".\\sound\\128NIGHT_01.wav"
-//#define BUKAERA_IMAGE ".\\img\\gameOver_1.bmp"
 #define MUSICA_MENU ".\\sound\\inicio.wav"
 #define FONDO_INCIO ".\\img\\mapa.bmp"
 #define FONDO_MENU ".\\img\\mapa_desenfoque.bmp"
@@ -22,21 +20,10 @@
 #define IMG_IRABAZI ".\\img\\irabazi.bmp"
 #define IMG_GALDU ".\\img\\galdu.bmp"
 
-
-int JOKOA_jokalariaIrudiaSortu();
-void JOKOA_lerroHBatMargotu(int x, int y, int x1, int y1);
-void JOKOA_lerroVBatMargotu(int x, int y, int x1, int y1);
-EGOERA JOKOA_egoera(JOKO_ELEMENTUA jokalaria, JOKO_ELEMENTUA oztopoa);
-POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa);
-int BUKAERA_irudiaBistaratu();
-void kredituak();
-
 int jokoaAurkeztu(void)
 {
   int ebentu = 0, idFONDOINICIO;
- 
   idFONDOINICIO = HASIERA_irudiaBistaratu();
-
   
   audioInit();
   loadTheMusic(MUSICA_MENU);
@@ -44,7 +31,7 @@ int jokoaAurkeztu(void)
   
   do
   {
-    ebentu = ebentuaJasoGertatuBada();
+	  ebentu = ebentuaJasoGertatuBada();
   } while (ebentu != TECLA_1 && ebentu != TECLA_2 && ebentu != TECLA_3 && ebentu != TECLA_ESCAPE);
   pantailaGarbitu();
   irudiaKendu(idFONDOINICIO);
@@ -56,13 +43,10 @@ int jokoaAurkeztu(void)
 void kredituak()
 {
     int ebentu = 0, idFONDO;
-
     idFONDO = irudiaKargatu(CREDITOS);    
     irudiaMugitu(idFONDO, 0, 0);
     irudiakMarraztu();
     pantailaBerriztu();
-
-    
 
     audioInit();
     loadTheMusic(MUSICA_MENU);
@@ -287,4 +271,3 @@ int HASIERA_irudiaBistaratu()
     pantailaBerriztu();
     return id;
 }
-
