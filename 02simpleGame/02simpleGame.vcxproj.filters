@@ -42,6 +42,9 @@
     <ClCompile Include="..\simpleSdlWrapper\text.c">
       <Filter>Source Files\simpleSdlWrapper</Filter>
     </ClCompile>
+    <ClCompile Include="olatuak.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\simpleSdlWrapper\ebentoak.h">
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\game02.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="olatuak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

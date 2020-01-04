@@ -1,10 +1,8 @@
-﻿  ebentoak.c
-  graphics.c
-  imagen.c
-  soinua.c
-  text.c
-  02simpleGameMain.c
-  game02.c
-  Generando código...
-C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(26,42): warning C4013: 'HASIERA_irudiaBistaratu' sin definir; se supone que extern devuelve como resultado int
+﻿  game02.c
+C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(866,38): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(867,38): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(873,38): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(896,38): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(897,38): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\Oier\02simpleGame\game02\game02.c(903,38): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
   02simpleGame.vcxproj -> C:\Users\oierb\Desktop\Oier\Debug\02simpleGame.exe

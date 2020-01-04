@@ -89,6 +89,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\game02;$(SolutionDir)\simpleSdlWrapper;$(SolutionDir)\sdl2\include;$(SolutionDir)\sdl2image\include;$(SolutionDir)\sdl2mixer\include;$(SolutionDir)\sdl2ttf\include</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +153,7 @@
     <ClCompile Include="..\simpleSdlWrapper\text.c" />
     <ClCompile Include="02simpleGameMain.c" />
     <ClCompile Include="game02\game02.c" />
+    <ClCompile Include="olatuak.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\simpleSdlWrapper\ebentoak.h" />
@@ -160,6 +162,7 @@
     <ClInclude Include="..\simpleSdlWrapper\soinua.h" />
     <ClInclude Include="..\simpleSdlWrapper\text.h" />
     <ClInclude Include="game02\game02.h" />
+    <ClInclude Include="olatuak.h" />
     <ClInclude Include="OurTypes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -6,6 +6,7 @@
 #include "soinua.h"
 #include <stdio.h>
 #include <windows.h>
+#include "olatuak.h"
 
 
 
