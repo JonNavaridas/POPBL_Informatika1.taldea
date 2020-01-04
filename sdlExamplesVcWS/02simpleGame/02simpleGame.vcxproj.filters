@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="02simpleGameMain.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="game02\game02.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -41,6 +38,12 @@
     </ClCompile>
     <ClCompile Include="..\simpleSdlWrapper\text.c">
       <Filter>Source Files\simpleSdlWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="45.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="olatuak.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game02\game02.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="olatuak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

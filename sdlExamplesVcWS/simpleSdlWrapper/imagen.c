@@ -64,7 +64,8 @@ void  irudiaMugitu( int numImg , int x, int y)
 	id =irudiarenPosizioaAurkitu(numImg);
 
 	irudiak[id].dest.x = x;
-  irudiak[id].dest.y = y;
+	irudiak[id].dest.y = y;
+
 }
 
 void irudiakMarraztu(void)
