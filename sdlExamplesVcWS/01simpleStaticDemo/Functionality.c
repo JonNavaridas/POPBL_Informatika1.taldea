@@ -81,9 +81,9 @@ int archerTowerTarget(int x, int y, int positionX, int positionY, int radius, in
 		arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
 		arkatzKoloreaEzarri(255, 0, 0);
-		if ((time % 100 >= 85 && time % 100 < 100) || (time % 100 > 0 && time % 100 <= 15) || time % 100 == 0) {
+		if ((time % 50 >= 30 && time % 50 < 50) || time % 50 == 0) {
 			zirkuluaMarraztu(bullet.x, bullet.y, 5);
-			if (time % 100 == 0) damage = (100 * (1 + upgrade / 10));
+			if (time % 50 == 0) damage = (100 * (1 + upgrade / 10));
 		}
 	}
 	pantailaBerriztu();
@@ -114,9 +114,9 @@ ACTION mageTowerTarget(int x, int y, int positionX, int positionY, int radius, i
 
 	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
 	{
-		if ((time % 200 >= 180 && time % 200 < 200) || (time % 200 > 0 && time % 200 <= 20) || time % 200 == 0) {
+		if ((time % 100 >= 80 && time % 100 < 100)|| time % 100 == 0) {
 			arkatzKoloreaEzarri(0, 0, 255);
-			if (time % 200 == 0) { action.damage = (30 * (1 + upgrade / 10)); action.freeze = 1; }
+			if (time % 100 == 0) { action.damage = (30 * (1 + upgrade / 10)); action.freeze = 1; }
 		}
 		else arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
@@ -154,10 +154,10 @@ ACTION bomberTowerTarget(int x, int y, int positionX, int positionY, int radius,
 		arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
 		arkatzKoloreaEzarri(255, 0, 0);
-		if ((time % 300 >= 280 && time % 300 < 300) || (time % 300 > 0 && time % 400 <= 20) || time % 300 == 0) {
+		if ((time % 150 >= 130 && time % 150 < 150) || time % 150 == 0) {
 			action.resource = 30;
 			zirkuluaMarraztu(bullet.x, bullet.y, action.resource);
-			if (time % 300 == 0) action.damage = (60 * (1 + upgrade / 10));
+			if (time % 150 == 0) action.damage = (60 * (1 + upgrade / 10));
 		}
 	}
 	pantailaBerriztu();

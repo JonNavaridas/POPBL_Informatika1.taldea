@@ -51,7 +51,7 @@ int main(int argc, char * str[])
 		if (action.freeze == 1) stop = 1;
 		if (stop == 1) {
 			timer++;
-			if (timer == 100 + (20 * upgrade)) { stop = 0; timer = 0; }
+			if (timer == 25 + (20 * upgrade)) { stop = 0; timer = 0; }
 		}
 		//Daño en area
 		if (tower == TECLA_3 && enemyPos.x <= enemyPos.x + action.resource && enemyPos.x > enemyPos.x - action.resource && enemyPos.y < enemyPos.y + action.resource && enemyPos.y > enemyPos.y - action.resource)
