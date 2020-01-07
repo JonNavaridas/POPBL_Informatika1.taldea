@@ -1,2 +1,7 @@
-﻿  torre.c
+﻿  graphics.c
+  imagen.c
+  text.c
+  01simpleStaticDemoMain.c
+  torre.c
+  Generando código...
   01simpleStaticDemo.vcxproj -> C:\Users\joune\Desktop\PBL\demo\sdlExamplesVcWS\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe
