@@ -1,7 +1,6 @@
-﻿  graphics.c
-  imagen.c
-  text.c
-  01simpleStaticDemoMain.c
+﻿  01simpleStaticDemoMain.c
   torre.c
+C:\Users\joune\Desktop\PBL\GIT\POPBL_Informatika1.taldea\sdlExamplesVcWS\01simpleStaticDemo\torre.c(98,13): error C2143: error de sintaxis: falta ')' delante de '{'
+C:\Users\joune\Desktop\PBL\GIT\POPBL_Informatika1.taldea\sdlExamplesVcWS\01simpleStaticDemo\torre.c(205,58): error C2198: 'vender': no hay suficientes argumentos para la llamada
+C:\Users\joune\Desktop\PBL\GIT\POPBL_Informatika1.taldea\sdlExamplesVcWS\01simpleStaticDemo\torre.c(423,51): error C2198: 'mejorar': no hay suficientes argumentos para la llamada
   Generando código...
-  01simpleStaticDemo.vcxproj -> C:\Users\joune\Desktop\PBL\demo\sdlExamplesVcWS\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe

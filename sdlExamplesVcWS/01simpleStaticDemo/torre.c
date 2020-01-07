@@ -28,10 +28,10 @@ int torre(int a)
         {
             pos = saguarenPosizioa();
 
-            if ((pos.x > 49) && (pos.x < 93) && (pos.y > 370) && (pos.y < 412))
+            if ((pos.x > 54) && (pos.x < 101) && (pos.y > 370) && (pos.y < 412))
             {
-                b = 30;
-                c = 324;
+                b = 23;
+                c = 339;
 
                 torres.torre1 = torre1(torres.torre1, a, b, c, irudia.id1);
                 irudia.id1 = irudia.irudia;
@@ -39,10 +39,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 135) && (pos.x < 182) && (pos.y > 552) && (pos.y < 596))
+            else if ((pos.x > 148) && (pos.x < 197) && (pos.y > 577) && (pos.y < 625))
             {
-                b = 117;
-                c = 507;
+                b = 122;
+                c = 534;
 
                 torres.torre2 = torre1(torres.torre2, a, b, c, irudia.id2);
                 irudia.id2 = irudia.irudia;
@@ -50,10 +50,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 181) && (pos.x < 225) && (pos.y > 53) && (pos.y < 93))
+            else if ((pos.x > 197) && (pos.x < 244) && (pos.y > 54) && (pos.y < 104))
             {
-                b = 160;
-                c = 8;
+                b = 171;
+                c = 7;
 
                 torres.torre3 = torre1(torres.torre3, a, b, c, irudia.id3);
                 irudia.id3 = irudia.irudia;
@@ -61,10 +61,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else  if ((pos.x > 227) && (pos.x < 291) && (pos.y > 233) && (pos.y < 273))
+            else  if ((pos.x > 247) && (pos.x < 293) && (pos.y > 244) && (pos.y < 290))
             {
-                b = 205;
-                c = 190;
+                b = 220;
+                c = 201;
 
                 torres.torre4 = torre1(torres.torre4, a, b, c, irudia.id4);
                 irudia.id4 = irudia.irudia;
@@ -72,10 +72,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 268) && (pos.x < 313) && (pos.y > 52) && (pos.y < 92))
+            else if ((pos.x > 291) && (pos.x < 338) && (pos.y > 54) && (pos.y < 104))
             {
-                b = 246;
-                c = 7;
+                b = 265;
+                c = 5;
 
                 torres.torre5 = torre1(torres.torre5, a, b, c, irudia.id5);
                 irudia.id5 = irudia.irudia;
@@ -83,10 +83,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 530) && (pos.x < 575) && (pos.y > 234) && (pos.y < 274))
+            else if ((pos.x > 577) && (pos.x < 626) && (pos.y > 230) && (pos.y < 279))
             {
-                b = 509;
-                c = 191;
+                b = 551;
+                c = 203;
 
                 torres.torre6 = torre1(torres.torre6, a, b, c, irudia.id6);
                 irudia.id6 = irudia.irudia;
@@ -94,20 +94,20 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 664) && (pos.x < 709) && (pos.y > 416) && (pos.y < 456))
+            else if ((pos.x > 723) && (pos.x < 772) && (pos.y > 435) && (pos.y < 484)
             {
-                b = 639;
-                c = 368;
+                b = 694;
+                c = 388;
 
                 torres.torre7 = torre1(torres.torre7, a, b, c, irudia.id7);
                 irudia.id7 = irudia.irudia;
                 irudia.irudia = 0;
                 irten = 1;
             }
-            else if ((pos.x > 838) && (pos.x < 883) && (pos.y > 234) && (pos.y < 274))
+            else if ((pos.x > 909) && (pos.x < 958) && (pos.y > 243) && (pos.y < 292))
             {
-                b = 818;
-                c = 190;
+                b = 883;
+                c = 197;
 
                 torres.torre8 = torre1(torres.torre8, a, b, c, irudia.id8);
                 irudia.id8 = irudia.irudia;
@@ -115,10 +115,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 883) && (pos.x < 928) && (pos.y > 416) && (pos.y < 456))
+            else if ((pos.x > 960) && (pos.x < 909) && (pos.y > 434) && (pos.y < 483))
             {
-                b = 862;
-                c = 372;
+                b = 935;
+                c = 392;
 
                 torres.torre9 = torre1(torres.torre9, a, b, c, irudia.id9);
                 irudia.id9 = irudia.irudia;
@@ -126,10 +126,10 @@ int torre(int a)
 
                 irten = 1;
             }
-            else if ((pos.x > 924) && (pos.x < 969) && (pos.y > 233) && (pos.y < 263))
+            else if ((pos.x > 1005) && (pos.x < 1054) && (pos.y > 244) && (pos.y < 293))
             {
-                b = 907;
-                c = 188;
+                b = 980;
+                c = 196;
 
                 torres.torre10 = torre1(torres.torre10, a, b, c, irudia.id10);
                 irudia.id10 = irudia.irudia;
@@ -146,7 +146,7 @@ int torre(int a)
 
 int torre1(int torre, int a, int b, int c, int id)
 {
-    int ebentu, irten = 0;
+    int ebentu, irten = 0, saldu = 0, mejoratu = 0;
 
     if (torre == 0)
     {
@@ -182,28 +182,31 @@ int torre1(int torre, int a, int b, int c, int id)
                     irudiakMarraztu();
                     pantailaBerriztu();
                 }
-
-                else if ((pos.x > 307) && (pos.x < 405) && (pos.y > 414) && (pos.y < 471))
+                while (irten == 0)
                 {
-                    irudiakMarraztu();
-                    pantailaBerriztu();
-               
-                    torre = mejorar(torre, a, id, b, c);
-                    irudiaKendu(irudia.idmenu3);
-                    irudiakMarraztu();
-                    pantailaBerriztu();
+                    if (((pos.x > 307) && (pos.x < 405) && (pos.y > 414) && (pos.y < 471)) || (mejoratu == 1))
+                    {
+                        mejoratu = 0;
+                        irudiakMarraztu();
+                        pantailaBerriztu();
 
-                    irten = 1;
-                }
+                        torre = mejorar(torre, a, id, b, c, saldu);
 
-                else if ((pos.x > 307) && (pos.x < 405) && (pos.y > 358) && (pos.y < 414))
-                {
-                    irudiakMarraztu();
-                    pantailaBerriztu();
+                        if (saldu == 0)
+                        irten = 1;
+                    }
 
-                    torre = vender(torre, a, id, b, c);
+                    else if (((pos.x > 307) && (pos.x < 405) && (pos.y > 358) && (pos.y < 414)) || (saldu == 1))
+                    {
+                        saldu = 0;
+                        irudiakMarraztu();
+                        pantailaBerriztu();
 
-                    irten = 1;
+                        torre = vender(torre, a, id, b, c);
+
+                        if (saldu == 0)
+                        irten = 1;
+                    }
                 }
             }
         } 
@@ -291,14 +294,14 @@ int comprar(int a, int b, int c, int id)
       return torre;
 }
 
-int mejorar(int torre, int a, int id, int b, int c)
+int mejorar(int torre, int a, int id, int b, int c, int saldu)
 {
     int ebentu, irten = 0;
     irudia.idmenu3 = irudiaKargatu(".\\img\\menus\\menu3.1.bmp");
     irudiaMugitu(irudia.idmenu3, 290, 341);
     irudiakMarraztu();
     pantailaBerriztu();
-
+    irudiaKendu(irudia.idmenu3);
 
     while(irten == 0)
     {
@@ -355,8 +358,9 @@ int mejorar(int torre, int a, int id, int b, int c)
             {
                 irudiakMarraztu();
                 pantailaBerriztu();
-                torre = vender(torre, a, id, b, c);
+                saldu = 1;
                 irten = 1;
+                return saldu;
             }
         }      
         } 
@@ -364,9 +368,9 @@ int mejorar(int torre, int a, int id, int b, int c)
             return torre;
 }
 
-int vender(int torre, int a, int id, int b, int c)
+int vender(int torre, int a, int id, int b, int c, int mejoratu)
 {
-    int ebentu, irten = 0, borrar = 1;
+    int ebentu, irten = 0, borrar;
 
     
     irudia.idmenu4 = irudiaKargatu(".\\img\\menus\\menu3.2.bmp");

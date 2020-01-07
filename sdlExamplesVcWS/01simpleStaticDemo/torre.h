@@ -10,8 +10,8 @@
 int torre(int a);
 int torre1(int torre, int a, int b, int c, int id);
 int comprar(int a, int b, int c, int id);
-int mejorar(int torre, int a, int id, int b, int c);
-int vender(int torre, int a, int id, int b, int c);
+int mejorar(int torre, int a, int id, int b, int c, int saldu);
+int vender(int torre, int a, int id, int b, int c, int mejoratu);
 
 int imagen(int id, int b, int c, int torre, int borrar);
 
