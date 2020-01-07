@@ -150,8 +150,9 @@
     <ClCompile Include="..\simpleSdlWrapper\imagen.c" />
     <ClCompile Include="..\simpleSdlWrapper\soinua.c" />
     <ClCompile Include="..\simpleSdlWrapper\text.c" />
-    <ClCompile Include="02simpleGameMain.c" />
+    <ClCompile Include="game02main.c" />
     <ClCompile Include="game02\game02.c" />
+    <ClCompile Include="olatuak.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\simpleSdlWrapper\ebentoak.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="..\simpleSdlWrapper\soinua.h" />
     <ClInclude Include="..\simpleSdlWrapper\text.h" />
     <ClInclude Include="game02\game02.h" />
+    <ClInclude Include="olatuak.h" />
     <ClInclude Include="OurTypes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

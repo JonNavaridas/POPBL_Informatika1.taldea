@@ -35,7 +35,7 @@ int irudiaKargatu(char *fileName)
 		}
 		else
 		{
-    	    colorkey = SDL_MapRGB(surface->format, 255, 0, 255); // MIRAD ESTO, IGUAL TIENE ALGO QUE VER
+    	colorkey = SDL_MapRGB(surface->format, 255, 0, 255);
 			SDL_SetColorKey(surface, SDL_TRUE, colorkey);
       irudiak[irudiKop].texture=SDL_CreateTextureFromSurface(gRenderer, surface);
       irudiak[irudiKop].dest.x = irudiak[irudiKop].dest.y = 0;
@@ -64,7 +64,8 @@ void  irudiaMugitu( int numImg , int x, int y)
 	id =irudiarenPosizioaAurkitu(numImg);
 
 	irudiak[id].dest.x = x;
-  irudiak[id].dest.y = y;
+	irudiak[id].dest.y = y;
+
 }
 
 void irudiakMarraztu(void)

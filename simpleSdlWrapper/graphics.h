@@ -2,8 +2,9 @@
 #define GRAPHICS_H
 #include "SDL.h"
 
-#define SCREEN_WIDTH  1109
+#define SCREEN_WIDTH  1109  
 #define SCREEN_HEIGHT  680
+
 
 int sgHasieratu();
 void sgItxi();//Sin opciones

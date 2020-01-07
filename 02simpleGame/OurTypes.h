@@ -4,7 +4,7 @@
 #include "ebentoak.h"
 
 typedef enum { JOLASTEN, GALDU, IRABAZI }EGOERA;
-typedef enum { IRUDIA, MARGOA, TESTUA } MOTA;
+typedef enum { RP, PC, PN } MOTA;
 
 typedef struct
 {
