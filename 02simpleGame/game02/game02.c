@@ -10,14 +10,14 @@
 
 #define ONGI_ETORRI_MEZUA "Sakatu return hasteko..."
 #define JOKOA_SOUND ".\\sound\\pol-battle-march-long.wav"
-#define JOKOA_PLAYER_IMAGE ".\\img\\imagen\\Pepino2.bmp"
+#define JOKOA_PLAYER_IMAGE ".\\img\\imagen\\seleccionarquero1.bmp"
 #define JOKOA_SOUND_WIN ".\\sound\\win.wav"
 #define JOKOA_SOUND_LOOSE ".\\sound\\fail.wav"
 //#define BUKAERA_SOUND_1 ".\\sound\\128NIGHT_01.wav"
 //#define BUKAERA_IMAGE ".\\img\\gameOver_1.bmp"
 #define BACKGROUND_IMAGE ".\\img\\imagen\\Map copia.bmp"
 #define JOKOA_PLAYER_IMAGE2 ".\\img\\imagen\\pepinaco copia.bmp"
-#define JOKOA_PLAYER_IMAGE3 ".\\img\\imagen\\pepino copia.bmp"
+#define JOKOA_PLAYER_IMAGE3 ".\\img\\imagen\\pepino copia (1).bmp"
 
 #define MUSICA_MENU ".\\sound\\inicio.wav"
 #define FONDO_INCIO ".\\img\\mapa.bmp"
@@ -254,22 +254,120 @@ EGOERA jokatu1(void)
             pantailaGarbitu();
             arkatzKoloreaEzarri(0, 0, 0xFF);
             zirkuluaMarraztu(zirkulua.pos.x, zirkulua.pos.y, 20);
-            if(kont1<20000){
+            if(kont1<=10000){
 
              Olatua1(P1, P2, P3, P4, P5, P6);
 
             }
-            if(kont1 > 20000 && kont1 < 40000){
+            if(kont1 > 10000 && kont1 <= 20000){
             
             Olatua2(P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
             }
 
-            if (kont1 > 40000 && kont1 < 60000) {
+            if (kont1 > 20000 && kont1 <= 30000) {
 
 
              Olatua3(P21, P22, P23, P24, P25, P26);
 
             }
+
+            if (kont1 > 30000 && kont1 <= 40000) {
+
+
+                Olatua4(P21, P22, P23, P24, P1,P2,P3,P4);
+
+            }
+
+            if (kont1 > 40000 && kont1 <= 50000) {
+
+
+                Olatua5(P11, P12);
+
+            }
+
+            if (kont1 > 50000 && kont1 <= 60000) {
+
+
+                Olatua6(P1, P2, P3, P4, P5, P11, P12);
+
+            }
+
+            if (kont1 > 60000 && kont1 <= 70000) {
+
+
+                Olatua7(P1, P2, P3, P4, P5,P6, P27, P28,P21,P22,P23,P24,P25,P26);
+
+            }
+
+            if (kont1 > 70000 && kont1 <= 80000) {
+
+
+                Olatua8(P21, P22, P23, P24, P25, P26, P27,P28,P29,P30);
+
+            }
+
+            if (kont1 > 80000 && kont1 <= 90000) {
+
+
+                Olatua9(P11, P12, P13, P14);
+
+            }
+
+            if (kont1 > 90000 && kont1 <= 100000) {
+
+
+                Olatua10(P1, P2, P3, P4, P5, P6, P11, P12, P13, P14, P21,P22,P23,P24,P25,P26);
+
+            }
+
+            if (kont1 > 100000 && kont1 <= 110000) {
+
+
+                Olatua11(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30,P11,P12,P13,P14);
+
+            }
+
+            if (kont1 > 110000 && kont1 <= 120000) {
+
+
+                Olatua12(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, P11, P12, P1, P2, P3,P4, P5,P6, P7, P8, P9, P10);
+
+            }
+
+            if (kont1 > 120000 && kont1 <= 130000) {
+
+
+                Olatua13(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, P11, P12, P13, P14, P15, P16, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
+
+            }
+
+            if (kont1 > 130000 && kont1 < 140000) {
+
+
+                Olatua14(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, P11, P12, P13, P14, P15, P16, P17, P18, P19, P20, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
+
+            }
+
+            
+            /*if (kont1 > 50000 && kont1 < 55000) {
+
+
+                Olatua12(P1, P2, P3, P4, P5, P11, P12);
+
+            }
+
+            if (kont1 > 55000 && kont1 < 60000) {
+
+
+                Olatua13(P1, P2, P3, P4, P5, P11, P12);
+
+            }
+            if (kont1 > 60000 && kont1 < 65000) {
+
+
+                Olatua14(P1, P2, P3, P4, P5, P11, P12);
+
+            }*/
            
             /* irudiaMugitu(P11.id, jokalaria.pos.x, jokalaria.pos.y);
              irudiaMugitu(P12.id, jokalaria.pos.x, jokalaria.pos.y);
@@ -581,7 +679,7 @@ EGOERA jokatu1(void)
                 if (aux57.x >= 920 && aux57.x < 1109 && aux57.y < 300) P29.pos.x = aux57.x;
                 if (aux59.x >= 920 && aux59.x < 1109 && aux59.y < 300) P30.pos.x = aux59.x;
 
-                if (kont1 % 30000 == 0)
+                if (kont1 % 10000 == 0)
                 {
 
                     P1.pos.x = -10;
@@ -680,8 +778,9 @@ EGOERA jokatu1(void)
             
                
             }
+            int pos[30];
 
-            egoera = JOKOA_egoera(P1, zirkulua);
+            egoera = JOKOA_egoera(etsaienPosizioaHasieratu(pos), zirkulua);
         } while (egoera == JOLASTEN);
         irudiaKendu(P1.id);
         irudiaKendu(fondoa2.id);
@@ -746,12 +845,13 @@ EGOERA jokatu2(void)
     return egoera;
 }
 
-EGOERA JOKOA_egoera(JOKO_ELEMENTUA jokalaria, JOKO_ELEMENTUA oztopoa) {
+EGOERA JOKOA_egoera(int pos[]) {
+
   EGOERA  ret = JOLASTEN;
   if (jokalaria.pos.x >oztopoa.pos.x - 20 && jokalaria.pos.x <oztopoa.pos.x + 20 && jokalaria.pos.y >oztopoa.pos.y - 20 && jokalaria.pos.y <oztopoa.pos.y + 20) {
     ret = IRABAZI;
   }
-  else if (jokalaria.pos.x > 1500) {
+  else if (jokalaria.pos.x > 1108) {
     ret = GALDU;
   }
   return ret;
@@ -824,13 +924,13 @@ POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa) {
 
 
 POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa) {
-    posizioa.y = posizioa.y - 0.2;
-    posizioa.x = posizioa.x + 0.2;
+    posizioa.y = posizioa.y - 0.25;
+    posizioa.x = posizioa.x + 0.25;
     return posizioa;
 }
 
 POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa) {
-    posizioa.y = posizioa.y + 0.2;
+    posizioa.y = posizioa.y + 0.25;
     posizioa.x = posizioa.x + 8;
     return posizioa;
 }
