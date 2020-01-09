@@ -256,9 +256,3 @@ void Olatua14(JOKO_ELEMENTUA P15, JOKO_ELEMENTUA P16, JOKO_ELEMENTUA P17, JOKO_E
 
 }
 
-void etsaienPosizioaHasieratu(int pos[]) {
-
-
-   pos[]={}
-
-}

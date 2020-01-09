@@ -8,9 +8,11 @@
 #include <windows.h>
 #include "olatuak.h"
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #define ONGI_ETORRI_MEZUA "Sakatu return hasteko..."
 #define JOKOA_SOUND ".\\sound\\pol-battle-march-long.wav"
-#define JOKOA_PLAYER_IMAGE ".\\img\\imagen\\seleccionarquero1.bmp"
+#define JOKOA_PLAYER_IMAGE ".\\img\\imagen\\pepino2.bmp"
 #define JOKOA_SOUND_WIN ".\\sound\\win.wav"
 #define JOKOA_SOUND_LOOSE ".\\sound\\fail.wav"
 //#define BUKAERA_SOUND_1 ".\\sound\\128NIGHT_01.wav"
@@ -53,6 +55,8 @@ POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa);
 
 //int  BUKAERA_menua(EGOERA egoera);
 //int BUKAERA_irudiaBistaratu();
+
+POSIZIOA inicializarAuxiliares(void);
 
 int jokoaAurkeztu(void)
 {
@@ -118,6 +122,8 @@ EGOERA jokatu1(void)
         zirkulua.pos.x = 200;
         zirkulua.pos.y = 200;
         //Uint32 time01 = SDL_GetTicks(), time02;
+
+        textuaGaitu();
 
         P1.pos.x = -10;
         P1.pos.y = 480;
@@ -212,6 +218,67 @@ EGOERA jokatu1(void)
         fondoa2.pos.x = 0;
         fondoa2.pos.y = 0;
 
+        /*aux = inicializarAuxiliares();
+        aux2 = inicializarAuxiliares();
+        aux3 = inicializarAuxiliares();
+        aux4 = inicializarAuxiliares();
+        aux5 = inicializarAuxiliares();
+        aux6 = inicializarAuxiliares();
+        aux7 = inicializarAuxiliares();
+        aux8 = inicializarAuxiliares();
+        aux9 = inicializarAuxiliares();
+        aux10 = inicializarAuxiliares();
+        aux11 = inicializarAuxiliares();
+        aux12 = inicializarAuxiliares();
+        aux13 = inicializarAuxiliares();
+        aux14 = inicializarAuxiliares();
+        aux15 = inicializarAuxiliares();
+        aux16 = inicializarAuxiliares();
+        aux17 = inicializarAuxiliares();
+        aux18 = inicializarAuxiliares();
+        aux19 = inicializarAuxiliares();
+        aux20 = inicializarAuxiliares();
+        aux21 = inicializarAuxiliares();
+        aux22 = inicializarAuxiliares();
+        aux23 = inicializarAuxiliares();
+        aux24 = inicializarAuxiliares();
+        aux25 = inicializarAuxiliares();
+        aux26 = inicializarAuxiliares();
+        aux27 = inicializarAuxiliares();
+        aux28 = inicializarAuxiliares();
+        aux29 = inicializarAuxiliares();
+        aux30 = inicializarAuxiliares();
+        aux31 = inicializarAuxiliares();
+        aux32 = inicializarAuxiliares();
+        aux33 = inicializarAuxiliares();
+        aux34 = inicializarAuxiliares();
+        aux35 = inicializarAuxiliares();
+        aux36 = inicializarAuxiliares();
+        aux37 = inicializarAuxiliares();
+        aux38 = inicializarAuxiliares();
+        aux39 = inicializarAuxiliares();
+        aux40 = inicializarAuxiliares();
+        aux41 = inicializarAuxiliares();
+        aux42 = inicializarAuxiliares();
+        aux43 = inicializarAuxiliares();
+        aux44 = inicializarAuxiliares();
+        aux45 = inicializarAuxiliares();
+        aux46 = inicializarAuxiliares();
+        aux47 = inicializarAuxiliares();
+        aux48 = inicializarAuxiliares();
+        aux49 = inicializarAuxiliares();
+        aux50 = inicializarAuxiliares();
+        aux51 = inicializarAuxiliares();
+        aux52 = inicializarAuxiliares();
+        aux53 = inicializarAuxiliares();
+        aux54 = inicializarAuxiliares();
+        aux55 = inicializarAuxiliares();
+        aux56 = inicializarAuxiliares();
+        aux57 = inicializarAuxiliares();
+        aux58 = inicializarAuxiliares();
+        aux59 = inicializarAuxiliares();
+        aux60 = inicializarAuxiliares();*/
+
         audioInit();
         loadTheMusic(JOKOA_SOUND);
         playMusic();
@@ -247,76 +314,337 @@ EGOERA jokatu1(void)
         P29.id = JOKOA_jokalaria3IrudiaSortu();
         P30.id = JOKOA_jokalaria3IrudiaSortu();
         do {
-            kont1++;
+            //kont1++;
             Sleep(2);
-            aux = ERREALITATE_FISIKOA_mugimendua(zirkulua.pos);
-            zirkulua.pos.y = aux.y;
+           
             pantailaGarbitu();
-            arkatzKoloreaEzarri(0, 0, 0xFF);
-            zirkuluaMarraztu(zirkulua.pos.x, zirkulua.pos.y, 20);
-            if(kont1<=10000){
+            //arkatzKoloreaEzarri(0, 0, 0xFF);
+            //zirkuluaMarraztu(zirkulua.pos.x, zirkulua.pos.y, 20);
+            if(kont1<=10000 && kont1 > 0){
 
              Olatua1(P1, P2, P3, P4, P5, P6);
+
+             /*aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+             aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+             aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+             aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+             aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+             aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+             aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+             aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+             aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+             aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+             aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+             aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);*/
+             if (aux.x < 200) P1.pos.x = aux.x;
+             if (aux3.x < 200) P2.pos.x = aux3.x;
+             if (aux5.x < 200) P3.pos.x = aux5.x;
+             if (aux7.x < 200) P4.pos.x = aux7.x;
+             if (aux9.x < 200) P5.pos.x = aux9.x;
+             if (aux11.x < 200) P6.pos.x = aux11.x;
 
             }
             if(kont1 > 10000 && kont1 <= 20000){
             
             Olatua2(P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
+
+            /*aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+            aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+            aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+            aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+            aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+            aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+            aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+            aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+            aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+            aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+            aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+            aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);
+            aux13 = ERREALITATE_FISIKOA_mugimendua(P7.pos);
+            aux14 = ERREALITATE_FISIKOA2_mugimendua(P7.pos);
+            aux15 = ERREALITATE_FISIKOA_mugimendua(P8.pos);
+            aux16 = ERREALITATE_FISIKOA2_mugimendua(P8.pos);
+            aux17 = ERREALITATE_FISIKOA_mugimendua(P9.pos);
+            aux18 = ERREALITATE_FISIKOA2_mugimendua(P9.pos);
+            aux19 = ERREALITATE_FISIKOA_mugimendua(P10.pos);
+            aux20 = ERREALITATE_FISIKOA2_mugimendua(P10.pos);*/
+
+            if (aux.x < 200) P1.pos.x = aux.x;
+            if (aux3.x < 200) P2.pos.x = aux3.x;
+            if (aux5.x < 200) P3.pos.x = aux5.x;
+            if (aux7.x < 200) P4.pos.x = aux7.x;
+            if (aux9.x < 200) P5.pos.x = aux9.x;
+            if (aux11.x < 200) P6.pos.x = aux11.x;
+            if (aux13.x < 200) P7.pos.x = aux13.x;
+            if (aux15.x < 200) P8.pos.x = aux15.x;
+            if (aux17.x < 200) P9.pos.x = aux17.x;
+            if (aux19.x < 200) P10.pos.x = aux19.x;
+
+            
             }
 
             if (kont1 > 20000 && kont1 <= 30000) {
 
-
              Olatua3(P21, P22, P23, P24, P25, P26);
+
+             /*aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+             aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+             aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+             aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+             aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+             aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+             aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+             aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+             aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+             aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+             aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+             aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);*/
+
+             if (aux41.x < 200) P21.pos.x = aux41.x;
+             if (aux43.x < 200) P22.pos.x = aux43.x;
+             if (aux45.x < 200) P23.pos.x = aux45.x;
+             if (aux47.x < 200) P24.pos.x = aux47.x;
+             if (aux49.x < 200) P25.pos.x = aux49.x;
+             if (aux51.x < 200) P26.pos.x = aux51.x;
 
             }
 
             if (kont1 > 30000 && kont1 <= 40000) {
 
-
                 Olatua4(P21, P22, P23, P24, P1,P2,P3,P4);
+
+                /*aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);*/
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+
 
             }
 
             if (kont1 > 40000 && kont1 <= 50000) {
 
-
                 Olatua5(P11, P12);
+
+                /*aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);*/
+
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
 
             }
 
             if (kont1 > 50000 && kont1 <= 60000) {
 
-
                 Olatua6(P1, P2, P3, P4, P5, P11, P12);
+
+               /* aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+                aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+                aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);*/
+
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
 
             }
 
             if (kont1 > 60000 && kont1 <= 70000) {
-
-
+             
                 Olatua7(P1, P2, P3, P4, P5,P6, P27, P28,P21,P22,P23,P24,P25,P26);
+              /*  aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+                aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+                aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+                aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+                aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+                aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+                aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+                aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);
+                aux53 = ERREALITATE_FISIKOA3_mugimendua(P27.pos);
+                aux54 = ERREALITATE_FISIKOA4_mugimendua(P27.pos);
+                aux55 = ERREALITATE_FISIKOA3_mugimendua(P28.pos);
+                aux56 = ERREALITATE_FISIKOA4_mugimendua(P28.pos);*/
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux11.x < 200) P6.pos.x = aux11.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
+                if (aux53.x < 200) P27.pos.x = aux53.x;
+                if (aux55.x < 200) P28.pos.x = aux55.x;
 
             }
 
             if (kont1 > 70000 && kont1 <= 80000) {
-
-
+                
                 Olatua8(P21, P22, P23, P24, P25, P26, P27,P28,P29,P30);
+
+               /* aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+                aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+                aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+                aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+                aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);
+                aux53 = ERREALITATE_FISIKOA3_mugimendua(P27.pos);
+                aux54 = ERREALITATE_FISIKOA4_mugimendua(P27.pos);
+                aux55 = ERREALITATE_FISIKOA3_mugimendua(P28.pos);
+                aux56 = ERREALITATE_FISIKOA4_mugimendua(P28.pos);
+                aux57 = ERREALITATE_FISIKOA3_mugimendua(P29.pos);
+                aux58 = ERREALITATE_FISIKOA4_mugimendua(P29.pos);
+                aux59 = ERREALITATE_FISIKOA3_mugimendua(P30.pos);
+                aux60 = ERREALITATE_FISIKOA4_mugimendua(P30.pos);*/
+
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
+                if (aux53.x < 200) P27.pos.x = aux53.x;
+                if (aux55.x < 200) P28.pos.x = aux55.x;
+                if (aux57.x < 200) P29.pos.x = aux57.x;
+                if (aux59.x < 200) P30.pos.x = aux59.x;
+
 
             }
 
             if (kont1 > 80000 && kont1 <= 90000) {
-
-
+                
                 Olatua9(P11, P12, P13, P14);
 
+               /* aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);
+                aux25 = ERREALITATE_FISIKOA5_mugimendua(P13.pos);
+                aux26 = ERREALITATE_FISIKOA6_mugimendua(P13.pos);
+                aux27 = ERREALITATE_FISIKOA5_mugimendua(P14.pos);
+                aux28 = ERREALITATE_FISIKOA6_mugimendua(P14.pos);*/
+
+
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux25.x < 200) P13.pos.x = aux25.x;
+                if (aux27.x < 200) P14.pos.x = aux27.x;
             }
 
             if (kont1 > 90000 && kont1 <= 100000) {
 
 
                 Olatua10(P1, P2, P3, P4, P5, P6, P11, P12, P13, P14, P21,P22,P23,P24,P25,P26);
+
+               /* aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+                aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+                aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+                aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);
+                aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);
+                aux25 = ERREALITATE_FISIKOA5_mugimendua(P13.pos);
+                aux26 = ERREALITATE_FISIKOA6_mugimendua(P13.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+                aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+                aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+                aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+                aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);*/
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux11.x < 200) P6.pos.x = aux11.x;
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux25.x < 200) P13.pos.x = aux25.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
 
             }
 
@@ -325,6 +653,51 @@ EGOERA jokatu1(void)
 
                 Olatua11(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30,P11,P12,P13,P14);
 
+               /* aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);
+                aux25 = ERREALITATE_FISIKOA5_mugimendua(P13.pos);
+                aux26 = ERREALITATE_FISIKOA6_mugimendua(P13.pos);
+                aux27 = ERREALITATE_FISIKOA5_mugimendua(P14.pos);
+                aux28 = ERREALITATE_FISIKOA6_mugimendua(P14.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+                aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+                aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+                aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+                aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);
+                aux53 = ERREALITATE_FISIKOA3_mugimendua(P27.pos);
+                aux54 = ERREALITATE_FISIKOA4_mugimendua(P27.pos);
+                aux55 = ERREALITATE_FISIKOA3_mugimendua(P28.pos);
+                aux56 = ERREALITATE_FISIKOA4_mugimendua(P28.pos);
+                aux57 = ERREALITATE_FISIKOA3_mugimendua(P29.pos);
+                aux58 = ERREALITATE_FISIKOA4_mugimendua(P29.pos);
+                aux59 = ERREALITATE_FISIKOA3_mugimendua(P30.pos);
+                aux60 = ERREALITATE_FISIKOA4_mugimendua(P30.pos);*/
+
+
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux25.x < 200) P13.pos.x = aux25.x;
+                if (aux27.x < 200) P14.pos.x = aux27.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
+                if (aux53.x < 200) P27.pos.x = aux53.x;
+                if (aux55.x < 200) P28.pos.x = aux55.x;
+                if (aux57.x < 200) P29.pos.x = aux57.x;
+                if (aux59.x < 200) P30.pos.x = aux59.x;
+
             }
 
             if (kont1 > 110000 && kont1 <= 120000) {
@@ -332,19 +705,242 @@ EGOERA jokatu1(void)
 
                 Olatua12(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, P11, P12, P1, P2, P3,P4, P5,P6, P7, P8, P9, P10);
 
+                /*aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+                aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+                aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+                aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);
+                aux13 = ERREALITATE_FISIKOA_mugimendua(P7.pos);
+                aux14 = ERREALITATE_FISIKOA2_mugimendua(P7.pos);
+                aux15 = ERREALITATE_FISIKOA_mugimendua(P8.pos);
+                aux16 = ERREALITATE_FISIKOA2_mugimendua(P8.pos);
+                aux17 = ERREALITATE_FISIKOA_mugimendua(P9.pos);
+                aux18 = ERREALITATE_FISIKOA2_mugimendua(P9.pos);
+                aux19 = ERREALITATE_FISIKOA_mugimendua(P10.pos);
+                aux20 = ERREALITATE_FISIKOA2_mugimendua(P10.pos);
+                aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+                aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+                aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+                aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+                aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);
+                aux53 = ERREALITATE_FISIKOA3_mugimendua(P27.pos);
+                aux54 = ERREALITATE_FISIKOA4_mugimendua(P27.pos);
+                aux55 = ERREALITATE_FISIKOA3_mugimendua(P28.pos);
+                aux56 = ERREALITATE_FISIKOA4_mugimendua(P28.pos);
+                aux57 = ERREALITATE_FISIKOA3_mugimendua(P29.pos);
+                aux58 = ERREALITATE_FISIKOA4_mugimendua(P29.pos);
+                aux59 = ERREALITATE_FISIKOA3_mugimendua(P30.pos);
+                aux60 = ERREALITATE_FISIKOA4_mugimendua(P30.pos);*/
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux11.x < 200) P6.pos.x = aux11.x;
+                if (aux13.x < 200) P7.pos.x = aux13.x;
+                if (aux15.x < 200) P8.pos.x = aux15.x;
+                if (aux17.x < 200) P9.pos.x = aux17.x;
+                if (aux19.x < 200) P10.pos.x = aux19.x;
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
+                if (aux53.x < 200) P27.pos.x = aux53.x;
+                if (aux55.x < 200) P28.pos.x = aux55.x;
+                if (aux57.x < 200) P29.pos.x = aux57.x;
+                if (aux59.x < 200) P30.pos.x = aux59.x;
+
+
             }
 
-            if (kont1 > 120000 && kont1 <= 130000) {
+            if (kont1 > 120000 && kont1 <= 131000) {
 
 
                 Olatua13(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, P11, P12, P13, P14, P15, P16, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
 
+                /*aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+                aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+                aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+                aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);
+                aux13 = ERREALITATE_FISIKOA_mugimendua(P7.pos);
+                aux14 = ERREALITATE_FISIKOA2_mugimendua(P7.pos);
+                aux15 = ERREALITATE_FISIKOA_mugimendua(P8.pos);
+                aux16 = ERREALITATE_FISIKOA2_mugimendua(P8.pos);
+                aux17 = ERREALITATE_FISIKOA_mugimendua(P9.pos);
+                aux18 = ERREALITATE_FISIKOA2_mugimendua(P9.pos);
+                aux19 = ERREALITATE_FISIKOA_mugimendua(P10.pos);
+                aux20 = ERREALITATE_FISIKOA2_mugimendua(P10.pos);
+                aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);
+                aux25 = ERREALITATE_FISIKOA5_mugimendua(P13.pos);
+                aux26 = ERREALITATE_FISIKOA6_mugimendua(P13.pos);
+                aux27 = ERREALITATE_FISIKOA5_mugimendua(P14.pos);
+                aux28 = ERREALITATE_FISIKOA6_mugimendua(P14.pos);
+                aux29 = ERREALITATE_FISIKOA5_mugimendua(P15.pos);
+                aux30 = ERREALITATE_FISIKOA6_mugimendua(P15.pos);
+                aux31 = ERREALITATE_FISIKOA5_mugimendua(P16.pos);
+                aux32 = ERREALITATE_FISIKOA6_mugimendua(P16.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);*/
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux11.x < 200) P6.pos.x = aux11.x;
+                if (aux13.x < 200) P7.pos.x = aux13.x;
+                if (aux15.x < 200) P8.pos.x = aux15.x;
+                if (aux17.x < 200) P9.pos.x = aux17.x;
+                if (aux19.x < 200) P10.pos.x = aux19.x;
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux25.x < 200) P13.pos.x = aux25.x;
+                if (aux27.x < 200) P14.pos.x = aux27.x;
+                if (aux29.x < 200) P15.pos.x = aux29.x;
+                if (aux31.x < 200) P16.pos.x = aux31.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+
             }
 
-            if (kont1 > 130000 && kont1 < 140000) {
+            if (kont1 > 131000 && kont1 < 142000) {
 
 
                 Olatua14(P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, P11, P12, P13, P14, P15, P16, P17, P18, P19, P20, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
+               /* aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
+                aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
+                aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
+                aux4 = ERREALITATE_FISIKOA2_mugimendua(P2.pos);
+                aux5 = ERREALITATE_FISIKOA_mugimendua(P3.pos);
+                aux6 = ERREALITATE_FISIKOA2_mugimendua(P3.pos);
+                aux7 = ERREALITATE_FISIKOA_mugimendua(P4.pos);
+                aux8 = ERREALITATE_FISIKOA2_mugimendua(P4.pos);
+                aux9 = ERREALITATE_FISIKOA_mugimendua(P5.pos);
+                aux10 = ERREALITATE_FISIKOA2_mugimendua(P5.pos);
+                aux11 = ERREALITATE_FISIKOA_mugimendua(P6.pos);
+                aux12 = ERREALITATE_FISIKOA2_mugimendua(P6.pos);
+                aux13 = ERREALITATE_FISIKOA_mugimendua(P7.pos);
+                aux14 = ERREALITATE_FISIKOA2_mugimendua(P7.pos);
+                aux15 = ERREALITATE_FISIKOA_mugimendua(P8.pos);
+                aux16 = ERREALITATE_FISIKOA2_mugimendua(P8.pos);
+                aux17 = ERREALITATE_FISIKOA_mugimendua(P9.pos);
+                aux18 = ERREALITATE_FISIKOA2_mugimendua(P9.pos);
+                aux19 = ERREALITATE_FISIKOA_mugimendua(P10.pos);
+                aux20 = ERREALITATE_FISIKOA2_mugimendua(P10.pos);
+                aux21 = ERREALITATE_FISIKOA5_mugimendua(P11.pos);
+                aux22 = ERREALITATE_FISIKOA6_mugimendua(P11.pos);
+                aux23 = ERREALITATE_FISIKOA5_mugimendua(P12.pos);
+                aux24 = ERREALITATE_FISIKOA6_mugimendua(P12.pos);
+                aux25 = ERREALITATE_FISIKOA5_mugimendua(P13.pos);
+                aux26 = ERREALITATE_FISIKOA6_mugimendua(P13.pos);
+                aux27 = ERREALITATE_FISIKOA5_mugimendua(P14.pos);
+                aux28 = ERREALITATE_FISIKOA6_mugimendua(P14.pos);
+                aux29 = ERREALITATE_FISIKOA5_mugimendua(P15.pos);
+                aux30 = ERREALITATE_FISIKOA6_mugimendua(P15.pos);
+                aux31 = ERREALITATE_FISIKOA5_mugimendua(P16.pos);
+                aux32 = ERREALITATE_FISIKOA6_mugimendua(P16.pos);
+                aux33 = ERREALITATE_FISIKOA5_mugimendua(P17.pos);
+                aux34 = ERREALITATE_FISIKOA6_mugimendua(P17.pos);
+                aux35 = ERREALITATE_FISIKOA5_mugimendua(P18.pos);
+                aux36 = ERREALITATE_FISIKOA6_mugimendua(P18.pos);
+                aux37 = ERREALITATE_FISIKOA5_mugimendua(P19.pos);
+                aux38 = ERREALITATE_FISIKOA6_mugimendua(P19.pos);
+                aux39 = ERREALITATE_FISIKOA5_mugimendua(P20.pos);
+                aux40 = ERREALITATE_FISIKOA6_mugimendua(P20.pos);
+                aux41 = ERREALITATE_FISIKOA3_mugimendua(P21.pos);
+                aux42 = ERREALITATE_FISIKOA4_mugimendua(P21.pos);
+                aux43 = ERREALITATE_FISIKOA3_mugimendua(P22.pos);
+                aux44 = ERREALITATE_FISIKOA4_mugimendua(P22.pos);
+                aux45 = ERREALITATE_FISIKOA3_mugimendua(P23.pos);
+                aux46 = ERREALITATE_FISIKOA4_mugimendua(P23.pos);
+                aux47 = ERREALITATE_FISIKOA3_mugimendua(P24.pos);
+                aux48 = ERREALITATE_FISIKOA4_mugimendua(P24.pos);
+                aux49 = ERREALITATE_FISIKOA3_mugimendua(P25.pos);
+                aux50 = ERREALITATE_FISIKOA4_mugimendua(P25.pos);
+                aux51 = ERREALITATE_FISIKOA3_mugimendua(P26.pos);
+                aux52 = ERREALITATE_FISIKOA4_mugimendua(P26.pos);
+                aux53 = ERREALITATE_FISIKOA3_mugimendua(P27.pos);
+                aux54 = ERREALITATE_FISIKOA4_mugimendua(P27.pos);
+                aux55 = ERREALITATE_FISIKOA3_mugimendua(P28.pos);
+                aux56 = ERREALITATE_FISIKOA4_mugimendua(P28.pos);
+                aux57 = ERREALITATE_FISIKOA3_mugimendua(P29.pos);
+                aux58 = ERREALITATE_FISIKOA4_mugimendua(P29.pos);
+                aux59 = ERREALITATE_FISIKOA3_mugimendua(P30.pos);
+                aux60 = ERREALITATE_FISIKOA4_mugimendua(P30.pos);*/
+
+                if (aux.x < 200) P1.pos.x = aux.x;
+                if (aux3.x < 200) P2.pos.x = aux3.x;
+                if (aux5.x < 200) P3.pos.x = aux5.x;
+                if (aux7.x < 200) P4.pos.x = aux7.x;
+                if (aux9.x < 200) P5.pos.x = aux9.x;
+                if (aux11.x < 200) P6.pos.x = aux11.x;
+                if (aux13.x < 200) P7.pos.x = aux13.x;
+                if (aux15.x < 200) P8.pos.x = aux15.x;
+                if (aux17.x < 200) P9.pos.x = aux17.x;
+                if (aux19.x < 200) P10.pos.x = aux19.x;
+                if (aux21.x < 200) P11.pos.x = aux21.x;
+                if (aux23.x < 200) P12.pos.x = aux23.x;
+                if (aux25.x < 200) P13.pos.x = aux25.x;
+                if (aux27.x < 200) P14.pos.x = aux27.x;
+                if (aux29.x < 200) P15.pos.x = aux29.x;
+                if (aux31.x < 200) P16.pos.x = aux31.x;
+                if (aux33.x < 200) P17.pos.x = aux33.x;
+                if (aux35.x < 200) P18.pos.x = aux35.x;
+                if (aux37.x < 200) P19.pos.x = aux37.x;
+                if (aux39.x < 200) P20.pos.x = aux39.x;
+                if (aux41.x < 200) P21.pos.x = aux41.x;
+                if (aux43.x < 200) P22.pos.x = aux43.x;
+                if (aux45.x < 200) P23.pos.x = aux45.x;
+                if (aux47.x < 200) P24.pos.x = aux47.x;
+                if (aux49.x < 200) P25.pos.x = aux49.x;
+                if (aux51.x < 200) P26.pos.x = aux51.x;
+                if (aux53.x < 200) P27.pos.x = aux53.x;
+                if (aux55.x < 200) P28.pos.x = aux55.x;
+                if (aux57.x < 200) P29.pos.x = aux57.x;
+                if (aux59.x < 200) P30.pos.x = aux59.x;
+
 
             }
 
@@ -390,9 +986,15 @@ EGOERA jokatu1(void)
              irudiaMugitu(P29.id, jokalaria.pos.x, jokalaria.pos.y);
              irudiaMugitu(P30.id, jokalaria.pos.x, jokalaria.pos.y);*/
             irudiakMarraztu();
+
+            kontagailua(P8.pos.x, 100, 100);
+            kontagailua(P9.pos.x, 200, 100);
+            kontagailua(P10.pos.x, 300, 100);
+            kontagailua(kont1, 400, 100);
+
             pantailaBerriztu();
             ebentu = ebentuaJasoGertatuBada();
-            if (ebentu == SAGU_BOTOIA_ESKUMA || ebentu == SAGU_BOTOIA_EZKERRA)
+            if (ebentu == TECLA_RETURN)
             {
                 mugitu = 1; //true
             }
@@ -400,6 +1002,7 @@ EGOERA jokatu1(void)
                 zirkulua.pos.y = 0 + 30;
             }
             if (mugitu) {
+                kont1++;
                 aux = ERREALITATE_FISIKOA_mugimendua(P1.pos);
                 aux2 = ERREALITATE_FISIKOA2_mugimendua(P1.pos);
                 aux3 = ERREALITATE_FISIKOA_mugimendua(P2.pos);
@@ -461,7 +1064,7 @@ EGOERA jokatu1(void)
                 aux59 = ERREALITATE_FISIKOA3_mugimendua(P30.pos);
                 aux60 = ERREALITATE_FISIKOA4_mugimendua(P30.pos);
 
-                if (aux.x < 200) P1.pos.x = aux.x;
+               /* if (aux.x < 200) P1.pos.x = aux.x;
                 if (aux3.x < 200) P2.pos.x = aux3.x;
                 if (aux5.x < 200) P3.pos.x = aux5.x;
                 if (aux7.x < 200) P4.pos.x = aux7.x;
@@ -490,7 +1093,7 @@ EGOERA jokatu1(void)
                 if (aux53.x < 200) P27.pos.x = aux53.x;
                 if (aux55.x < 200) P28.pos.x = aux55.x;
                 if (aux57.x < 200) P29.pos.x = aux57.x;
-                if (aux59.x < 200) P30.pos.x = aux59.x;
+                if (aux59.x < 200) P30.pos.x = aux59.x;*/
 
                 if (aux.x == 200) P1.pos.y = aux.y;
                 if (aux3.x == 200) P2.pos.y = aux3.y;
@@ -679,97 +1282,97 @@ EGOERA jokatu1(void)
                 if (aux57.x >= 920 && aux57.x < 1109 && aux57.y < 300) P29.pos.x = aux57.x;
                 if (aux59.x >= 920 && aux59.x < 1109 && aux59.y < 300) P30.pos.x = aux59.x;
 
-                if (kont1 % 10000 == 0)
+                if ((kont1 % 10000 == 0  && kont1 != 140000 && kont1 != 130000) || kont1  == 142000 || kont1 == 131000)
                 {
 
-                    P1.pos.x = -10;
+                    P1.pos.x = -30;
                     P1.pos.y = 480;
 
-                    P2.pos.x = -40;
+                    P2.pos.x = -60;
                     P2.pos.y = 480;
 
-                    P3.pos.x = -70;
+                    P3.pos.x = -90;
                     P3.pos.y = 480;
 
-                    P4.pos.x = -100;
+                    P4.pos.x = -120;
                     P4.pos.y = 480;
 
-                    P5.pos.x = -130;
+                    P5.pos.x = -150;
                     P5.pos.y = 480;
 
-                    P6.pos.x = -160;
+                    P6.pos.x = -180;
                     P6.pos.y = 480;
 
-                    P7.pos.x = -190;
+                    P7.pos.x = -210;
                     P7.pos.y = 480;
 
-                    P8.pos.x = -220;
+                    P8.pos.x = -240;
                     P8.pos.y = 480;
 
-                    P9.pos.x = -250;
+                    P9.pos.x = -270;
                     P9.pos.y = 480;
 
-                    P10.pos.x = -280;
+                    P10.pos.x = -300;
                     P10.pos.y = 480;
 
-                    P11.pos.x = -310;
+                    P11.pos.x = -330;
                     P11.pos.y = 480;
 
-                    P12.pos.x = -340;
+                    P12.pos.x = -360;
                     P12.pos.y = 480;
 
-                    P13.pos.x = -370;
+                    P13.pos.x = -390;
                     P13.pos.y = 480;
 
-                    P14.pos.x = -400;
+                    P14.pos.x = -420;
                     P14.pos.y = 480;
 
-                    P15.pos.x = -430;
+                    P15.pos.x = -450;
                     P15.pos.y = 480;
 
-                    P16.pos.x = -460;
+                    P16.pos.x = -480;
                     P16.pos.y = 480;
 
-                    P17.pos.x = -490;
+                    P17.pos.x = -510;
                     P17.pos.y = 480;
 
-                    P18.pos.x = -520;
+                    P18.pos.x = -540;
                     P18.pos.y = 480;
 
-                    P19.pos.x = -550;
+                    P19.pos.x = -570;
                     P19.pos.y = 480;
 
-                    P20.pos.x = -580;
+                    P20.pos.x = -600;
                     P20.pos.y = 480;
 
-                    P21.pos.x = -610;
+                    P21.pos.x = -630;
                     P21.pos.y = 480;
 
-                    P22.pos.x = -640;
+                    P22.pos.x = -660;
                     P22.pos.y = 480;
 
-                    P23.pos.x = -670;
+                    P23.pos.x = -690;
                     P23.pos.y = 480;
 
-                    P24.pos.x = -540;
+                    P24.pos.x = -720;
                     P24.pos.y = 480;
 
-                    P25.pos.x = -730;
+                    P25.pos.x = -750;
                     P25.pos.y = 480;
 
-                    P26.pos.x = -760;
+                    P26.pos.x = -780;
                     P26.pos.y = 480;
 
-                    P27.pos.x = -790;
+                    P27.pos.x = -810;
                     P27.pos.y = 480;
 
-                    P28.pos.x = -820;
+                    P28.pos.x = -840;
                     P28.pos.y = 480;
 
-                    P29.pos.x = -850;
+                    P29.pos.x = -870;
                     P29.pos.y = 480;
 
-                    P30.pos.x = -880;
+                    P30.pos.x = -900;
                     P30.pos.y = 480;
                 
                 
@@ -778,9 +1381,9 @@ EGOERA jokatu1(void)
             
                
             }
-            int pos[30];
+            
 
-            egoera = JOKOA_egoera(etsaienPosizioaHasieratu(pos), zirkulua);
+            egoera = JOKOA_egoera(fondoa2, zirkulua);
         } while (egoera == JOLASTEN);
         irudiaKendu(P1.id);
         irudiaKendu(fondoa2.id);
@@ -792,7 +1395,7 @@ EGOERA jokatu1(void)
     
 }
 
-EGOERA jokatu2(void)
+/*EGOERA jokatu2(void)
 {
     int mugitu = 0; //boolean
     EGOERA  egoera = JOLASTEN;
@@ -843,9 +1446,9 @@ EGOERA jokatu2(void)
     pantailaGarbitu();
     pantailaBerriztu();
     return egoera;
-}
+}*/
 
-EGOERA JOKOA_egoera(int pos[]) {
+EGOERA JOKOA_egoera(JOKO_ELEMENTUA jokalaria, JOKO_ELEMENTUA oztopoa) {
 
   EGOERA  ret = JOLASTEN;
   if (jokalaria.pos.x >oztopoa.pos.x - 20 && jokalaria.pos.x <oztopoa.pos.x + 20 && jokalaria.pos.y >oztopoa.pos.y - 20 && jokalaria.pos.y <oztopoa.pos.y + 20) {
@@ -968,7 +1571,7 @@ void  jokoAmaierakoa1(EGOERA egoera)
     irudiaKendu(id);
 }
 
-void  jokoAmaierakoa2(EGOERA egoera)
+/*void  jokoAmaierakoa2(EGOERA egoera)
 {
     int ebentu = 0, id = -1;
     int idAudioGame;
@@ -999,7 +1602,7 @@ void  jokoAmaierakoa2(EGOERA egoera)
     } while ((ebentu != TECLA_RETURN));
     audioTerminate();
     irudiaKendu(id);
-}
+}*/
 
 
 
@@ -1032,4 +1635,21 @@ int FONDOA_irudiaBistaratu() {
     return fondo;
 }
 
+void kontagailua(int kont, int Posx, int Posy)
 
+{
+    int i = kont;
+    char str1[50];
+    sprintf(str1, "%d", i);
+    textuaIdatzi(Posx, Posy, str1);
+}
+
+POSIZIOA inicializarAuxiliares(void)
+{
+    POSIZIOA aux;
+
+    aux.x = 0;
+    aux.y = 0;
+
+    return aux;
+}
