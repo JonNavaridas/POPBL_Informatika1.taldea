@@ -25,7 +25,7 @@ void funtzioa()
 {
     struct Torres torres;
     struct Irudia irudia;
-    int dirua= 1000, irten = 0;
+    int dirua= 50000, irten = 0;
 
     torres.torre1 = 0;
     torres.torre2 = 0;
@@ -54,12 +54,11 @@ void funtzioa()
     }
 }
 
-int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
+int funtzioa1(int dirua, struct Torres* torres, struct Irudia* irudia)
 {
-    int irten = 0, ebentu;
+    int irten = 0, ebentu, T = 0;
 
     int b[20];
-
 
     while(irten == 0)
     {
@@ -73,11 +72,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
             {
                 // menu1 elegitzeko
                     //1
-                    b[0] = 13;
-                    b[1] = 392;
+                b[0] = 60;
+                b[1] = 342;
                     //2
-                    b[2] = 60;
-                    b[3] = 342;
+                b[2] = 13;
+                b[3] = 392;
                     //3
                     b[4] = 108;
                     b[5] = 392;
@@ -87,8 +86,8 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
 
                  // menu2 elegitzeko
                     //saldu
-                    b[8] = 60;
-                    b[9] = 342;
+                   b[8]= 13;
+                    b[9] = 392;
                     //mejoratu
                     b[10] = 108;
                     b[11] = 392;
@@ -105,8 +104,13 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                     b[16] = 29;
                     b[17] = 339;
 
-                (*torres).torre1 = funtzioa2(torres->torre1, dirua, irudia->id1, b);
-                (*irudia).id1 = b[19];
+                T = funtzioa2(torres->torre1, dirua, irudia->id1, b);
+                if ((*torres).torre1 == 0)
+                    (*irudia).id1 = b[19];
+
+                (*torres).torre1 = T;
+
+
                 irten = 1;
             }
             else if ((pos.x > 148) && (pos.x < 197) && (pos.y > 577) && (pos.y < 625))
@@ -127,8 +131,8 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
 
                 // menu2 elegitzeko
                    //saldu
-                b[8] = 60;
-                b[9] = 342;
+                b[8] = 108;
+                b[9] = 582;
                 //mejoratu
                 b[10] = 204;
                 b[11] = 582;
@@ -145,8 +149,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 125;
                 b[17] = 534;
 
-                (*torres).torre2 = funtzioa2(torres->torre2, dirua, irudia->id2, b);
-                (*irudia).id2 = b[19];
+                T = funtzioa2(torres->torre2, dirua, irudia->id2, b);
+                if ((*torres).torre2 == 0)
+                    (*irudia).id2 = b[19];
+
+                (*torres).torre2 = T;
 
                 irten = 1;
             }
@@ -186,9 +193,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 171;
                 b[17] = 7;
 
-                (*torres).torre3 = funtzioa2(torres->torre3, dirua, irudia->id3, b);
-                (*irudia).id3 = b[19];
+                T = funtzioa2(torres->torre3, dirua, irudia->id3, b);
+                if ((*torres).torre3 == 0)
+                    (*irudia).id3 =b[19];
 
+                (*torres).torre3 = T;
                 irten = 1;
             }
             else  if ((pos.x > 247) && (pos.x < 293) && (pos.y > 244) && (pos.y < 290))
@@ -228,9 +237,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 220;
                 b[17] = 201;
  
-                (*torres).torre4 = funtzioa2(torres->torre4, dirua, irudia->id4, b);
-                (*irudia).id4 = b[19];
+                T = funtzioa2(torres->torre4, dirua, irudia->id4, b);
+                if ((*torres).torre4 == 0)
+                    (*irudia).id4 = b[19];
 
+                (*torres).torre4 = T;
                 irten = 1;
             }
             else if ((pos.x > 291) && (pos.x < 338) && (pos.y > 54) && (pos.y < 104))
@@ -269,8 +280,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 265;
                 b[17] = 5;
 
-                (*torres).torre5 = funtzioa2(torres->torre5, dirua, irudia->id5, b);
-                (*irudia).id5 = b[19];
+               T= funtzioa2(torres->torre5, dirua, irudia->id5, b);
+                if ((*torres).torre5 == 0)
+                    (*irudia).id5 = b[19];
+
+                (*torres).torre5 = T;
 
                 irten = 1;
             }
@@ -292,8 +306,8 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
 
                 // menu2 elegitzeko
                    //saldu
-                b[8] = 60;
-                b[9] = 342;
+                b[8] = 536;
+                b[9] = 254;
                 //mejoratu
                 b[10] = 631;
                 b[11] = 252;
@@ -310,9 +324,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 551;
                 b[17] = 203;
      
-                (*torres).torre6 = funtzioa2(torres->torre6, dirua, irudia->id6, b);
-                (*irudia).id6 = b[19];
+                T = funtzioa2(torres->torre6, dirua, irudia->id6, b);
+                if ((*torres).torre6 == 0)
+                    (*irudia).id6 = b[19];
 
+                (*torres).torre6 = T;
                 irten = 1;
             }
             else if ((pos.x > 723) && (pos.x < 772) && (pos.y > 435) && (pos.y < 484))
@@ -351,9 +367,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 694;
                 b[17] = 388;
 
-                (*torres).torre7 = funtzioa2(torres->torre7, dirua, irudia->id7, b);
-                (*irudia).id7 = b[19];
+                T = funtzioa2(torres->torre7, dirua, irudia->id7, b);
+                if ((*torres).torre7 == 0)
+                    (*irudia).id7 = b[19];
 
+                (*torres).torre7 = T;
                 irten = 1;
             }
             else if ((pos.x > 909) && (pos.x < 958) && (pos.y > 243) && (pos.y < 292))
@@ -392,9 +410,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 883;
                 b[17] = 197;
 
-                (*torres).torre8 = funtzioa2(torres->torre8, dirua, irudia->id8, b);
-                (*irudia).id8 = b[19];
+                T= funtzioa2(torres->torre8, dirua, irudia->id8, b);
+                if ((*torres).torre8 == 0)
+                    (*irudia).id8 = b[19];
 
+                (*torres).torre8 = T;
                 irten = 1;
             }
             else if ((pos.x > 960) && (pos.x < 1008) && (pos.y > 434) && (pos.y < 483))
@@ -433,9 +453,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 935;
                 b[17] = 392;
 
-                (*torres).torre9 = funtzioa2(torres->torre9, dirua, irudia->id9, b);
-                (*irudia).id9 = b[19];
+                T = funtzioa2(torres->torre9, dirua, irudia->id9, b);
+                if ((*torres).torre9 == 0)
+                    (*irudia).id9 = b[19];
 
+                (*torres).torre9 = T;
                 irten = 1;
             }
             else if ((pos.x > 1005) && (pos.x < 1054) && (pos.y > 244) && (pos.y < 293))
@@ -474,9 +496,11 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
                 b[16] = 980;
                 b[17] = 200;
 
-                (*torres).torre10 = funtzioa2(torres->torre10, dirua, irudia->id10, b);
-                (*irudia).id10 = b[19];
+                T= funtzioa2(torres->torre10, dirua, (*irudia).id10, b);
+                if ((*torres).torre10 == 0)
+                    (*irudia).id10 = b[19];
 
+                (*torres).torre10 = T;
                 irten = 1;
             }
         }
@@ -487,7 +511,6 @@ int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
 int funtzioa2(int torres, int dirua, int irudia, int b[])
 {
     struct Irudiamenus irudiamenus;
-
     int ebentu, irten = 0;
 
     if (torres == 0)
@@ -520,7 +543,7 @@ int funtzioa2(int torres, int dirua, int irudia, int b[])
             if ((pos.x > b[10]) && (pos.x < b[10] + 40) && (pos.y > b[11]) && (pos.y < b[11] + 40))
             {
 
-              torres = mejorar(torres, dirua, b);
+              torres = mejorar(torres, dirua);
 
                 irten = 1;
             }
@@ -564,7 +587,6 @@ int comprar(int dirua, int b[])
                 {
                     textuaGaitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    Sleep(2000);
                 }
                 irten = 1;
             }
@@ -579,7 +601,6 @@ int comprar(int dirua, int b[])
                 else {
                     textuaGaitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    Sleep(2000);
                 }
 
                 irten = 1;
@@ -597,7 +618,6 @@ int comprar(int dirua, int b[])
                 {
                     textuaGaitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    Sleep(2000);
                 }
                 irten = 1;
             }
@@ -613,7 +633,6 @@ int comprar(int dirua, int b[])
                 {
                     textuaGaitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    Sleep(2000);
                 }
                 irten = 1;          
             }
@@ -675,7 +694,7 @@ int mejorar(int torre, int dirua)
                 default:
                     break;
                 }
-            return torre;
+            return dirua;
 }
 
 int vender(int torre, int dirua, int irudia)
@@ -739,10 +758,4 @@ void ponerimagen(int b[], int torre)
     default:
         break;
     }
-}
-
-void borrarimagen(int id)
-{
-    irudiaKendu(id);
-    pantailaBerriztu();
 }

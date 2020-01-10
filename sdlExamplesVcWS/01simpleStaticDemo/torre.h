@@ -15,6 +15,5 @@ int mejorar(int torre, int dirua);
 int vender(int torre, int dirua, int irudia);
 
 void ponerimagen(int b[], int torre);
-void borrarimagen(int id);
 
 #endif
