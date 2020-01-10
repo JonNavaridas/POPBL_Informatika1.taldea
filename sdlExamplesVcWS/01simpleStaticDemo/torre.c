@@ -4,21 +4,62 @@
 #include "soinua.h"
 #include "text.h"
 #include "imagen.h"
+#include <stdio.h> 
+#include <Windows.h>
 
-struct torres { int torres, torre1, torre2, torre3, torre4, torre5, torre6, torre7, torre8, torre9, torre10; }torres;
 
+struct Torres { int torre1, torre2, torre3, torre4, torre5, torre6, torre7, torre8, torre9, torre10; };
 
-struct irudia
+struct Irudia
 {
-    int irudia, idmenu1, idmenu2, idmenu3, idmenu4, id1, id2, id3, id4, id5, id6, id7, id8, id9, id10;
+    int id1, id2, id3, id4, id5, id6, id7, id8, id9, id10;
 };
-struct irudia irudia;
+struct Irudiamenus
+{
+    int  idmenu1, idmenu2, idmenu3, idmenu4;
+};
 
 POSIZIOA pos;
 
-int torre(int a)
+void funtzioa()
 {
-    int c = 0, b = 0, irten = 0, ebentu;
+    struct Torres torres;
+    struct Irudia irudia;
+    int dirua= 1000, irten = 0;
+
+    torres.torre1 = 0;
+    torres.torre2 = 0;
+    torres.torre3 = 0;
+    torres.torre4 = 0;
+    torres.torre5 = 0;
+    torres.torre6 = 0;
+    torres.torre7 = 0;
+    torres.torre8 = 0;
+    torres.torre9 = 0;
+    torres.torre10 = 0;
+    irudia.id1 = 0;
+    irudia.id2 = 0;
+    irudia.id3 = 0;
+    irudia.id4 = 0;
+    irudia.id5 = 0;
+    irudia.id6 = 0;
+    irudia.id7 = 0;
+    irudia.id8 = 0;
+    irudia.id9 = 0;
+    irudia.id10 = 0;
+
+    while (irten == 0)
+    {
+        dirua = funtzioa1(dirua, &torres, &irudia);
+    }
+}
+
+int funtzioa1(int dirua,struct Torres *torres,struct Irudia *irudia)
+{
+    int irten = 0, ebentu;
+
+    int b[20];
+
 
     while(irten == 0)
     {
@@ -28,444 +69,680 @@ int torre(int a)
         {
             pos = saguarenPosizioa();
 
-            if ((pos.x > 54) && (pos.x < 101) && (pos.y > 370) && (pos.y < 412))
+            if ((pos.x > 54) && (pos.x < 101) && (pos.y > 380) && (pos.y < 427))
             {
-                b = 23;
-                c = 339;
+                // menu1 elegitzeko
+                    //1
+                    b[0] = 13;
+                    b[1] = 392;
+                    //2
+                    b[2] = 60;
+                    b[3] = 342;
+                    //3
+                    b[4] = 108;
+                    b[5] = 392;
+                    //4
+                    b[6] = 60;
+                    b[7] = 440;
 
-                torres.torre1 = torre1(torres.torre1, a, b, c, irudia.id1);
-                irudia.id1 = irudia.irudia;
-                irudia.irudia = 0;
+                 // menu2 elegitzeko
+                    //saldu
+                    b[8] = 60;
+                    b[9] = 342;
+                    //mejoratu
+                    b[10] = 108;
+                    b[11] = 392;
 
+                 //menu1 X,Y
+                    b[12] = -6;
+                    b[13] = 328;
+
+                 //menu2 X,Y
+                    b[14] = 9;
+                    b[15] = 344;
+
+                    //torre X,Y
+                    b[16] = 29;
+                    b[17] = 339;
+
+                (*torres).torre1 = funtzioa2(torres->torre1, dirua, irudia->id1, b);
+                (*irudia).id1 = b[19];
                 irten = 1;
             }
             else if ((pos.x > 148) && (pos.x < 197) && (pos.y > 577) && (pos.y < 625))
             {
-                b = 122;
-                c = 534;
+                // menu1 elegitzeko
+                    //1
+                b[0] = 156;
+                b[1] = 532;
+                //2
+                b[2] = 108;
+                b[3] = 582;
+                //3
+                b[4] = 204;
+                b[5] = 582;
+                //4
+                b[6] = 157;
+                b[7] = 629;
 
-                torres.torre2 = torre1(torres.torre2, a, b, c, irudia.id2);
-                irudia.id2 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 60;
+                b[9] = 342;
+                //mejoratu
+                b[10] = 204;
+                b[11] = 582;
+
+                //menu1 X,Y
+                b[12] = 92;
+                b[13] = 518;
+
+                //menu2 X,Y
+                b[14] = 101;
+                b[15] = 535;
+
+                //torre X,Y
+                b[16] = 125;
+                b[17] = 534;
+
+                (*torres).torre2 = funtzioa2(torres->torre2, dirua, irudia->id2, b);
+                (*irudia).id2 = b[19];
 
                 irten = 1;
             }
             else if ((pos.x > 197) && (pos.x < 244) && (pos.y > 54) && (pos.y < 104))
             {
-                b = 171;
-                c = 7;
+                // menu1 elegitzeko
+                    //1
+                b[0] = 202;
+                b[1] = 13;
+                //2
+                b[2] = 155;
+                b[3] = 62;
+                //3
+                b[4] = 250;
+                b[5] = 60;
+                //4
+                b[6] = 202;
+                b[7] = 110;
 
-                torres.torre3 = torre1(torres.torre3, a, b, c, irudia.id3);
-                irudia.id3 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 155;
+                b[9] = 62;
+                //mejoratu
+                b[10] = 250;
+                b[11] = 60;
+
+                //menu1 X,Y
+                b[12] = 138;
+                b[13] = -6;
+
+                //menu2 X,Y
+                b[14] = 150;
+                b[15] = 9;
+
+                //torre X,Y
+                b[16] = 171;
+                b[17] = 7;
+
+                (*torres).torre3 = funtzioa2(torres->torre3, dirua, irudia->id3, b);
+                (*irudia).id3 = b[19];
 
                 irten = 1;
             }
             else  if ((pos.x > 247) && (pos.x < 293) && (pos.y > 244) && (pos.y < 290))
             {
-                b = 220;
-                c = 201;
+                // menu1 elegitzeko
+                    //1
+                    b[0] = 250;
+                    b[1] = 200;
+                //2
 
-                torres.torre4 = torre1(torres.torre4, a, b, c, irudia.id4);
-                irudia.id4 = irudia.irudia;
-                irudia.irudia = 0;
+                    b[2] = 202;
+                    b[3] = 248;
+                //3
+                    b[4] = 297;
+                    b[5] = 249;
+                //4
+                    b[6] = 250;
+                    b[7] = 295;
+
+                // menu2 elegitzeko
+                   //saldu
+                    b[8] = 202;
+                    b[9] = 248;
+                //mejoratu
+                    b[10] = 297;
+                    b[11] = 249;
+
+                //menu1 X,Y
+                b[12] = 190;
+                b[13] = 186;
+
+                //menu2 X,Y
+                b[14] = 200;
+                b[15] = 203;
+
+                //torre X,Y
+                b[16] = 220;
+                b[17] = 201;
+ 
+                (*torres).torre4 = funtzioa2(torres->torre4, dirua, irudia->id4, b);
+                (*irudia).id4 = b[19];
 
                 irten = 1;
             }
             else if ((pos.x > 291) && (pos.x < 338) && (pos.y > 54) && (pos.y < 104))
-            {
-                b = 265;
-                c = 5;
+            {            
+                // menu1 elegitzeko
+                  //1
+                b[0] = 297;
+                b[1] = 10;
+                //2
+                b[2] = 250;
+                b[3] = 60;
+                //3
+                b[4] = 245;
+                b[5] = 60;
+                //4
+                b[6] = 292;
+                b[7] = 108;
 
-                torres.torre5 = torre1(torres.torre5, a, b, c, irudia.id5);
-                irudia.id5 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 250;
+                b[9] = 60;
+                //mejoratu
+                b[10] = 245;
+                b[11] = 60;
+
+                //menu1 X,Y
+                b[12] = 228;
+                b[13] = -6;
+
+                //menu2 X,Y
+                b[14] = 246;
+                b[15] = 9;
+
+                //torre X,Y
+                b[16] = 265;
+                b[17] = 5;
+
+                (*torres).torre5 = funtzioa2(torres->torre5, dirua, irudia->id5, b);
+                (*irudia).id5 = b[19];
 
                 irten = 1;
             }
             else if ((pos.x > 577) && (pos.x < 626) && (pos.y > 230) && (pos.y < 279))
-            {
-                b = 551;
-                c = 203;
+            {          
+                // menu1 elegitzeko
+             //1
+                b[0] = 583;
+                b[1] = 203;
+                //2
+                b[2] = 536;
+                b[3] = 254;
+                //3
+                b[4] = 631;
+                b[5] = 252;
+                //4
+                b[6] = 585;
+                b[7] = 300;
 
-                torres.torre6 = torre1(torres.torre6, a, b, c, irudia.id6);
-                irudia.id6 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 60;
+                b[9] = 342;
+                //mejoratu
+                b[10] = 631;
+                b[11] = 252;
+
+                //menu1 X,Y
+                b[12] = 512;
+                b[13] = 186;
+
+                //menu2 X,Y
+                b[14] = 528;
+                b[15] = 200;
+
+                //torre X,Y
+                b[16] = 551;
+                b[17] = 203;
+     
+                (*torres).torre6 = funtzioa2(torres->torre6, dirua, irudia->id6, b);
+                (*irudia).id6 = b[19];
 
                 irten = 1;
             }
-            else if ((pos.x > 723) && (pos.x < 772) && (pos.y > 435) && (pos.y < 484)
-            {
-                b = 694;
-                c = 388;
+            else if ((pos.x > 723) && (pos.x < 772) && (pos.y > 435) && (pos.y < 484))
+            {        
+                // menu1 elegitzeko
+         //1
+                b[0] = 776;
+                b[1] = 392;
+                //2
+                b[2] = 678;
+                b[3] = 441;
+                //3
+                b[4] = 774;
+                b[5] = 440;
+                //4
+                b[6] = 726;
+                b[7] = 487;
 
-                torres.torre7 = torre1(torres.torre7, a, b, c, irudia.id7);
-                irudia.id7 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 678;
+                b[9] = 441;
+                //mejoratu
+                b[10] = 774;
+                b[11] = 440;
+
+                //menu1 X,Y
+                b[12] = 664;
+                b[13] = 374;
+
+                //menu2 X,Y
+                b[14] = 675;
+                b[15] = 390;
+
+                //torre X,Y
+                b[16] = 694;
+                b[17] = 388;
+
+                (*torres).torre7 = funtzioa2(torres->torre7, dirua, irudia->id7, b);
+                (*irudia).id7 = b[19];
+
                 irten = 1;
             }
             else if ((pos.x > 909) && (pos.x < 958) && (pos.y > 243) && (pos.y < 292))
-            {
-                b = 883;
-                c = 197;
+            { 
+                // menu1 elegitzeko
+                //1
+                b[0] = 917;
+                b[1] = 202;
+                //2
+                b[2] = 870;
+                b[3] = 250;
+                //3
+                b[4] = 965;
+                b[5] = 250;
+                //4
+                b[6] = 918;
+                b[7] = 297;
 
-                torres.torre8 = torre1(torres.torre8, a, b, c, irudia.id8);
-                irudia.id8 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 870;
+                b[9] = 250;
+                //mejoratu
+                b[10] = 965;
+                b[11] = 250;
+
+                //menu1 X,Y
+                b[12] = 853;
+                b[13] = 182;
+
+                //menu2 X,Y
+                b[14] = 863;
+                b[15] = 202;
+
+                //torre X,Y
+                b[16] = 883;
+                b[17] = 197;
+
+                (*torres).torre8 = funtzioa2(torres->torre8, dirua, irudia->id8, b);
+                (*irudia).id8 = b[19];
 
                 irten = 1;
             }
-            else if ((pos.x > 960) && (pos.x < 909) && (pos.y > 434) && (pos.y < 483))
+            else if ((pos.x > 960) && (pos.x < 1008) && (pos.y > 434) && (pos.y < 483))
             {
-                b = 935;
-                c = 392;
+                // menu1 elegitzeko
+ //1
+                b[0] = 964;
+                b[1] = 391;
+                //2
+                b[2] = 917;
+                b[3] = 442;
+                //3
+                b[4] = 1013;
+                b[5] = 441;
+                //4
+                b[6] = 966;
+                b[7] = 488;
 
-                torres.torre9 = torre1(torres.torre9, a, b, c, irudia.id9);
-                irudia.id9 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 917;
+                b[9] = 442;
+                //mejoratu
+                b[10] = 1013;
+                b[11] = 441;
+
+                //menu1 X,Y
+                b[12] = 900;
+                b[13] = 375;
+
+                //menu2 X,Y
+                b[14] = 914;
+                b[15] = 391;
+
+                //torre X,Y
+                b[16] = 935;
+                b[17] = 392;
+
+                (*torres).torre9 = funtzioa2(torres->torre9, dirua, irudia->id9, b);
+                (*irudia).id9 = b[19];
 
                 irten = 1;
             }
             else if ((pos.x > 1005) && (pos.x < 1054) && (pos.y > 244) && (pos.y < 293))
             {
-                b = 980;
-                c = 196;
+                // menu1 elegitzeko
+//1
+                b[0] = 1012;
+                b[1] = 202;
+                //2
+                b[2] = 965;
+                b[3] = 252;
+                //3
+                b[4] = 1061;
+                b[5] = 253;
+                //4
+                b[6] = 1012;
+                b[7] = 300;
 
-                torres.torre10 = torre1(torres.torre10, a, b, c, irudia.id10);
-                irudia.id10 = irudia.irudia;
-                irudia.irudia = 0;
+                // menu2 elegitzeko
+                   //saldu
+                b[8] = 965;
+                b[9] = 252;
+                //mejoratu
+                b[10] = 1061;
+                b[11] = 253;
+
+                //menu1 X,Y
+                b[12] = 948;
+                b[13] = 182;
+
+                //menu2 X,Y
+                b[14] = 960;
+                b[15] = 200;
+
+                //torre X,Y
+                b[16] = 980;
+                b[17] = 200;
+
+                (*torres).torre10 = funtzioa2(torres->torre10, dirua, irudia->id10, b);
+                (*irudia).id10 = b[19];
 
                 irten = 1;
             }
-           
         }
     }
-
-    return a;
+    return dirua;
 }
 
-int torre1(int torre, int a, int b, int c, int id)
+int funtzioa2(int torres, int dirua, int irudia, int b[])
 {
-    int ebentu, irten = 0, saldu = 0, mejoratu = 0;
+    struct Irudiamenus irudiamenus;
 
-    if (torre == 0)
+    int ebentu, irten = 0;
+
+    if (torres == 0)
     {
-        irudia.idmenu1 = irudiaKargatu(".\\img\\menus\\menu1.bmp");
-        irudiaMugitu(irudia.idmenu1, 290, 341);
+        irudiamenus.idmenu1 = irudiaKargatu(".\\img\\menus\\menu1.bmp");
+        irudiaMugitu(irudiamenus.idmenu1, b[12], b[13]);
         irudiakMarraztu();
         pantailaBerriztu();
-        irudiaKendu(irudia.idmenu1);
+        irudiaKendu(irudiamenus.idmenu1);
      
-        torre = comprar(a, b, c, id);
+        torres = comprar(dirua, b);
         irudiakMarraztu();
         pantailaBerriztu();
     }
     else
     {
-        irudia.idmenu2 = irudiaKargatu(".\\img\\menus\\menu2.bmp");
-        irudiaMugitu(irudia.idmenu2, 290, 341);
+        irudiamenus.idmenu2 = irudiaKargatu(".\\img\\menus\\menu2.bmp");
+        irudiaMugitu(irudiamenus.idmenu2, b[14], b[15]);
         irudiakMarraztu();
         pantailaBerriztu();
-        irudiaKendu(irudia.idmenu2);
+        irudiaKendu(irudiamenus.idmenu2);
 
-
-        while (irten == 0)
+        while (irten == 0) 
         {
             ebentu = ebentuaJasoGertatuBada();
-            if (ebentu == SAGU_BOTOIA_EZKERRA)
+        if (ebentu == SAGU_BOTOIA_EZKERRA)
+        {
+            pos = saguarenPosizioa();
+
+            if ((pos.x > b[10]) && (pos.x < b[10] + 40) && (pos.y > b[11]) && (pos.y < b[11] + 40))
             {
-                pos = saguarenPosizioa();
 
-                if ((pos.x > 305) && (pos.x < 402) && (pos.y > 464) && (pos.y < 508))
-                {
-                    irten = 1;
-                    irudiakMarraztu();
-                    pantailaBerriztu();
-                }
-                while (irten == 0)
-                {
-                    if (((pos.x > 307) && (pos.x < 405) && (pos.y > 414) && (pos.y < 471)) || (mejoratu == 1))
-                    {
-                        mejoratu = 0;
-                        irudiakMarraztu();
-                        pantailaBerriztu();
+              torres = mejorar(torres, dirua, b);
 
-                        torre = mejorar(torre, a, id, b, c, saldu);
-
-                        if (saldu == 0)
-                        irten = 1;
-                    }
-
-                    else if (((pos.x > 307) && (pos.x < 405) && (pos.y > 358) && (pos.y < 414)) || (saldu == 1))
-                    {
-                        saldu = 0;
-                        irudiakMarraztu();
-                        pantailaBerriztu();
-
-                        torre = vender(torre, a, id, b, c);
-
-                        if (saldu == 0)
-                        irten = 1;
-                    }
-                }
+                irten = 1;
             }
+            else if ((pos.x > b[8]) && (pos.x < b[8] + 40) && (pos.y > b[9]) && (pos.y < b[9] + 40))
+            {
+                torres = vender(torres, dirua, irudia);
+             
+                irten = 1;
+            }
+            else irten = 1;
+        }                        
         } 
     }
-
-    return torre;
+    irudiakMarraztu();
+    pantailaBerriztu();
+    return torres;
 }
 
-int comprar(int a, int b, int c, int id)
+int comprar(int dirua, int b[])
 {
-    int torre = 0, ebentu, irten = 0, borrar = 1;
+    int torre = 0, ebentu, irten = 0;
 
   while (irten == 0)
   {
       ebentu = ebentuaJasoGertatuBada();
         if (ebentu == SAGU_BOTOIA_EZKERRA)
         {
+
             pos = saguarenPosizioa();
 
-            if ((pos.x > 305) && (pos.x < 401) && (pos.y > 464) && (pos.y < 508))
+            if ((pos.x > b[0]) && (pos.x < b[0] + 40) && (pos.y > b[1]) && (pos.y < b[1] + 40))
             {
-         
-                irten = 1;
-            }
-            else if ((pos.x > 311) && (pos.x < 374) && (pos.y > 363) && (pos.y < 451))
-            {
-                if (a >= 100)
+
+                if (dirua >= 40)
                 {
-                    a = a - 100;
-                    torre = 3;
-                    id = imagen(id, b, c, torre, borrar);
-                    irudia.irudia = id;
+                    dirua = dirua - 40;
+                    torre = 1;
+                    ponerimagen(b, torre);
                 }
                 else
                 {
                     textuaGaitu();
-                    pantailaGarbitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    pantailaBerriztu();
-          
+                    Sleep(2000);
                 }
-
                 irten = 1;
             }
-            else if ((pos.x > 374) && (pos.x < 433) && (pos.y > 363) && (pos.y < 451))
+            else if ((pos.x > b[2]) && (pos.x < b[2] + 40) && (pos.y > b[3]) && (pos.y < b[3] + 40))
             {
-                if (a >= 40)
+                if (dirua >= 60)
                 {
-                    a = a - 40;
-                    torre = 1;
-                    id = imagen(id, b, c, torre, borrar);                   
-                    irudia.irudia = id;
+                    dirua = dirua - 60;
+                    torre = 2;
+                    ponerimagen(b, torre);
                 }
                 else {
                     textuaGaitu();
-                    pantailaGarbitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    pantailaBerriztu();
-
+                    Sleep(2000);
                 }
-   
+
                 irten = 1;
             }
-            else if ((pos.x > 433) && (pos.x < 491) && (pos.y > 363) && (pos.y < 451))
+            else if ((pos.x > b[4]) && (pos.x < b[4] + 40) && (pos.y > b[5]) && (pos.y < b[5] + 40))
             {
-                if (a >= 60)
+                if (dirua >= 100)
+
                 {
-                    torre = 2;
-                    a = a - 60;
-                   id = imagen(id, b, c, torre, borrar);
-                    irudia.irudia = id;
+                    torre = 3;
+                    dirua = dirua - 100;
+                    ponerimagen(b, torre);
                 }
                 else
                 {
                     textuaGaitu();
-                    pantailaGarbitu();
                     textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    pantailaBerriztu();
+                    Sleep(2000);
                 }
                 irten = 1;
             }
-           
+            else if ((pos.x > b[6]) && (pos.x < b[6] + 40) && (pos.y > b[7]) && (pos.y < b[7] + 40))
+            {
+                if (dirua >= 80)
+                {
+                    torre = 4;
+                    dirua = dirua - 80;
+                    ponerimagen(b, torre);
+                }
+                else
+                {
+                    textuaGaitu();
+                    textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
+                    Sleep(2000);
+                }
+                irten = 1;          
+            }
+            else irten = 1;
         }
   }
       return torre;
 }
 
-int mejorar(int torre, int a, int id, int b, int c, int saldu)
+int mejorar(int torre, int dirua)
 {
-    int ebentu, irten = 0;
-    irudia.idmenu3 = irudiaKargatu(".\\img\\menus\\menu3.1.bmp");
-    irudiaMugitu(irudia.idmenu3, 290, 341);
-    irudiakMarraztu();
-    pantailaBerriztu();
-    irudiaKendu(irudia.idmenu3);
-
-    while(irten == 0)
-    {
-        ebentu = ebentuaJasoGertatuBada();
-        if (ebentu == SAGU_BOTOIA_EZKERRA)
-        {
-            pos = saguarenPosizioa();
-            if ((pos.x > 413) && (pos.x < 515) && (pos.y > 474) && (pos.y < 522))
-            {
                 switch (torre)
                 {
                 case 1:
-                    if (a > 40)
+                    if (dirua > 40)
                     {
-                        a = a - 40;
+                        dirua = dirua - 40;
                     }
                     else
                     {
+                        textuaGaitu();
                         textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                        pantailaBerriztu();
                     }
                     break;
                 case 2:
-                    if (a > 60)
+                    if (dirua > 60)
                     {
-                        a = a - 60;
+                        dirua = dirua - 60;
                     }
                     else
                     {
+                        textuaGaitu();
                         textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                        pantailaBerriztu();
                     }
                     break;
                 case 3:
-                    if (a > 100)
+                    if (dirua > 100)
                     {
-                        a = a - 100;
+                        dirua = dirua - 100;
                     }
                     else   
                     {
+                        textuaGaitu();
                         textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
-                    pantailaBerriztu();
                     }
                     break;
+                case 4:
+                    if (dirua > 80)
+                    {
+                        dirua = dirua - 80;
+                    }
+                    else
+                    {
+                        textuaGaitu();
+                        textuaIdatzi(10, 80, "Ez daukazu nahiko dirurik");
+                    }
+                    break;
+
                 default:
                     break;
                 }
-                irten = 1;
-            }
-            else if ((pos.x > 307) && (pos.x < 473) && (pos.y > 474) && (pos.y < 520))
-
-                irten = 1;
-            else if ((pos.x > 473) && (pos.x < 515) && (pos.y > 474) && (pos.y < 520))
-            {
-                irudiakMarraztu();
-                pantailaBerriztu();
-                saldu = 1;
-                irten = 1;
-                return saldu;
-            }
-        }      
-        } 
-
             return torre;
 }
 
-int vender(int torre, int a, int id, int b, int c, int mejoratu)
+int vender(int torre, int dirua, int irudia)
 {
-    int ebentu, irten = 0, borrar;
-
-    
-    irudia.idmenu4 = irudiaKargatu(".\\img\\menus\\menu3.2.bmp");
-    irudiaMugitu(irudia.idmenu4, 290, 341);
-    pantailaGarbitu();
-    irudiakMarraztu();
-    pantailaBerriztu();
- 
-    while(irten == 0)
-    {
-        ebentu = ebentuaJasoGertatuBada();
-        if (ebentu == SAGU_BOTOIA_EZKERRA)
-        {
-            pos = saguarenPosizioa();
-            if ((pos.x > 473) && (pos.x < 515) && (pos.y > 474) && (pos.y < 520))
-            {
-
-                borrar = 0;
                 switch (torre)
                 {
                 case 1:
-                    a = a + 20;
-                   id = imagen(id, b, c, torre, borrar);
+                    dirua = dirua + 20;
 
                     break;
                 case 2:
-                    a = a + 30;
-                    imagen(id, b, c, torre, borrar);
+                    dirua = dirua + 30;
 
                     break;
                 case 3:
-                    a = a + 50;
-                    imagen(id, b, c, torre, borrar);
+                    dirua = dirua + 50;
+
+                    break;
+                case 4:
+                    dirua = dirua + 40;
 
                     break;
                 default:
                     break;
-                }              
-                irten = 1;
-                torre = 0;
-            
-            }
-            else if ((pos.x > 307) && (pos.x < 473) && (pos.y > 474) && (pos.y < 520))
-
-                irten = 1;
-            else if ((pos.x > 413) && (pos.x < 515) && (pos.y > 474) && (pos.y < 522))
-            {
-                irudiakMarraztu();
+                }       
+                irudiaKendu(irudia);
                 pantailaBerriztu();
-                torre = mejorar(torre, a, id, b, c);
-                irten = 1;
+                torre = 0;          
 
-            }
-        }
-    }
     return torre;
 }
 
-int imagen(int id, int b, int c, int torre, int borrar)
+void ponerimagen(int b[], int torre)
 {
-
-    if (borrar != 0)
+    switch (torre)
     {
-        switch (torre)
-        {
-        case 1:
-            id = irudiaKargatu(".\\img\\torres\\1.bmp");
-            irudiaMugitu(id, b, c);
-            irudiakMarraztu();
-            pantailaGarbitu();
-            pantailaBerriztu();
-            break;
-        case 2:
-            id = irudiaKargatu(".\\img\\torres\\2.bmp");
-            irudiaMugitu(id, b, c);
-            irudiakMarraztu();
-            pantailaGarbitu();
-            pantailaBerriztu();
-            break;
-        case 3:
-            id = irudiaKargatu(".\\img\\torres\\3.bmp");
-            irudiaMugitu(id, b, c);
-            irudiakMarraztu();
-            pantailaGarbitu();
-            pantailaBerriztu();
-            break;
-        default:
-            break;
-        }
-    }
-    else 
-    {
-        irudiaKendu(id);
+    case 1:
+        b[19] = irudiaKargatu(".\\img\\torres\\1.bmp");
+        irudiaMugitu(b[19], b[16], b[17]);
+        irudiakMarraztu();
         pantailaBerriztu();
+        break;
+    case 2:
+        b[19] = irudiaKargatu(".\\img\\torres\\2.bmp");
+        irudiaMugitu(b[19], b[16], b[17]);
+        irudiakMarraztu();
+        pantailaBerriztu();
+        break;
+    case 3:
+        b[19] = irudiaKargatu(".\\img\\torres\\3.bmp");
+        irudiaMugitu(b[19], b[16], b[17]);
+        irudiakMarraztu();
+        pantailaBerriztu();
+        break;
+    case 4:
+        b[19] = irudiaKargatu(".\\img\\torres\\4.bmp");
+        irudiaMugitu(b[19], b[16], b[17]);
+        irudiakMarraztu();
+        pantailaBerriztu();
+        break;
+    default:
+        break;
     }
+}
 
-     return id;
+void borrarimagen(int id)
+{
+    irudiaKendu(id);
+    pantailaBerriztu();
 }

@@ -7,12 +7,14 @@
 #include "text.h"
 #include "imagen.h"
 
-int torre(int a);
-int torre1(int torre, int a, int b, int c, int id);
-int comprar(int a, int b, int c, int id);
-int mejorar(int torre, int a, int id, int b, int c, int saldu);
-int vender(int torre, int a, int id, int b, int c, int mejoratu);
+void funtzioa();
+int funtzioa1(int dirua, struct Torres *torres, struct Irudia *irudia);
+int funtzioa2(int torres, int dirua, int irudia, int b[]);
+int comprar(int dirua, int b[]);
+int mejorar(int torre, int dirua);
+int vender(int torre, int dirua, int irudia);
 
-int imagen(int id, int b, int c, int torre, int borrar);
+void ponerimagen(int b[], int torre);
+void borrarimagen(int id);
 
 #endif
