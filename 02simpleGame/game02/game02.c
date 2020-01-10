@@ -249,21 +249,17 @@ EGOERA jokatu1(void)
             if(kont1<=10000 && kont1 > 0){
 
              Olatua1(P1, P2, P3, P4, P5, P6);
-
-             
              if (aux.x < 200) P1.pos.x = aux.x;
              if (aux3.x < 200) P2.pos.x = aux3.x;
              if (aux5.x < 200) P3.pos.x = aux5.x;
              if (aux7.x < 200) P4.pos.x = aux7.x;
              if (aux9.x < 200) P5.pos.x = aux9.x;
              if (aux11.x < 200) P6.pos.x = aux11.x;
-
             }
+
             if(kont1 > 10000 && kont1 <= 20000){
             
             Olatua2(P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
-
-
             if (aux.x < 200) P1.pos.x = aux.x;
             if (aux3.x < 200) P2.pos.x = aux3.x;
             if (aux5.x < 200) P3.pos.x = aux5.x;
@@ -274,28 +270,22 @@ EGOERA jokatu1(void)
             if (aux15.x < 200) P8.pos.x = aux15.x;
             if (aux17.x < 200) P9.pos.x = aux17.x;
             if (aux19.x < 200) P10.pos.x = aux19.x;
-
-            
             }
 
             if (kont1 > 20000 && kont1 <= 30000) {
 
              Olatua3(P21, P22, P23, P24, P25, P26);
-
              if (aux41.x < 200) P21.pos.x = aux41.x;
              if (aux43.x < 200) P22.pos.x = aux43.x;
              if (aux45.x < 200) P23.pos.x = aux45.x;
              if (aux47.x < 200) P24.pos.x = aux47.x;
              if (aux49.x < 200) P25.pos.x = aux49.x;
              if (aux51.x < 200) P26.pos.x = aux51.x;
-
             }
 
             if (kont1 > 30000 && kont1 <= 40000) {
 
                 Olatua4(P21, P22, P23, P24, P1,P2,P3,P4);
-
-
                 if (aux.x < 200) P1.pos.x = aux.x;
                 if (aux3.x < 200) P2.pos.x = aux3.x;
                 if (aux5.x < 200) P3.pos.x = aux5.x;
@@ -304,8 +294,6 @@ EGOERA jokatu1(void)
                 if (aux43.x < 200) P22.pos.x = aux43.x;
                 if (aux45.x < 200) P23.pos.x = aux45.x;
                 if (aux47.x < 200) P24.pos.x = aux47.x;
-
-
             }
 
             if (kont1 > 40000 && kont1 <= 50000) {
@@ -1077,7 +1065,8 @@ void  jokoAmaierakoa1(EGOERA egoera)
     {
         ebentu = ebentuaJasoGertatuBada();
     } while ((ebentu != TECLA_RETURN));
-    audioTerminate();
+    //audioTerminate();
+    soundsUnload();
     irudiaKendu(id);
 }
 
