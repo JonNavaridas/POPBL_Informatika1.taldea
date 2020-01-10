@@ -254,7 +254,7 @@ int funtzioa1(int dirua, struct Torres* torres, struct Irudia* irudia)
                 b[2] = 250;
                 b[3] = 60;
                 //3
-                b[4] = 245;
+                b[4] = 345;
                 b[5] = 60;
                 //4
                 b[6] = 292;
@@ -265,7 +265,7 @@ int funtzioa1(int dirua, struct Torres* torres, struct Irudia* irudia)
                 b[8] = 250;
                 b[9] = 60;
                 //mejoratu
-                b[10] = 245;
+                b[10] = 345;
                 b[11] = 60;
 
                 //menu1 X,Y
