@@ -1,13 +1,13 @@
 ﻿  game02.c
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(990,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(991,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(992,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1504,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1505,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1510,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1530,35): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1531,35): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1536,35): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1643,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(530,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(531,33): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(532,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1014,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1015,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1020,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1040,35): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1041,35): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1046,35): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(1153,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : vea la declaración de 'sprintf'
   02simpleGame.vcxproj -> C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe
