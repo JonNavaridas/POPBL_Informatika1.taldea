@@ -10,7 +10,6 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#define ONGI_ETORRI_MEZUA "Sakatu return hasteko..."
 #define JOKOA_SOUND ".\\sound\\pol-battle-march-long.wav"
 #define JOKOA_PLAYER_IMAGE ".\\img\\imagen\\pepino2.bmp"
 #define JOKOA_SOUND_WIN ".\\sound\\win.wav"
@@ -20,11 +19,13 @@
 #define JOKOA_PLAYER_IMAGE3 ".\\img\\imagen\\pepino copia (1).bmp"
 
 #define MUSICA_MENU ".\\sound\\inicio.wav"
-#define FONDO_INCIO ".\\img\\mapa.bmp"
+#define FONDO_INCIO ".\\img\\Pantallas\\inicio.bmp"
 #define FONDO_MENU ".\\img\\mapa_desenfoque.bmp"
-#define CREDITOS ".\\img\\creditos.bmp"
+#define CREDITOS ".\\img\\Pantallas\\creditos.bmp"
 #define IMG_IRABAZI ".\\img\\irabazi.bmp"
 #define IMG_GALDU ".\\img\\galdu.bmp"
+#define HOWTO_1 ".\\img\\Pantallas\\howto1.bmp"
+#define HOWTO_2 ".\\img\\Pantallas\\howto2.bmp"
 
 
 
@@ -34,6 +35,7 @@ int JOKOA_jokalaria3IrudiaSortu();
 int FONDOA_irudiaBistaratu();
 
 void kredituak();
+void howto();
 int HASIERA_irudiaBistaratu(void);
 
 
@@ -59,17 +61,17 @@ int jokoaAurkeztu(void)
     idFONDOINICIO = HASIERA_irudiaBistaratu();
 
 
-    audioInit();
+   /* audioInit();
     loadTheMusic(MUSICA_MENU);
-    playMusic();
+    playMusic();*/
 
     do
     {
         ebentu = ebentuaJasoGertatuBada();
-    } while (ebentu != TECLA_1 && ebentu != TECLA_2 && ebentu != TECLA_3 && ebentu != TECLA_ESCAPE);
+    } while (ebentu != SAGU_BOTOIA_EZKERRA && ebentu != TECLA_ESCAPE);
     pantailaGarbitu();
     irudiaKendu(idFONDOINICIO);
-    audioTerminate();
+   // audioTerminate();
     return ebentu;
 }
 
@@ -84,18 +86,57 @@ void kredituak()
 
 
 
-    audioInit();
+   /* audioInit();
     loadTheMusic(MUSICA_MENU);
-    playMusic();
+    playMusic();*/
     do
     {
         ebentu = ebentuaJasoGertatuBada();
-    } while (ebentu != TECLA_ESCAPE);
+    } while (ebentu != TECLA_RETURN && ebentu != TECLA_ESCAPE);
 
     pantailaGarbitu();
     irudiaKendu(idFONDO);
     pantailaBerriztu();
-    audioTerminate();
+    //audioTerminate();
+}
+
+void howto()
+{
+    int ebentu = 0, idFONDO1, idFONDO2;
+
+    idFONDO1 = irudiaKargatu(HOWTO_1);
+    irudiaMugitu(idFONDO1, 0, 0);
+    irudiakMarraztu();
+    pantailaBerriztu();
+
+   /* audioInit();
+    loadTheMusic(MUSICA_MENU);
+    playMusic();*/
+    do
+    {
+        ebentu = ebentuaJasoGertatuBada();
+    } while (ebentu != SAGU_BOTOIA_EZKERRA && ebentu != TECLA_RETURN);
+
+
+    pantailaGarbitu();
+    irudiaKendu(idFONDO1);
+    pantailaBerriztu();
+
+    idFONDO2 = irudiaKargatu(HOWTO_2);
+    irudiaMugitu(idFONDO2, 0, 0);
+    irudiakMarraztu();
+    pantailaBerriztu();
+
+    do
+    {
+        ebentu = ebentuaJasoGertatuBada();
+    } while (ebentu != SAGU_BOTOIA_EZKERRA && ebentu != TECLA_RETURN);
+
+    pantailaGarbitu();
+    irudiaKendu(idFONDO2);
+    pantailaBerriztu();
+
+   // audioTerminate();
 }
 
 

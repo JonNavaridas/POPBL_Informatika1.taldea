@@ -26,7 +26,7 @@ int sgHasieratu()
     return -1;
   }
   atexit(SDL_Quit);
-  window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+  window = SDL_CreateWindow("Cucumbers Catastrophe", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
   if (window == NULL)
   {
     fprintf(stderr, "Ezin lehioa sortu: %s\n", SDL_GetError());
