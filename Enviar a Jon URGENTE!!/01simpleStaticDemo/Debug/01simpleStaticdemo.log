@@ -1,0 +1,8 @@
+﻿  01simpleStaticDemoMain.c
+  Functionality.c
+  hasieratu.c
+  TowerBuild.c
+  Generando código...
+C:\Users\oierb\Desktop\sdlExamplesVcWS\01simpleStaticDemo\hasieratu.c(68): warning C4716: 'checkEbentu': debe devolver un valor
+C:\Users\oierb\Desktop\sdlExamplesVcWS\01simpleStaticDemo\01simpleStaticDemoMain.c(56): warning C4700: se utilizó la variable local 'action' sin inicializar
+  01simpleStaticDemo.vcxproj -> C:\Users\oierb\Desktop\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe
