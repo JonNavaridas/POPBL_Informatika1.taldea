@@ -1,2 +1,0 @@
-﻿graphics.obj : error LNK2019: símbolo externo _SDL_SetVideoMode sin resolver al que se hace referencia en la función _sgHasieratu
-C:\Users\oierb\Downloads\sdlExamplesVcWS\sdlExamplesVcWS\Debug\01simpleStaticDemo.exe : fatal error LNK1120: 1 externos sin resolver
