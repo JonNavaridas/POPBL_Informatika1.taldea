@@ -18,7 +18,6 @@ void textuaGaitu(void){
 	}
 }
 
-
 void textuaIdatzi(int x, int y, char *str)
 {
   SDL_Surface* textSurface;
@@ -39,7 +38,6 @@ void textuaIdatzi(int x, int y, char *str)
   SDL_FreeSurface(textSurface);
   SDL_DestroyTexture(mTexture);
 }
-
 
 void textuaDesgaitu(void)
 {

@@ -26,7 +26,7 @@ int sgHasieratu()
     return -1;
   }
   atexit(SDL_Quit);
-  window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH , SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+  window = SDL_CreateWindow("Cucumbers Catastrophe", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
   if (window == NULL)
   {
     fprintf(stderr, "Ezin lehioa sortu: %s\n", SDL_GetError());
@@ -53,7 +53,7 @@ void arkatzKoloreaEzarri(int red, int green, int blue)
 }
 
 
-void zuzenaMarraztu(int x1, int y1, int x2, int y2)
+void zuzenaMarraztu(float x1, float y1, float x2, float y2)
 {
   SDL_SetRenderDrawColor(gRenderer, colorR, colorG, colorB, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawLine(gRenderer, x1, y1, x2, y2);

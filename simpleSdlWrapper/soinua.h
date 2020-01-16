@@ -12,7 +12,7 @@ int playSound(int idSound);
 int playMusic(void);
 void toggleMusic(void);
 void audioTerminate();
-
+void soundsUnload();
 
 
 #endif
