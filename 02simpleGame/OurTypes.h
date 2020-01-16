@@ -17,11 +17,17 @@ typedef struct MENU_PARTS_DE
 	int id;
 } MENU_PARTS;
 
+typedef struct TARGET_DE
+{
+	int tower[10];
+} TARGET;
+
 typedef struct ACTION_DE
 {
 	int damage;
 	int freeze;
 	int resource;
+	TARGET target;
 	int money;
 	int id;
 } ACTION;

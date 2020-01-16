@@ -234,9 +234,10 @@ void Olatua14(JOKO_ELEMENTUA P15, JOKO_ELEMENTUA P16, JOKO_ELEMENTUA P17, JOKO_E
 
 OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int lifeTotal)
 {
-    int mugitu = 0, kont1 = 0, i, j;
+    int kont1 = 0, i, j;
     EGOERA  egoera = JOLASTEN;
 	kont1 = olatuak.kont;
+	structure.action = hasieratuAction();
 
     do {
         kont1++;
@@ -800,7 +801,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             olatuak.damage = lifeTotal;
         }
         
-		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy);
+		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy, structure.action);
     } while (olatuak.defentsa == 1);
     return olatuak;
 }

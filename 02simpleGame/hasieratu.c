@@ -63,12 +63,14 @@ UPGRADE hasieratuUpgrade(void)
 //Hasieratu dorreen akzioak
 ACTION hasieratuAction(void)
 {
+	int i;
 	ACTION action;
 	action.damage = 0;
 	action.freeze = 0;
 	action.resource = 0;
 	action.money = 0;
     action.id = -1;
+	for (i = 0; i < 10; i++) action.target.tower[i] = -1;
 	return action;
 }
 

@@ -130,7 +130,7 @@ EGOERA jokatu1(int hasieratu)
             idVida = irudiaKargatu(HEART);
             irudiaMugitu(idVida, 900, 50);
             idMoney = irudiaKargatu(MONEY);
-            irudiaMugitu(idMoney, 900, 90);
+            irudiaMugitu(idMoney, 900, 80);
             irudiakMarraztu();
 
             ebentu = checkEbentu(lifeTotal, structure.money);

@@ -24,7 +24,7 @@ int checkTowerBuild(AREA area, CREATE created);
 
 //Crear las torres
 ACTIVE acitvateTower(POSIZIOA pos, int tower, ACTIVE active, int id);
-ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[]);
+ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[], ACTION action);
 int createTower(int towerType, int x, int y);
 int createArcherTower(int x, int y);
 int createMageTower(int x, int y);

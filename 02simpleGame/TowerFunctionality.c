@@ -11,23 +11,24 @@
 #include <windows.h>
 
 //Dorreak sortu
-ACTION towerAttack(float towerX, float towerY, int ebentu, float enemyX, float enemyY, int time, int upgrade)
+ACTION towerAttack(float towerX, float towerY, int ebentu, float enemyX, float enemyY, int time, int upgrade, int tower, ACTION action)
 {
-	ACTION action;
 	int radius = 0;
-	action = hasieratuAction();
 
 	if (ebentu == 1) {
 		radius = (110 * (1 + upgrade / 10));
 		action.damage = archerTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
+		if (enemyX > towerX + radius && enemyX < towerX - radius && enemyY > towerY + radius && enemyY < towerY - radius) { action.target.tower[tower] = -1; }
 	}
 	if (ebentu == 2) {
 		radius = (80 * (1 + upgrade / 10));
 		action = mageTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
+		if (enemyX > towerX + radius && enemyX < towerX - radius && enemyY > towerY + radius && enemyY < towerY - radius) { action.target.tower[tower] = -1; }
 	}
 	if (ebentu == 3) {
 		radius = (150 * (1 + upgrade / 10));
 		action = bomberTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
+		if (enemyX > towerX + radius && enemyX < towerX - radius && enemyY > towerY + radius && enemyY < towerY - radius) { action.target.tower[tower] = -1; }
 	}
 	if (ebentu == 4) {
 		action.money = mineRecolection(time, upgrade);
@@ -103,13 +104,10 @@ ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int
 	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
 	{
 		arkatzKoloreaEzarri(255, 255, 255);
-		zuzenaMarraztu(tower.x, tower.y, enemy.x, enemy.y);
+		zuzenaMarraztu(tower.x, tower.y, enemy.x + 15, enemy.y + 30);
 		arkatzKoloreaEzarri(255, 0, 0);
 		if ((time % 150 >= 100 && time % 150 < 150) || time % 150 == 0) {
-			action.id = irudiaKargatu(MIRA);
-			irudiaMugitu(action.id, enemy.x - 15, enemy.y);
-			irudiakMarraztu();
-			irudiaKendu(action.id);
+			zirkuluaMarraztu(bullet.x + 15, bullet.y + 30, 30);
 			if (time % 150 == 0) {
 				action.damage = (60 * (1 + upgrade / 10));
 				action.resource = 30;
