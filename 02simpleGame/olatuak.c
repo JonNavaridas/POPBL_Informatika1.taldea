@@ -1,4 +1,4 @@
-#include "game02.h"
+#include "CC_Game.h"
 #include "imagen.h"
 #include "graphics.h"
 #include "ebentoak.h"
@@ -6,6 +6,7 @@
 #include "TowerBuild.h"
 #include "text.h"
 #include "soinua.h"
+#include "TowerFunctionality.h"
 #include <stdio.h>
 #include <windows.h>
 
@@ -234,19 +235,22 @@ void Olatua14(JOKO_ELEMENTUA P15, JOKO_ELEMENTUA P16, JOKO_ELEMENTUA P17, JOKO_E
 
 OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int lifeTotal)
 {
-    int kont1 = 0, i, j;
+    int kont1 = 0, i = 0, j;
     EGOERA  egoera = JOLASTEN;
 	kont1 = olatuak.kont;
-	structure.action = hasieratuAction();
+	structure.action = hasieratuAction(1);
 
     do {
         kont1++;
 		for (i = 0; i < 30; i++) {
 			olatuak.enemy[i] = hasieratuEnemyPos(olatuak, i);
-			olatuak.enemyLife[i] = hasieratuBizitzak(i); 
+			if (kont1 == 2 || kont1 == 10001 || kont1 == 20001 || kont1 == 27001 || kont1 == 37001 || kont1 == 57001 || kont1 == 77001 || kont1 == 97001 || kont1 == 104001 || kont1 == 124001 || kont1 == 144001 || kont1 == 164001 || kont1 == 184001 || kont1 == 204001 || kont1 == 224001) {
+				olatuak.enemyLife[i] = hasieratuBizitzak(i);
+				olatuak.enemyFreeze[i] = 0;
+			}
 		}
 
-        if (kont1 <= 5000 && kont1 > 1) {
+        if (kont1 <= 10000 && kont1 > 1) {
             Olatua1(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -256,7 +260,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux11.x < 190) olatuak.P6.pos.x = olatuak.aux11.x;
         }
 
-        else if (kont1 > 5000 && kont1 <= 10000) {
+        else if (kont1 > 10000 && kont1 <= 20000) {
             Olatua2(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -270,7 +274,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux19.x < 190) olatuak.P10.pos.x = olatuak.aux19.x;
         }
 
-        else if (kont1 > 10000 && kont1 <= 13500) {
+        else if (kont1 > 20000 && kont1 <= 27000) {
             Olatua3(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26);
             if (olatuak.aux41.x < 190) olatuak.P21.pos.x = olatuak.aux41.x;
             if (olatuak.aux43.x < 190) olatuak.P22.pos.x = olatuak.aux43.x;
@@ -280,7 +284,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux51.x < 190) olatuak.P26.pos.x = olatuak.aux51.x;
         }
 
-        else if (kont1 > 13500 && kont1 <= 18500) {
+        else if (kont1 > 27000 && kont1 <= 37000) {
             Olatua4(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -292,14 +296,14 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux47.x < 190) olatuak.P24.pos.x = olatuak.aux47.x;
         }
 
-        else if (kont1 > 18500 && kont1 <= 28500) {
+        else if (kont1 > 37000 && kont1 <= 57000) {
             Olatua5(olatuak.P11, olatuak.P12);
             if (olatuak.aux21.x < 190) olatuak.P11.pos.x = olatuak.aux21.x;
             if (olatuak.aux23.x < 190) olatuak.P12.pos.x = olatuak.aux23.x;
 
         }
 
-        else if (kont1 > 28500 && kont1 <= 38500) {
+        else if (kont1 > 57000 && kont1 <= 77000) {
             Olatua6(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P11, olatuak.P12);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -310,7 +314,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux23.x < 190) olatuak.P12.pos.x = olatuak.aux23.x;
         }
 
-        else if (kont1 > 38500 && kont1 <= 43500) {
+        else if (kont1 > 77000 && kont1 <= 97000) {
             Olatua7(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P27, olatuak.P28, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -328,7 +332,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux55.x < 190) olatuak.P28.pos.x = olatuak.aux55.x;
         }
 
-        else if (kont1 > 43500 && kont1 <= 47000) {
+        else if (kont1 > 97000 && kont1 <= 104000) {
             Olatua8(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30);
             if (olatuak.aux41.x < 190) olatuak.P21.pos.x = olatuak.aux41.x;
             if (olatuak.aux43.x < 190) olatuak.P22.pos.x = olatuak.aux43.x;
@@ -342,7 +346,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux59.x < 190) olatuak.P30.pos.x = olatuak.aux59.x;
         }
 
-        else if (kont1 > 47000 && kont1 <= 57000) {
+        else if (kont1 > 104000 && kont1 <= 124000) {
             Olatua9(olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14);
             if (olatuak.aux21.x < 190) olatuak.P11.pos.x = olatuak.aux21.x;
             if (olatuak.aux23.x < 190) olatuak.P12.pos.x = olatuak.aux23.x;
@@ -350,7 +354,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux27.x < 190) olatuak.P14.pos.x = olatuak.aux27.x;
         }
 
-        else if (kont1 > 57000 && kont1 <= 67000) {
+        else if (kont1 > 124000 && kont1 <= 144000) {
             Olatua10(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -369,7 +373,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux51.x < 190) olatuak.P26.pos.x = olatuak.aux51.x;
         }
 
-        else if (kont1 > 67000 && kont1 <= 77000) {
+        else if (kont1 > 144000 && kont1 <= 164000) {
             Olatua11(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14);
             if (olatuak.aux21.x < 190) olatuak.P11.pos.x = olatuak.aux21.x;
             if (olatuak.aux23.x < 190) olatuak.P12.pos.x = olatuak.aux23.x;
@@ -387,7 +391,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux59.x < 190) olatuak.P30.pos.x = olatuak.aux59.x;
         }
 
-        else if (kont1 > 77000 && kont1 <= 87000) {
+        else if (kont1 > 164000 && kont1 <= 184000) {
             Olatua12(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -413,7 +417,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux59.x < 190) olatuak.P30.pos.x = olatuak.aux59.x;
         }
 
-        else if (kont1 > 87000 && kont1 <= 97000) {
+        else if (kont1 > 184000 && kont1 <= 204000) {
             Olatua13(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -437,7 +441,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.aux47.x < 190) olatuak.P24.pos.x = olatuak.aux47.x;
         }
 
-        else if (kont1 > 97000 && kont1 < 110000) {
+        else if (kont1 > 204000 && kont1 < 224000) {
             Olatua14(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P17, olatuak.P18, olatuak.P19, olatuak.P20, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10);
             if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
             if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
@@ -734,7 +738,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             if (olatuak.damage != 0) lifeTotal -= olatuak.damage;
         }
         
-        if (kont1 == 5000 || kont1 == 10000 || kont1 == 13500 || kont1 == 18500 || kont1 == 28500 || kont1 == 38500 || kont1 == 43500 || kont1 == 47000 || kont1 == 57000 || kont1 == 67000 || kont1 == 77000 || kont1 == 87000 || kont1 == 97000 || kont1 == 110000)
+        if (kont1 == 10000 || kont1 == 20000 || kont1 == 27000 || kont1 == 37000 || kont1 == 57000 || kont1 == 77000 || kont1 == 97000 || kont1 == 104000 || kont1 == 124000 || kont1 == 144000 || kont1 == 164000 || kont1 == 184000 || kont1 == 204000 || kont1 == 224000)
         {
             olatuak.P1.pos.x = -30;
             olatuak.P1.pos.y = 440;
@@ -800,8 +804,9 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
         	olatuak.kont = kont1;
             olatuak.damage = lifeTotal;
         }
-        
 		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy, structure.action);
+		for (i = 0; i < 30; i++) olatuak = stageDamage(olatuak, structure.action, i);
+
     } while (olatuak.defentsa == 1);
     return olatuak;
 }

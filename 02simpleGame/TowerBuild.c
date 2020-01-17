@@ -30,7 +30,7 @@ TOWER_STRUCTURE towerBuild(TOWER_STRUCTURE structure, int time, int ebentu, POSI
     if (structure.area.place1 == 1 || structure.area.place2 == 1 || structure.area.place3 == 1 || structure.area.place4 == 1 || structure.area.place5 == 1 || structure.area.place6 == 1 || structure.area.place7 == 1 || structure.area.place8 == 1 || structure.area.place9 == 1 || structure.area.place10 == 1) {
 		if (built == 0) {
 			structure.menu = createMenu(structure.menu, structure.area, structure.money, ebentu, menu);
-			structure.money -= reduceMoney(structure.menu.tower);
+			structure.money -= reduceMoney(structure.menu.tower, 0);
 			structure.active = acitvateTower(towerPos, structure.menu.tower, structure.active, structure.menu.id);
 			if (structure.menu.tower != 0) { structure.area = hasieratuAreak(); }
 		}
@@ -169,13 +169,13 @@ int createTower(int towerType, int x, int y)
 	return created;
 }
 
-int reduceMoney(int tower)
+int reduceMoney(int tower, int upgrade)
 {
 	int reduceMoney = 0;
-	if (tower == 1) reduceMoney = 40;
-    else if (tower == 2) reduceMoney = 60;
-    else if (tower == 3) reduceMoney = 100;
-    else if (tower == 4) reduceMoney = 80;
+	if (tower == 1) reduceMoney = 40 + (8 * upgrade);
+    else if (tower == 2) reduceMoney = 60 + (12 * upgrade);
+    else if (tower == 3) reduceMoney = 100 + (20 * upgrade);
+    else if (tower == 4) reduceMoney = 80 + (16 * upgrade);
 	return reduceMoney;
 }
 
@@ -239,69 +239,69 @@ ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[], A
 {
 	int i, j;
 	ACTION totalAction;
-	totalAction = hasieratuAction();
+	totalAction = hasieratuAction(1);
 
 	for (i = 0; i < 30; i++) {
-		for (j = 0; j < 10; j++) if (action.target.tower[j] == -1) action.target.tower[j] = i;
+		for (j = 1; j <= 10; j++) { if (action.target.tower[j] == -1) action.target.tower[j] = i; }
 		if (active.tower1 != 0 && i == action.target.tower[1]) {
 			action.target.tower[1] = i;
-			action = towerAttack(223, 25, active.tower1, enemy[i].x, enemy[i].y, time, upgrade.tower1, 1, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(223, 25, active.tower1, enemy[i].x, enemy[i].y, time, upgrade.tower1, 1, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower2 != 0 && i == action.target.tower[2]) {
 			action.target.tower[2] = i;
-			action = towerAttack(313, 25, active.tower2, enemy[i].x, enemy[i].y, time, upgrade.tower2, 2, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(313, 25, active.tower2, enemy[i].x, enemy[i].y, time, upgrade.tower2, 2, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower3 != 0 && i == action.target.tower[3]) {
 			action.target.tower[3] = i;
-			action = towerAttack(76, 337, active.tower3, enemy[i].x, enemy[i].y, time, upgrade.tower3, 3, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(76, 337, active.tower3, enemy[i].x, enemy[i].y, time, upgrade.tower3, 3, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower4 != 0 && i == action.target.tower[4]) {
 			action.target.tower[4] = i;
-			action = towerAttack(266, 215, active.tower4, enemy[i].x, enemy[i].y, time, upgrade.tower4, 4, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(266, 215, active.tower4, enemy[i].x, enemy[i].y, time, upgrade.tower4, 4, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower5 != 0 && i == action.target.tower[5]) {
 			action.target.tower[5] = i;
-			action = towerAttack(593, 217, active.tower5, enemy[i].x, enemy[i].y, time, upgrade.tower5, 5, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(593, 217, active.tower5, enemy[i].x, enemy[i].y, time, upgrade.tower5, 5, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower6 != 0 && i == action.target.tower[6]) {
 			action.target.tower[6] = i;
-			action = towerAttack(925, 205, active.tower6, enemy[i].x, enemy[i].y, time, upgrade.tower6, 6, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(925, 205, active.tower6, enemy[i].x, enemy[i].y, time, upgrade.tower6, 6, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower7 != 0 && i == action.target.tower[7]) {
 			action.target.tower[7] = i;
-			action = towerAttack(1030, 205, active.tower7, enemy[i].x, enemy[i].y, time, upgrade.tower7, 7, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(1030, 205, active.tower7, enemy[i].x, enemy[i].y, time, upgrade.tower7, 7, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower8 != 0 && i == action.target.tower[8]) {
 			action.target.tower[8] = i;
-			action = towerAttack(170, 525, active.tower8, enemy[i].x, enemy[i].y, time, upgrade.tower8, 8, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(170, 525, active.tower8, enemy[i].x, enemy[i].y, time, upgrade.tower8, 8, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower9 != 0 && i == action.target.tower[9]) {
 			action.target.tower[9] = i;
-			action = towerAttack(735, 390, active.tower9, enemy[i].x, enemy[i].y, time, upgrade.tower9, 9, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(735, 390, active.tower9, enemy[i].x, enemy[i].y, time, upgrade.tower9, 9, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 		if (active.tower10 != 0 && i == action.target.tower[10]) {
 			action.target.tower[10] = i;
-			action = towerAttack(980, 395, active.tower10, enemy[i].x, enemy[i].y, time, upgrade.tower10, 10, action);
-			totalAction = batuAction(action, totalAction);
+			action = towerAttack(980, 395, active.tower10, enemy[i].x, enemy[i].y, time, upgrade.tower10, 10, i, action);
+			totalAction = batuAction(action, totalAction, i);
 		}
 	}
 	return totalAction;
 }
 
-ACTION batuAction(ACTION action, ACTION totalAction)
+ACTION batuAction(ACTION action, ACTION totalAction, int i)
 {
-	totalAction.damage += action.damage;
-	if (totalAction.freeze < 2) totalAction.freeze += action.freeze;
-	if (totalAction.resource == 0) totalAction.resource = action.resource;
+	totalAction.damage[i] += action.damage[i];
+	if (totalAction.freeze[i] != 1) totalAction.freeze[i] += action.freeze[i];
+	if (totalAction.resource[i] == 0) totalAction.resource[i] = action.resource[i];
 	totalAction.money += action.money;
 
 	return totalAction;
@@ -329,7 +329,10 @@ TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, 
 			structure.change.terminate = terminateTower(structure.area); 
 			structure.money += returnMoney(structure.active, structure.change.terminate);
 		}
-		if (posible != 0 && ebentu == TECLA_RIGHT) { structure = upgradeTower(posible, structure); } //Mejorar
+		if (posible != 0 && ebentu == TECLA_RIGHT) { //Mejorar
+			structure = upgradeTower(posible, structure);
+			structure.money -= reduceMoneyUpgrade(structure.menu.tower, structure.change.upgrade);
+		}
 		if (posible == 0) structure.area = hasieratuAreak();
 	}
 	return structure;
@@ -341,9 +344,9 @@ int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade)
 
 	if (pos.x == 158 && pos.y == 14 && upgrade.tower1 < 2) { posible = 1; }
     else if (pos.x == 248 && pos.y == 14 && upgrade.tower2 < 2) { posible = 2; }
-    else if (pos.x == 14 && pos.y == 248 && upgrade.tower3 < 2) { posible = 3; }
+    else if (pos.x == 14 && pos.y == 348 && upgrade.tower3 < 2) { posible = 3; }
     else if (pos.x == 210 && pos.y == 206 && upgrade.tower4 < 2) { posible = 4; }
-    else if (pos.x == 558 && pos.y == 206 && upgrade.tower5 < 2) { posible = 5; }
+    else if (pos.x == 538 && pos.y == 206 && upgrade.tower5 < 2) { posible = 5; }
     else if (pos.x == 873 && pos.y == 202 && upgrade.tower6 < 2) { posible = 6; }
     else if (pos.x == 968 && pos.y == 202 && upgrade.tower7 < 2) { posible = 7; }
     else if (pos.x == 112 && pos.y == 538 && upgrade.tower8 < 2) { posible = 8; }
@@ -357,17 +360,33 @@ TOWER_STRUCTURE upgradeTower(int posible, TOWER_STRUCTURE structure)
 {
 	int on = 0;
 	if (posible == 1) { structure.change.upgrade.tower1++; on = 1; }
-	if (posible == 2) { structure.change.upgrade.tower2++; on = 1; }
-	if (posible == 3) { structure.change.upgrade.tower3++; on = 1; }
-	if (posible == 4) { structure.change.upgrade.tower4++; on = 1; }
-	if (posible == 5) { structure.change.upgrade.tower5++; on = 1; }
-	if (posible == 6) { structure.change.upgrade.tower6++; on = 1; }
-	if (posible == 7) { structure.change.upgrade.tower7++; on = 1; }
-	if (posible == 8) { structure.change.upgrade.tower8++; on = 1; }
-	if (posible == 9) { structure.change.upgrade.tower9++; on = 1; }
-	if (posible == 10) { structure.change.upgrade.tower10++;  on = 1; }
+	else if (posible == 2) { structure.change.upgrade.tower2++; on = 1; }
+	else if (posible == 3) { structure.change.upgrade.tower3++; on = 1; }
+	else if (posible == 4) { structure.change.upgrade.tower4++; on = 1; }
+	else if (posible == 5) { structure.change.upgrade.tower5++; on = 1; }
+	else if (posible == 6) { structure.change.upgrade.tower6++; on = 1; }
+	else if (posible == 7) { structure.change.upgrade.tower7++; on = 1; }
+	else if (posible == 8) { structure.change.upgrade.tower8++; on = 1; }
+	else if (posible == 9) { structure.change.upgrade.tower9++; on = 1; }
+	else if (posible == 10) { structure.change.upgrade.tower10++;  on = 1; }
 	if (on == 1) { structure.area = hasieratuAreak(); }
 	return structure;
+}
+
+int reduceMoneyUpgrade(int tower, UPGRADE towerUpgrade)
+{
+	int money = 0;
+	if (towerUpgrade.tower1 != 0) money = reduceMoney(tower, towerUpgrade.tower1);
+	else if (towerUpgrade.tower2 != 0) money = reduceMoney(tower, towerUpgrade.tower2);
+	else if (towerUpgrade.tower3 != 0) money = reduceMoney(tower, towerUpgrade.tower3);
+	else if (towerUpgrade.tower4 != 0) money = reduceMoney(tower, towerUpgrade.tower4);
+	else if (towerUpgrade.tower5 != 0) money = reduceMoney(tower, towerUpgrade.tower5);
+	else if (towerUpgrade.tower6 != 0) money = reduceMoney(tower, towerUpgrade.tower6);
+	else if (towerUpgrade.tower7 != 0) money = reduceMoney(tower, towerUpgrade.tower7);
+	else if (towerUpgrade.tower8 != 0) money = reduceMoney(tower, towerUpgrade.tower8);
+	else if (towerUpgrade.tower9 != 0) money = reduceMoney(tower, towerUpgrade.tower9);
+	else if (towerUpgrade.tower10 != 0) money = reduceMoney(tower, towerUpgrade.tower10);
+	return money;
 }
 
 TERMINATE terminateTower(AREA area)
@@ -391,15 +410,15 @@ TOWER_STRUCTURE destroyTower(TOWER_STRUCTURE structure)
 {
 	int on = 0;
 	if (structure.change.terminate.tower1 != 0) { structure.active.tower1 = 0; irudiaKendu(structure.create.tower1); structure.create.tower1 = -1; on = 1; }
-	else if (structure.change.terminate.tower2 != 0) { structure.active.tower2 = 0; irudiaKendu(structure.create.tower2); structure.create.tower2 = -1; on = 1;}
-	else if (structure.change.terminate.tower3 != 0) { structure.active.tower3 = 0; irudiaKendu(structure.create.tower3); structure.create.tower3 = -1; on = 1; }
-	else if (structure.change.terminate.tower4 != 0) { structure.active.tower4 = 0; irudiaKendu(structure.create.tower4); structure.create.tower4 = -1; on = 1; }
-	else if (structure.change.terminate.tower5 != 0) { structure.active.tower5 = 0; irudiaKendu(structure.create.tower5); structure.create.tower5 = -1; on = 1; }
-	else if (structure.change.terminate.tower6 != 0) { structure.active.tower6 = 0; irudiaKendu(structure.create.tower6); structure.create.tower6 = -1; on = 1; }
-	else if (structure.change.terminate.tower7 != 0) { structure.active.tower7 = 0; irudiaKendu(structure.create.tower7); structure.create.tower7 = -1; on = 1; }
-	else if (structure.change.terminate.tower8 != 0) { structure.active.tower8 = 0; irudiaKendu(structure.create.tower8); structure.create.tower8 = -1; on = 1; }
-	else if (structure.change.terminate.tower9 != 0) { structure.active.tower9 = 0; irudiaKendu(structure.create.tower9); structure.create.tower9 = -1; on = 1;}
-	else if (structure.change.terminate.tower10 != 0) { structure.active.tower10 = 0; irudiaKendu(structure.create.tower10); structure.create.tower10 = -1; on = 1; }
+	if (structure.change.terminate.tower2 != 0) { structure.active.tower2 = 0; irudiaKendu(structure.create.tower2); structure.create.tower2 = -1; on = 1;}
+	if (structure.change.terminate.tower3 != 0) { structure.active.tower3 = 0; irudiaKendu(structure.create.tower3); structure.create.tower3 = -1; on = 1; }
+	if (structure.change.terminate.tower4 != 0) { structure.active.tower4 = 0; irudiaKendu(structure.create.tower4); structure.create.tower4 = -1; on = 1; }
+	if (structure.change.terminate.tower5 != 0) { structure.active.tower5 = 0; irudiaKendu(structure.create.tower5); structure.create.tower5 = -1; on = 1; }
+	if (structure.change.terminate.tower6 != 0) { structure.active.tower6 = 0; irudiaKendu(structure.create.tower6); structure.create.tower6 = -1; on = 1; }
+	if (structure.change.terminate.tower7 != 0) { structure.active.tower7 = 0; irudiaKendu(structure.create.tower7); structure.create.tower7 = -1; on = 1; }
+	if (structure.change.terminate.tower8 != 0) { structure.active.tower8 = 0; irudiaKendu(structure.create.tower8); structure.create.tower8 = -1; on = 1; }
+	if (structure.change.terminate.tower9 != 0) { structure.active.tower9 = 0; irudiaKendu(structure.create.tower9); structure.create.tower9 = -1; on = 1;}
+	if (structure.change.terminate.tower10 != 0) { structure.active.tower10 = 0; irudiaKendu(structure.create.tower10); structure.create.tower10 = -1; on = 1; }
 	if (on == 1) { structure.area = hasieratuAreak(); structure.change.terminate = hasieratuTerminate(); pantailaBerriztu(); }
 	return structure;
 }
@@ -408,15 +427,15 @@ int returnMoney(ACTIVE active, TERMINATE terminate)
 {
 	int money = 0;
 	if (terminate.tower1 != 0) money = checkTowerType(active.tower1);
-	if (terminate.tower2 != 0) money = checkTowerType(active.tower2);
-	if (terminate.tower3 != 0) money = checkTowerType(active.tower3);
-	if (terminate.tower4 != 0) money = checkTowerType(active.tower4);
-	if (terminate.tower5 != 0) money = checkTowerType(active.tower5);
-	if (terminate.tower6 != 0) money = checkTowerType(active.tower6);
-	if (terminate.tower7 != 0) money = checkTowerType(active.tower7);
-	if (terminate.tower8 != 0) money = checkTowerType(active.tower8);
-	if (terminate.tower9 != 0) money = checkTowerType(active.tower9);
-	if (terminate.tower10 != 0) money = checkTowerType(active.tower10);
+	else if (terminate.tower2 != 0) money = checkTowerType(active.tower2);
+	else if (terminate.tower3 != 0) money = checkTowerType(active.tower3);
+	else if (terminate.tower4 != 0) money = checkTowerType(active.tower4);
+	else if (terminate.tower5 != 0) money = checkTowerType(active.tower5);
+	else if (terminate.tower6 != 0) money = checkTowerType(active.tower6);
+	else if (terminate.tower7 != 0) money = checkTowerType(active.tower7);
+	else if (terminate.tower8 != 0) money = checkTowerType(active.tower8);
+	else if (terminate.tower9 != 0) money = checkTowerType(active.tower9);
+	else if (terminate.tower10 != 0) money = checkTowerType(active.tower10);
 	return money;
 }
 

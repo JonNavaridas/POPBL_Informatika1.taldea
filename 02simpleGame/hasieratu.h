@@ -11,6 +11,7 @@
 #define MIRA "img/Torres/mira.bmp"
 
 #define MUSICA_MENU ".\\sound\\inicio.wav"
+#define LOAD "img/Pantallas/logo.bmp"
 #define FONDO_INCIO ".\\img\\Pantallas\\inicio.bmp"
 #define CREDITOS ".\\img\\Pantallas\\creditos.bmp"
 #define IMG_IRABAZI "img/Pantallas/win.bmp"
@@ -33,7 +34,7 @@
 //Iniciar cosas distintas
 AREA hasieratuAreak(void);
 ACTIVE hasieratuActive(void);
-ACTION hasieratuAction(void);
+ACTION hasieratuAction(int on);
 CREATE hasieratuCreate(void);
 int hasieratuBizitzak(int i);
 UPGRADE hasieratuUpgrade(void);

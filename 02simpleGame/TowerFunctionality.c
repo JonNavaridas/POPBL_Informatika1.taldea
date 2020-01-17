@@ -11,24 +11,24 @@
 #include <windows.h>
 
 //Dorreak sortu
-ACTION towerAttack(float towerX, float towerY, int ebentu, float enemyX, float enemyY, int time, int upgrade, int tower, ACTION action)
+ACTION towerAttack(float towerX, float towerY, int ebentu, float enemyX, float enemyY, int time, int upgrade, int tower, int target, ACTION action)
 {
 	int radius = 0;
 
 	if (ebentu == 1) {
-		radius = (110 * (1 + upgrade / 10));
-		action.damage = archerTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
-		if (enemyX > towerX + radius && enemyX < towerX - radius && enemyY > towerY + radius && enemyY < towerY - radius) { action.target.tower[tower] = -1; }
+		radius = (140 * (1 + upgrade / 10));
+		if (enemyX > towerX + radius || enemyX < towerX - radius || enemyY > towerY + radius || enemyY < towerY - radius && enemyX >= 0 && enemyX <= SCREEN_WIDTH) { action.target.tower[tower] = -1; }
+		if (action.target.tower[tower] != -1) action.damage[target] = archerTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
 	}
 	if (ebentu == 2) {
-		radius = (80 * (1 + upgrade / 10));
-		action = mageTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
-		if (enemyX > towerX + radius && enemyX < towerX - radius && enemyY > towerY + radius && enemyY < towerY - radius) { action.target.tower[tower] = -1; }
+		radius = (110 * (1 + upgrade / 10));
+		if (enemyX > towerX + radius || enemyX < towerX - radius || enemyY > towerY + radius || enemyY < towerY - radius && enemyX >= 0 && enemyX <= SCREEN_WIDTH) { action.target.tower[tower] = -1; }
+		if (action.target.tower[tower] != -1) action = mageTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade, target);
 	}
 	if (ebentu == 3) {
-		radius = (150 * (1 + upgrade / 10));
-		action = bomberTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade);
-		if (enemyX > towerX + radius && enemyX < towerX - radius && enemyY > towerY + radius && enemyY < towerY - radius) { action.target.tower[tower] = -1; }
+		radius = (180 * (1 + upgrade / 10));
+		if (enemyX > towerX + radius || enemyX < towerX - radius || enemyY > towerY + radius || enemyY < towerY - radius && enemyX >= 0 && enemyX <= SCREEN_WIDTH) { action.target.tower[tower] = -1; }
+		if (action.target.tower[tower] != -1) action = bomberTowerTarget(enemyX, enemyY, towerX, towerY, radius, time, upgrade, target);
 	}
 	if (ebentu == 4) {
 		action.money = mineRecolection(time, upgrade);
@@ -48,14 +48,14 @@ int archerTowerTarget(float x, float y, float positionX, float positionY, int ra
 	tower.x = positionX;
 	tower.y = positionY;
 
-	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
+	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius && enemy.x > 0 && enemy.x < SCREEN_WIDTH)
 	{
 		arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x + 15, enemy.y + 30);
 		arkatzKoloreaEzarri(255, 0, 0);
-		if ((time % 50 >= 30 && time % 50 < 50) || time % 50 == 0) {
+		if ((time % 500 >= 30 && time % 500 < 50) || time % 500 == 0) {
 			zirkuluaMarraztu(bullet.x + 15, bullet.y + 30, 5);
-			if (time % 50 == 0) damage = (100 * (1 + upgrade / 10));
+			if (time % 200 == 0) damage = (100 * (1 + upgrade / 10));
 		}
 	}
 	pantailaBerriztu();
@@ -64,7 +64,7 @@ int archerTowerTarget(float x, float y, float positionX, float positionY, int ra
 }
 
 //Ataque de torre de mago
-ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade)
+ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target)
 {
 	POSIZIOA tower, enemy;
 	ACTION action;
@@ -72,16 +72,16 @@ ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int r
 	enemy.y = y;
 	tower.x = positionX;
 	tower.y = positionY;
-	action = hasieratuAction();
+	action = hasieratuAction(0);
 
-	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
+	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius && enemy.x > 0 && enemy.x < SCREEN_WIDTH - 2)
 	{
-		if ((time % 100 >= 80 && time % 100 < 100) || time % 100 == 0) {
-			arkatzKoloreaEzarri(0, 0, 255);
-			if (time % 100 == 0) { action.damage = (30 * (1 + upgrade / 10)); action.freeze = 1; }
-		}
-		else arkatzKoloreaEzarri(255, 255, 255);
+		arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x + 15, enemy.y + 30);
+		if ((time % 1000 >= 80 && time % 1000 < 100) || time % 1000 == 0) {
+			arkatzKoloreaEzarri(0, 0, 255);
+			if (time % 400 == 0) { action.damage[target] = (30 * (1 + upgrade / 10)); action.freeze[target] = 1; }
+		}
 	}
 	pantailaBerriztu();
 
@@ -89,7 +89,7 @@ ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int r
 }
 
 //Ataque torre de bombardero
-ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade)
+ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target)
 {
 	POSIZIOA tower, enemy, bullet;
 	ACTION action;
@@ -99,18 +99,19 @@ ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int
 	bullet.y = enemy.y;
 	tower.x = positionX;
 	tower.y = positionY;
-	action = hasieratuAction();
+	action = hasieratuAction(0);
 
-	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius)
+	if (enemy.x <= tower.x + radius && enemy.x >= tower.x - radius && enemy.y <= tower.y + radius && enemy.y >= tower.y - radius && enemy.x > 0 && enemy.x < SCREEN_WIDTH - 2)
 	{
 		arkatzKoloreaEzarri(255, 255, 255);
 		zuzenaMarraztu(tower.x, tower.y, enemy.x + 15, enemy.y + 30);
 		arkatzKoloreaEzarri(255, 0, 0);
-		if ((time % 150 >= 100 && time % 150 < 150) || time % 150 == 0) {
+
+		if ((time % 1500 >= 100 && time % 1500 < 150) || time % 1500 == 0) {
 			zirkuluaMarraztu(bullet.x + 15, bullet.y + 30, 30);
-			if (time % 150 == 0) {
-				action.damage = (60 * (1 + upgrade / 10));
-				action.resource = 30;
+			if (time % 600 == 0) {
+				action.damage[target] = (60 * (1 + upgrade / 10));
+				action.resource[target] = 30;
 			}
 		}
 	}
@@ -133,4 +134,9 @@ int enemyDeath(int lifeTotal)
 	int death = 0;
 	if (lifeTotal < 0) death = 1;
 	return death;
+}
+
+OLATUAK stageDamage(OLATUAK olatuak, ACTION action, int enemy)
+{
+	return olatuak;
 }

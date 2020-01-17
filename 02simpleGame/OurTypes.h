@@ -19,14 +19,14 @@ typedef struct MENU_PARTS_DE
 
 typedef struct TARGET_DE
 {
-	int tower[10];
+	int tower[11];
 } TARGET;
 
 typedef struct ACTION_DE
 {
-	int damage;
-	int freeze;
-	int resource;
+	int damage[30];
+	int freeze[30];
+	int resource[30];
 	TARGET target;
 	int money;
 	int id;
@@ -81,6 +81,7 @@ typedef struct OLATUAK_DE
 	int defentsa, kont, damage;
 	POSIZIOA enemy[30];
 	int enemyLife[30];
+	int enemyFreeze[30];
 } OLATUAK;
 
 #endif

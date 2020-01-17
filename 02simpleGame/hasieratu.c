@@ -7,7 +7,7 @@
 #include "OurTypes.h"
 #include "hasieratu.h"
 #include "TowerBuild.h"
-#include "game02.h"
+#include "CC_Game.h"
 #include <stdio.h>
 #include <windows.h>
 
@@ -61,16 +61,18 @@ UPGRADE hasieratuUpgrade(void)
 }
 
 //Hasieratu dorreen akzioak
-ACTION hasieratuAction(void)
+ACTION hasieratuAction(int on)
 {
 	int i;
 	ACTION action;
-	action.damage = 0;
-	action.freeze = 0;
-	action.resource = 0;
 	action.money = 0;
     action.id = -1;
-	for (i = 0; i < 10; i++) action.target.tower[i] = -1;
+	for (i = 0; i < 30; i++) {
+		action.damage[i] = 0;
+		action.freeze[i] = 0;
+		action.resource[i] = 0;
+		if (i >= 1 && i <= 10 && on == 1) action.target.tower[i] = -1; 
+	}
 	return action;
 }
 
@@ -111,7 +113,7 @@ TERMINATE hasieratuTerminate(void)
 TOWER_STRUCTURE hasieratuEstruktura(void)
 {
 	TOWER_STRUCTURE estruktura;
-	estruktura.action = hasieratuAction();
+	estruktura.action = hasieratuAction(1);
 	estruktura.active = hasieratuActive();
 	estruktura.change.upgrade = hasieratuUpgrade();
 	estruktura.change.terminate = hasieratuTerminate();

@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="game02\game02.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\simpleSdlWrapper\ebentoak.c">
       <Filter>Source Files\simpleSdlWrapper</Filter>
     </ClCompile>
@@ -42,9 +39,6 @@
     <ClCompile Include="olatuak.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game02main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TowerBuild.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,6 +46,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="hasieratu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cucumbers_Catastrophe_Main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CC_Game.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,9 +74,6 @@
     <ClInclude Include="OurTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game02\game02.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="olatuak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -87,6 +84,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TowerFunctionality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

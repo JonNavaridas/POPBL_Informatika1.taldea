@@ -15,7 +15,8 @@ MENU_PARTS createMenu(MENU_PARTS menu, AREA place, int money, int ebentu, int on
 TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, int ebentu, int on);
 
 //Cambio del dinero
-int reduceMoney(int tower);
+int reduceMoney(int tower, int upgrade);
+int reduceMoneyUpgrade(int tower, UPGRADE towerUpgrade);
 int returnMoney(ACTIVE active, TERMINATE terminate);
 int checkTowerType(int tower);
 
@@ -32,7 +33,7 @@ int createBomberTower(int x, int y);
 int createMine(int x, int y);
 
 //Aciones
-ACTION batuAction(ACTION action, ACTION totalAction);
+ACTION batuAction(ACTION action, ACTION totalAction, int i);
 CREATE constructTower(ACTIVE activate, CREATE created);
 
 //Mejora
