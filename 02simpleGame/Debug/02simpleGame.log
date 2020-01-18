@@ -1,7 +1,41 @@
-﻿  text.c
-  02simpleGameMain.c
-  game02.c
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\02simpleGameMain.c(55,22): warning C4013: 'kredituak' sin definir; se supone que extern devuelve como resultado int
+﻿  graphics.c
+C:\Users\oierb\Desktop\cambios\simpleSdlWrapper\graphics.c(59,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\simpleSdlWrapper\graphics.c(59,39): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\simpleSdlWrapper\graphics.c(59,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  imagen.c
+C:\Users\oierb\Desktop\cambios\simpleSdlWrapper\graphics.c(59,47): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\simpleSdlWrapper\imagen.c(66,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+  text.c
+  CC_Game.c
+C:\Users\oierb\Desktop\cambios\simpleSdlWrapper\imagen.c(67,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(140,85): warning C4020: 'etsaiak': hay demasiados parámetros reales
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(204,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(205,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(210,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(217,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(218,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(223,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(229,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(230,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Cucumbers_Catastrophe_Main.c
+  TowerBuild.c
+C:\Users\oierb\Desktop\cambios\02simpleGame\CC_Game.c(235,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(63,32): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(63,41): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(186,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(186,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(196,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(196,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(206,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(206,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(216,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+  TowerFunctionality.c
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerBuild.c(216,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerFunctionality.c(57,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerFunctionality.c(57,49): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerFunctionality.c(111,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  hasieratu.c
+  olatuak.c
   Generando código...
-C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\game02\game02.c(38,42): warning C4013: 'HASIERA_irudiaBistaratu' sin definir; se supone que extern devuelve como resultado int
-  02simpleGame.vcxproj -> C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe
+C:\Users\oierb\Desktop\cambios\02simpleGame\TowerFunctionality.c(111,49): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  02simpleGame.vcxproj -> C:\Users\oierb\Desktop\cambios\Debug\02simpleGame.exe

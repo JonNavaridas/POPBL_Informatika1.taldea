@@ -150,8 +150,12 @@
     <ClCompile Include="..\simpleSdlWrapper\imagen.c" />
     <ClCompile Include="..\simpleSdlWrapper\soinua.c" />
     <ClCompile Include="..\simpleSdlWrapper\text.c" />
-    <ClCompile Include="02simpleGameMain.c" />
-    <ClCompile Include="game02\game02.c" />
+    <ClCompile Include="CC_Game.c" />
+    <ClCompile Include="Cucumbers_Catastrophe_Main.c" />
+    <ClCompile Include="hasieratu.c" />
+    <ClCompile Include="olatuak.c" />
+    <ClCompile Include="TowerBuild.c" />
+    <ClCompile Include="TowerFunctionality.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\simpleSdlWrapper\ebentoak.h" />
@@ -159,8 +163,12 @@
     <ClInclude Include="..\simpleSdlWrapper\imagen.h" />
     <ClInclude Include="..\simpleSdlWrapper\soinua.h" />
     <ClInclude Include="..\simpleSdlWrapper\text.h" />
-    <ClInclude Include="game02\game02.h" />
+    <ClInclude Include="CC_Game.h" />
+    <ClInclude Include="hasieratu.h" />
+    <ClInclude Include="olatuak.h" />
     <ClInclude Include="OurTypes.h" />
+    <ClInclude Include="TowerBuild.h" />
+    <ClInclude Include="TowerFunctionality.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
