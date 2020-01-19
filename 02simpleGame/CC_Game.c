@@ -113,7 +113,7 @@ void howto()
 EGOERA jokatu1(void)
 {
 	int mugitu = 0, ebentu = 0, defensa = 0;
-	int lifeTotal = 2000, idVida = -1, idMoney = -1;
+	int lifeTotal = 20, idVida = -1, idMoney = -1;
 	EGOERA  egoera = JOLASTEN;
 	OLATUAK olatuak;
 	TOWER_STRUCTURE structure;
@@ -200,40 +200,52 @@ int JOKOA_jokalaria3IrudiaSortu(int rapinilloId)
 	return rapinilloId;
 }
 
-POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa) {
-	posizioa.y = posizioa.y - 0.25;
-	posizioa.x = posizioa.x + 0.25;
+POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa, int stop) {
+	if (stop != 1) {
+		posizioa.y = posizioa.y - 0.25;
+		posizioa.x = posizioa.x + 0.25;
+	}
 	return posizioa;
 }
 
-POSIZIOA ERREALITATE_FISIKOA2_mugimendua(POSIZIOA posizioa) {
-	posizioa.y = posizioa.y + 0.25;
-	posizioa.x = posizioa.x;
+POSIZIOA ERREALITATE_FISIKOA2_mugimendua(POSIZIOA posizioa, int stop) {
+	if (stop != 1) {
+		posizioa.y = posizioa.y + 0.25;
+		posizioa.x = posizioa.x;
+	}
 	return posizioa;
 }
 
 
-POSIZIOA ERREALITATE_FISIKOA3_mugimendua(POSIZIOA posizioa) {
-	posizioa.y = posizioa.y - 0.5;
-	posizioa.x = posizioa.x + 0.5;
+POSIZIOA ERREALITATE_FISIKOA3_mugimendua(POSIZIOA posizioa, int stop) {
+	if (stop != 1) {
+		posizioa.y = posizioa.y - 0.5;
+		posizioa.x = posizioa.x + 0.5;
+	}
 	return posizioa;
 }
 
-POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa) {
-	posizioa.y = posizioa.y + 0.5;
-	posizioa.x = posizioa.x;
+POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa, int stop) {
+	if (stop != 1) {
+		posizioa.y = posizioa.y + 0.5;
+		posizioa.x = posizioa.x;
+	}
 	return posizioa;
 }
 
-POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa) {
-	posizioa.y = posizioa.y - 0.125;
-	posizioa.x = posizioa.x + 0.125;
+POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa, int stop) {
+	if (stop != 1) {
+		posizioa.y = posizioa.y - 0.125;
+		posizioa.x = posizioa.x + 0.125;
+	}
 	return posizioa;
 }
 
-POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa) {
-	posizioa.y = posizioa.y + 0.125;
-	posizioa.x = posizioa.x;
+POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa, int stop) {
+	if (stop != 1) {
+		posizioa.y = posizioa.y + 0.125;
+		posizioa.x = posizioa.x;
+	}
 	return posizioa;
 }
 

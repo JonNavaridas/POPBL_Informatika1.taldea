@@ -7,13 +7,14 @@ ACTION towerAttack(float towerX, float towerY, int ebentu, float enemyX, float e
 
 //Targeting de las torres
 int archerTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade);
-ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target);
-ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target);
+ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target, ACTION action);
+ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target, ACTION action);
 int mineRecolection(int time, int upgrade); 
 OLATUAK stageDamage(OLATUAK olatuak, ACTION action, int enemy);
 OLATUAK areaDamage(int area, OLATUAK olatuak, int enemy);
 
 //Muerte de enemigo
 int enemyDeath(int lifeTotal);
+FROZEN freeze(FROZEN frozen);
 
 #endif

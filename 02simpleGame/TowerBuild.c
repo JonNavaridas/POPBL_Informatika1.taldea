@@ -239,7 +239,8 @@ ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[], A
 {
 	int i, j;
 	ACTION totalAction;
-	totalAction = hasieratuAction(1);
+	totalAction = hasieratuAction(1, 1);
+	for (i = 0; i < 30; i++) totalAction.frozen[i] = action.frozen[i];
 
 	for (i = 0; i < 30; i++) {
 		for (j = 1; j <= 10; j++) { if (action.target.tower[j] == -1) action.target.tower[j] = i; }
@@ -310,7 +311,7 @@ ACTION batuAction(ACTION action, ACTION totalAction, int i, int tower)
 TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, int ebentu, int on)
 {
 	int posible = 0;
-	posible = towerUpgradeCheck(towerPos, structure.change.upgrade);
+	posible = towerUpgradeCheck(towerPos, structure.change.upgrade, structure);
 
 	if (on == 0) {
 		structure.menu.id = irudiaKargatu(UPGRADE_SELL_MENU);
@@ -328,7 +329,7 @@ TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, 
 			structure.money += returnMoney(structure.active, structure.change.terminate);
 		}
 		if (posible != 0 && ebentu == TECLA_RIGHT) { //Mejorar
-			structure = upgradeTower(posible, structure);
+			structure = upgradeTower(posible, structure, structure.menu.tower);
 			structure.money -= reduceMoneyUpgrade(structure.menu.tower, structure.change.upgrade);
 		}
 		if (posible == 0) structure.area = hasieratuAreak();
@@ -336,20 +337,20 @@ TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, 
 	return structure;
 }
 
-int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade)
+int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade, TOWER_STRUCTURE structure)
 {
 	int posible = 0;
 
-	if (pos.x == 158 && pos.y == 14 && upgrade.tower1 < 2) { posible = 1; }
-    else if (pos.x == 248 && pos.y == 14 && upgrade.tower2 < 2) { posible = 2; }
-    else if (pos.x == 14 && pos.y == 348 && upgrade.tower3 < 2) { posible = 3; }
-    else if (pos.x == 210 && pos.y == 206 && upgrade.tower4 < 2) { posible = 4; }
-    else if (pos.x == 538 && pos.y == 206 && upgrade.tower5 < 2) { posible = 5; }
-    else if (pos.x == 873 && pos.y == 202 && upgrade.tower6 < 2) { posible = 6; }
-    else if (pos.x == 968 && pos.y == 202 && upgrade.tower7 < 2) { posible = 7; }
-    else if (pos.x == 112 && pos.y == 538 && upgrade.tower8 < 2) { posible = 8; }
-    else if (pos.x == 680 && pos.y == 394 && upgrade.tower9 < 2) { posible = 9; }
-    else if (pos.x == 920 && pos.y == 395 && upgrade.tower10 < 2) { posible = 10; }
+	if (pos.x == 158 && pos.y == 14 && upgrade.tower1 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower1) <= structure.money) { posible = 1; }
+    else if (pos.x == 248 && pos.y == 14 && upgrade.tower2 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower2) <= structure.money) { posible = 2; }
+    else if (pos.x == 14 && pos.y == 348 && upgrade.tower3 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower3) <= structure.money) { posible = 3; }
+    else if (pos.x == 210 && pos.y == 206 && upgrade.tower4 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower4) <= structure.money) { posible = 4; }
+    else if (pos.x == 538 && pos.y == 206 && upgrade.tower5 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower5) <= structure.money) { posible = 5; }
+    else if (pos.x == 873 && pos.y == 202 && upgrade.tower6 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower6) <= structure.money) { posible = 6; }
+    else if (pos.x == 968 && pos.y == 202 && upgrade.tower7 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower7) <= structure.money) { posible = 7; }
+    else if (pos.x == 112 && pos.y == 538 && upgrade.tower8 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower8) <= structure.money) { posible = 8; }
+    else if (pos.x == 680 && pos.y == 394 && upgrade.tower9 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower9) <= structure.money) { posible = 9; }
+    else if (pos.x == 920 && pos.y == 395 && upgrade.tower10 < 2 && reduceMoney(structure.menu.tower, structure.change.upgrade.tower10) <= structure.money) { posible = 10; }
 
 	return posible;
 }

@@ -37,7 +37,7 @@ ACTION batuAction(ACTION action, ACTION totalAction, int i, int tower);
 CREATE constructTower(ACTIVE activate, CREATE created);
 
 //Mejora
-int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade);
+int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade, TOWER_STRUCTURE structure);
 TOWER_STRUCTURE upgradeTower(int posible, TOWER_STRUCTURE structure);
 
 //Destruir torre

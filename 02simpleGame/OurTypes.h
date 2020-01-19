@@ -22,10 +22,16 @@ typedef struct TARGET_DE
 	int tower[11];
 } TARGET;
 
+typedef struct FROZEN_DE
+{
+	int kont, stop;
+} FROZEN;
+
 typedef struct ACTION_DE
 {
 	int damage[30];
 	int freeze[30];
+	FROZEN frozen[30];
 	int resource[30];
 	TARGET target;
 	int money;

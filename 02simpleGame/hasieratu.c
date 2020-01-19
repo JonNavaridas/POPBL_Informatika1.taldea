@@ -60,8 +60,16 @@ UPGRADE hasieratuUpgrade(void)
     return upgrade;
 }
 
+FROZEN hasieratuFrozen(void)
+{
+	FROZEN frozen;
+	frozen.stop = 0;
+	frozen.kont = 0;
+	return frozen;
+}
+
 //Hasieratu dorreen akzioak
-ACTION hasieratuAction(int on)
+ACTION hasieratuAction(int onTarget, int onFrozen)
 {
 	int i;
 	ACTION action;
@@ -71,7 +79,8 @@ ACTION hasieratuAction(int on)
 		action.damage[i] = 0;
 		action.freeze[i] = 0;
 		action.resource[i] = 0;
-		if (i >= 1 && i <= 10 && on == 1) action.target.tower[i] = -1; 
+		if (onFrozen == 1) action.frozen[i] = hasieratuFrozen();
+		if (i >= 1 && i <= 10 && onTarget == 1) action.target.tower[i] = -1; 
 	}
 	return action;
 }
@@ -113,14 +122,14 @@ TERMINATE hasieratuTerminate(void)
 TOWER_STRUCTURE hasieratuEstruktura(void)
 {
 	TOWER_STRUCTURE estruktura;
-	estruktura.action = hasieratuAction(1);
+	estruktura.action = hasieratuAction(1, 1);
 	estruktura.active = hasieratuActive();
 	estruktura.change.upgrade = hasieratuUpgrade();
 	estruktura.change.terminate = hasieratuTerminate();
 	estruktura.create = hasieratuCreate();
 	estruktura.area = hasieratuAreak();
 	estruktura.menu.id = -1;
-    estruktura.money = 1000000000;
+    estruktura.money = 80;
 	return estruktura;
 }
 
@@ -227,7 +236,7 @@ OLATUAK hasieratuOlatuak(void)
 
 	olatuak.defentsa = 0;
 	olatuak.kont = 0;
-    olatuak.damage = 2000;
+    olatuak.damage = 20;
 	return olatuak;
 }
 
@@ -273,7 +282,7 @@ int hasieratuBizitzak(int i)
 {
 	int enemy;
 	if (i < 10) enemy = 120;
-	else if (i >= 10 && i < 20) enemy = 600;
+	else if (i >= 10 && i < 20) enemy = 100;
 	else if (i >= 20) enemy = 80;
 	return enemy;
 }

@@ -1,2 +1,13 @@
-﻿  olatuak.c
-  02simpleGame.vcxproj -> C:\Users\Jon\Desktop\POPBL_Informatika1.taldea\Debug\02simpleGame.exe
+﻿  TowerBuild.c
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,32): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,41): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(332,69): warning C4020: 'upgradeTower': hay demasiados parámetros reales
+  02simpleGame.vcxproj -> C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe

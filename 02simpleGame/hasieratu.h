@@ -34,7 +34,7 @@
 //Iniciar cosas distintas
 AREA hasieratuAreak(void);
 ACTIVE hasieratuActive(void);
-ACTION hasieratuAction(int on);
+ACTION hasieratuAction(int onTarget, int onFrozen);
 CREATE hasieratuCreate(void);
 int hasieratuBizitzak(int i);
 UPGRADE hasieratuUpgrade(void);
