@@ -239,6 +239,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
     EGOERA  egoera = JOLASTEN;
 	kont1 = olatuak.kont;
 	structure.action = hasieratuAction(1);
+	olatuak.money = structure.money;
 
     do {
         kont1++;
@@ -479,7 +480,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
         // Kontagailuak hemen (NO MOVER)
         kontagailua(kont1/100, 400, 50);
         kontagailua(lifeTotal, 950, 55);
-        kontagailua(structure.money, 950, 90);
+        kontagailua(olatuak.money, 950, 90);
 
         pantailaBerriztu();
 
@@ -804,8 +805,10 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
         	olatuak.kont = kont1;
             olatuak.damage = lifeTotal;
         }
+
 		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy, structure.action);
-		for (i = 0; i < 30; i++) olatuak = stageDamage(olatuak, structure.action, i);
+		for (i = 0; i < 30; i++) { olatuak = stageDamage(olatuak, structure.action, i); olatuak.enemyDeath[i] = enemyDeath(olatuak.enemyLife[i]); }
+		olatuak.money += structure.action.money;
 
     } while (olatuak.defentsa == 1);
     return olatuak;

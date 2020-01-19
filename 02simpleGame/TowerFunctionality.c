@@ -55,7 +55,7 @@ int archerTowerTarget(float x, float y, float positionX, float positionY, int ra
 		arkatzKoloreaEzarri(255, 0, 0);
 		if ((time % 500 >= 30 && time % 500 < 50) || time % 500 == 0) {
 			zirkuluaMarraztu(bullet.x + 15, bullet.y + 30, 5);
-			if (time % 200 == 0) damage = (100 * (1 + upgrade / 10));
+			if (time % 100 == 0) damage = (100 * (1 + upgrade / 10));
 		}
 	}
 	pantailaBerriztu();
@@ -80,7 +80,7 @@ ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int r
 		zuzenaMarraztu(tower.x, tower.y, enemy.x + 15, enemy.y + 30);
 		if ((time % 1000 >= 80 && time % 1000 < 100) || time % 1000 == 0) {
 			arkatzKoloreaEzarri(0, 0, 255);
-			if (time % 400 == 0) { action.damage[target] = (30 * (1 + upgrade / 10)); action.freeze[target] = 1; }
+			if (time % 200 == 0) { action.damage[target] = (30 * (1 + upgrade / 10)); action.freeze[target] = 1; }
 		}
 	}
 	pantailaBerriztu();
@@ -109,7 +109,7 @@ ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int
 
 		if ((time % 1500 >= 100 && time % 1500 < 150) || time % 1500 == 0) {
 			zirkuluaMarraztu(bullet.x + 15, bullet.y + 30, 30);
-			if (time % 600 == 0) {
+			if (time % 300 == 0) {
 				action.damage[target] = (60 * (1 + upgrade / 10));
 				action.resource[target] = 30;
 			}
@@ -124,7 +124,7 @@ ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int
 int mineRecolection(int time, int upgrade)
 {
 	int money = 0;
-	if (time % 100 == 0) money = 3 + upgrade;
+	if (time % 200 == 0) money = 3 + upgrade;
 	return money;
 }
 
@@ -138,5 +138,22 @@ int enemyDeath(int lifeTotal)
 
 OLATUAK stageDamage(OLATUAK olatuak, ACTION action, int enemy)
 {
+	olatuak.enemyLife[enemy] -= action.damage[enemy];
+	olatuak.enemyFreeze[enemy] = action.freeze[enemy];
+	if (action.resource != 0) olatuak = areaDamage(action.resource, olatuak, enemy);
+	return olatuak;
+}
+
+OLATUAK areaDamage(int area, OLATUAK olatuak, int enemy)
+{
+	int i;
+	for (i = 0; i < 30; i++)
+	{
+		if (i != enemy) {
+			if (olatuak.enemy[i].x >= (olatuak.enemy[enemy].x - area) && olatuak.enemy[i].x <= (olatuak.enemy[enemy].x + area) && olatuak.enemy[i].y >= (olatuak.enemy[enemy].y - area) && olatuak.enemy[i].y <= (olatuak.enemy[enemy].y + area)) {
+				olatuak.enemyLife[i] -= 60;
+			}
+		}
+	}
 	return olatuak;
 }

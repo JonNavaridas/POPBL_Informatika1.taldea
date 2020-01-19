@@ -135,8 +135,11 @@ EGOERA jokatu1(void)
 
 		ebentu = checkEbentu(lifeTotal, structure.money);
 		if (ebentu == TECLA_RETURN) olatuak.defentsa = 1;
-		if (olatuak.defentsa == 1) olatuak = etsaiak(olatuak, ebentu, structure, lifeTotal);
-		lifeTotal = olatuak.damage;
+		if (olatuak.defentsa == 1) { 
+			olatuak = etsaiak(olatuak, ebentu, structure, lifeTotal);
+			structure.money = olatuak.money;
+			lifeTotal = olatuak.damage;
+		}
 
 		structure = towerBuild(structure, olatuak.kont, ebentu, olatuak.enemy);
 		egoera = JOKOA_egoera(olatuak.kont, lifeTotal);

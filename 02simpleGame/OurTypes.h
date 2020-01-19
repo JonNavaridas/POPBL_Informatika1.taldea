@@ -78,10 +78,11 @@ typedef struct OLATUAK_DE
 {
 	JOKO_ELEMENTUA P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23, P24, P25, P26, P27, P28, P29, P30, fondoa2;
 	POSIZIOA aux, aux2, aux3, aux4, aux5, aux6, aux7, aux8, aux9, aux10, aux11, aux12, aux13, aux14, aux15, aux16, aux17, aux18, aux19, aux20, aux21, aux22, aux23, aux24, aux25, aux26, aux27, aux28, aux29, aux30, aux31, aux32, aux33, aux34, aux35, aux36, aux37, aux38, aux39, aux40, aux41, aux42, aux43, aux44, aux45, aux46, aux47, aux48, aux49, aux50, aux51, aux52, aux53, aux54, aux55, aux56, aux57, aux58, aux59, aux60;
-	int defentsa, kont, damage;
+	int defentsa, kont, damage, money;
 	POSIZIOA enemy[30];
 	int enemyLife[30];
 	int enemyFreeze[30];
+	int enemyDeath[30];
 } OLATUAK;
 
 #endif

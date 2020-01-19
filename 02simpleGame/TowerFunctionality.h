@@ -11,6 +11,7 @@ ACTION mageTowerTarget(float x, float y, float positionX, float positionY, int r
 ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int radius, int time, int upgrade, int target);
 int mineRecolection(int time, int upgrade); 
 OLATUAK stageDamage(OLATUAK olatuak, ACTION action, int enemy);
+OLATUAK areaDamage(int area, OLATUAK olatuak, int enemy);
 
 //Muerte de enemigo
 int enemyDeath(int lifeTotal);
