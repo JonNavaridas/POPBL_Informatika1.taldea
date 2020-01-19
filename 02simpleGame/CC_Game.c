@@ -15,14 +15,15 @@
 
 int jokoaAurkeztu(void)
 {
+    //Hasierako menuaren argazkia jarri
 	int ebentu = 0, idFONDOINICIO;
 	idFONDOINICIO = HASIERA_irudiaBistaratu();
-
+   // Ebentu baten zain egon
 	do
 	{
 		ebentu = ebentuaJasoGertatuBada();
 	} while (ebentu != SAGU_BOTOIA_EZKERRA && ebentu != TECLA_ESCAPE);
-
+    //Hasierako menuaren irudia kendu
 	pantailaGarbitu();
 	irudiaKendu(idFONDOINICIO);
 	pantailaBerriztu();
@@ -32,50 +33,50 @@ int jokoaAurkeztu(void)
 void kredituak()
 {
 	int ebentu = 0, idFONDO;
-
+    //kredituen menuaren argazkia jarri
 	idFONDO = irudiaKargatu(CREDITOS);
 	irudiaMugitu(idFONDO, 0, 0);
 	irudiakMarraztu();
 	pantailaBerriztu();
-
+    //ebentu baten zain egon
 	do
 	{
 		ebentu = ebentuaJasoGertatuBada();
 	} while (ebentu != TECLA_RETURN && ebentu != TECLA_ESCAPE);
-
+    //Kredituen irudia kendu
 	pantailaGarbitu();
 	irudiaKendu(idFONDO);
 	pantailaBerriztu();
 }
 
 void howto()
-{
+{// Irudi guztiak berdin funtzionatzen dute
 	int ebentu = 0, idFONDO1, idFONDO2, idFONDO3, idFONDO4;
-
+    // "How-to" pantailaren lehenengo irudia jarri
 	idFONDO1 = irudiaKargatu(HOWTO_1);
 	irudiaMugitu(idFONDO1, 0, 0);
 	irudiakMarraztu();
 	pantailaBerriztu();
-
+    //Ebentu baten zain egon
 	do
 	{
 		ebentu = ebentuaJasoGertatuBada();
 	} while (ebentu != SAGU_BOTOIA_EZKERRA && ebentu != TECLA_RETURN);
-
+    // lehenengo irudia kendu
 	pantailaGarbitu();
 	irudiaKendu(idFONDO1);
 	pantailaBerriztu();
-
+    // bigarren irudia jarri
 	idFONDO2 = irudiaKargatu(HOWTO_2);
 	irudiaMugitu(idFONDO2, 0, 0);
 	irudiakMarraztu();
 	pantailaBerriztu();
-
+    //ebentu baten zain egon
 	do
 	{
 		ebentu = ebentuaJasoGertatuBada();
 	} while (ebentu != SAGU_BOTOIA_EZKERRA && ebentu != TECLA_RETURN);
-
+    //bigarren irudia kendu
 	pantailaGarbitu();
 	irudiaKendu(idFONDO2);
 	pantailaBerriztu();
@@ -117,14 +118,15 @@ EGOERA jokatu1(void)
 	EGOERA  egoera = JOLASTEN;
 	OLATUAK olatuak;
 	TOWER_STRUCTURE structure;
+    //Estrukturak hasieratu
 	structure = hasieratuEstruktura();
 	olatuak = hasieratuOlatuak();
-
+    // Textua gaitu eta musika jarri
 	textuaGaitu();
 	audioInit();
 	loadTheMusic(JOKOA_SOUND);
 	playMusic();
-
+    // Kontagailuen irudiak kokatu
 	idVida = irudiaKargatu(HEART);
 	irudiaMugitu(idVida, 900, 50);
 	idMoney = irudiaKargatu(MONEY);
@@ -133,22 +135,26 @@ EGOERA jokatu1(void)
 	do {
 		irudiakMarraztu();
 		pantailaBerriztu();
-
+        // ebentu baten zain egon eta kontagailuak jarri
 		ebentu = checkEbentu(lifeTotal, structure.money);
+        // Return sakatzerakoan olatua hasi
 		if (ebentu == TECLA_RETURN) olatuak.defentsa = 1;
 		if (olatuak.defentsa == 1) { 
+            //olatuen funtizioa
 			olatuak = etsaiak(olatuak, ebentu, structure, lifeTotal);
+            //Funtziotik bueltatutako datuak beste estrukturan
 			structure.money = olatuak.money;
 			lifeTotal = olatuak.damage;
 		}
-
+        //Dorreak sortzeko funtzioa
 		structure = towerBuild(structure, olatuak.kont, ebentu, olatuak.enemy);
+        //Irabazi edo galdu den egiaztatzeko funtzioa
 		egoera = JOKOA_egoera(olatuak.kont, lifeTotal);
 		if (ebentu == TECLA_ESCAPE) egoera = ATERA;
 		if (egoera != JOLASTEN) { etsaiIrudiakKendu(olatuak); }
 
 	} while (egoera == JOLASTEN);
-
+    //Irudiak eta musika kendu
 	irudiaKendu(idVida);
 	irudiaKendu(idMoney);
 	toggleMusic();
@@ -160,7 +166,7 @@ EGOERA jokatu1(void)
 
 EGOERA JOKOA_egoera(int kont1, int lifeTotal) {
 	EGOERA  ret = JOLASTEN;
-
+    // Olatuak amaitu badira --> irabazi         Jokalariaren bizitza 0 baino txikiagoa ala berdina bada --> galdu
 	if (kont1 == 140000) {
 		ret = IRABAZI;
 	}
@@ -169,7 +175,7 @@ EGOERA JOKOA_egoera(int kont1, int lifeTotal) {
 	}
 	return ret;
 }
-
+//Etsaien irudiak sortzeko funtzioak
 int JOKOA_jokalariaIrudiaSortu(int pepinoId)
 {
 	pepinoId = irudiaKargatu(JOKOA_PLAYER_IMAGE);
@@ -199,7 +205,7 @@ int JOKOA_jokalaria3IrudiaSortu(int rapinilloId)
 	pantailaBerriztu();
 	return rapinilloId;
 }
-
+// Auxiliarren gehiketa egiten duten funtzioak
 POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y - 0.25;
@@ -248,7 +254,7 @@ POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa, int stop) {
 	}
 	return posizioa;
 }
-
+//Joko amaieran egin beharrekoa egiten duen funtzioa: Irudiak eta musika jarri.
 void  jokoAmaierakoa1(EGOERA egoera)
 {
 	int ebentu = 0, id = -1;
@@ -274,6 +280,7 @@ void  jokoAmaierakoa1(EGOERA egoera)
 		irudiakMarraztu();
 		pantailaBerriztu();
 	}
+    // Ebentu baten zain egon
 	do
 	{
 		ebentu = ebentuaJasoGertatuBada();
@@ -281,7 +288,7 @@ void  jokoAmaierakoa1(EGOERA egoera)
 	soundsUnload();
 	irudiaKendu(id);
 }
-
+// Hasierako menuaren irudia bistaratzen duen funtzioa
 int HASIERA_irudiaBistaratu()
 {
 	int id = -1;
@@ -291,7 +298,7 @@ int HASIERA_irudiaBistaratu()
 	pantailaBerriztu();
 	return id;
 }
-
+//Maparen irudia bistaratzen duen funtzioa
 int FONDOA_irudiaBistaratu() {
 	int fondo = -1;
 	fondo = irudiaKargatu(BACKGROUND_IMAGE);
@@ -301,11 +308,13 @@ int FONDOA_irudiaBistaratu() {
 	pantailaBerriztu();
 	return fondo;
 }
-
+//Kontagailuaren funtzioa
 void kontagailua(int kont, int Posx, int Posy)
 {
 	int i = kont;
 	char str1[50];
+    // "INT" aldagaia karaktere-kate batean sartu
 	sprintf(str1, "%d", i);
+    // Textua pantailaratu
 	textuaIdatzi(Posx, Posy, str1);
 }

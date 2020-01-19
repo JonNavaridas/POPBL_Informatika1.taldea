@@ -23,18 +23,20 @@ int main(int argc, char* str[])
 		fprintf(stderr, "Unable to set 640x480 video: %s\n", SDL_GetError());
 		return 1;
 	}
-
+    // Loading pantalaren irudia jarri
 	id = irudiaKargatu(LOAD);
 	irudiaMugitu(id, 0, 0);
 	irudiakMarraztu();
 	pantailaBerriztu();
+    //800 milisegundu itxaron
 	Sleep(800);
+    //Loading pantailaren irudia kendu
 	irudiaKendu(id);
 	pantailaBerriztu();
-
+    
 	audioInit();
 	do
-	{
+	{    // Musika ez badago jarrita --> jarri
 		if (musica == 0) {
 			loadTheMusic(MUSICA_MENU);
 			playMusic();
@@ -42,11 +44,15 @@ int main(int argc, char* str[])
 		}
 
 		ebentu = jokoaAurkeztu();
+        //Saguaren posizioa detektatu
 		sagupos = saguarenPosizioa();
+        //Jolastu botoia
 		if ((sagupos.x > 180) && (sagupos.x < 440) && (sagupos.y > 340) && (sagupos.y < 380) && (ebentu == SAGU_BOTOIA_EZKERRA))
 		{
+            // Musika kendu eta jolastu
 			audioTerminate();
 			egoera = jokatu1();
+            //Amaierako pantaila
 			jokoAmaierakoa1(egoera);
 			musica = 0;
 

@@ -10,8 +10,11 @@
 #include <stdio.h>
 #include <windows.h>
 
+//Olatuetan irudiak mugitzen dituzten funtzioak (Olatua1 - Olatua14)
+
 void Olatua1(JOKO_ELEMENTUA P1, JOKO_ELEMENTUA P2, JOKO_ELEMENTUA P3, JOKO_ELEMENTUA P4, JOKO_ELEMENTUA P5, JOKO_ELEMENTUA P6, int enemy[])
 {
+    // Etsaia hilda ez badago --> irudia mugitu
 	if (enemy[0] == 0) irudiaMugitu(P1.id, P1.pos.x, P1.pos.y);
 	if (enemy[1] == 0) irudiaMugitu(P2.id, P2.pos.x, P2.pos.y);
 	if (enemy[2] == 0) irudiaMugitu(P3.id, P3.pos.x, P3.pos.y);
@@ -247,6 +250,8 @@ void Olatua14(JOKO_ELEMENTUA P15, JOKO_ELEMENTUA P16, JOKO_ELEMENTUA P17, JOKO_E
 	pantailaBerriztu();
 }
 
+//Etsaiak hiltzen badira, funtzio honek pantailatik kanpo bidaltzen ditu, targetingaren posizioa aldatuz eta irudia posizio horretara mugituz.
+
 POSIZIOA restartPosition(POSIZIOA enemy, int kont, JOKO_ELEMENTUA id1, JOKO_ELEMENTUA id2, JOKO_ELEMENTUA id3, JOKO_ELEMENTUA id4, JOKO_ELEMENTUA id5, JOKO_ELEMENTUA id6, JOKO_ELEMENTUA id7, JOKO_ELEMENTUA id8, JOKO_ELEMENTUA id9, JOKO_ELEMENTUA id10, JOKO_ELEMENTUA id11, JOKO_ELEMENTUA id12, JOKO_ELEMENTUA id13, JOKO_ELEMENTUA id14, JOKO_ELEMENTUA id15, JOKO_ELEMENTUA id16, JOKO_ELEMENTUA id17, JOKO_ELEMENTUA id18, JOKO_ELEMENTUA id19, JOKO_ELEMENTUA id20, JOKO_ELEMENTUA id21, JOKO_ELEMENTUA id22, JOKO_ELEMENTUA id23, JOKO_ELEMENTUA id24, JOKO_ELEMENTUA id25, JOKO_ELEMENTUA id26, JOKO_ELEMENTUA id27, JOKO_ELEMENTUA id28, JOKO_ELEMENTUA id29, JOKO_ELEMENTUA id30)
 {
 	if (kont == 0) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; irudiaMugitu(id1.id, enemy.x, enemy.y); }
@@ -282,7 +287,7 @@ POSIZIOA restartPosition(POSIZIOA enemy, int kont, JOKO_ELEMENTUA id1, JOKO_ELEM
 	pantailaBerriztu();
 	return enemy;
 }
-
+// Etsai bat hizten bada irabazten den dirua kalkulatzen duen funtzioa.
 int giveMoney(int enemy)
 {
 	int money = 0;
@@ -291,30 +296,39 @@ int giveMoney(int enemy)
 	if (enemy >= 20) money = 5;
 	return money;
 }
-
+// Olatuen funtzio nagusia
 OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int lifeTotal)
 {
 	int timeLeft1 = 10000, timeLeft2 = 10000, timeLeft3 = 7000, timeLeft4 = 10000, timeLeft5 = 20000, timeLeft6 = 20000, timeLeft7 = 20000, timeLeft8 = 7000, timeLeft9 = 20000, timeLeft10 = 20000, timeLeft11 = 20000, timeLeft12 = 20000, timeLeft13 = 20000, timeLeft14 = 20000;
 	int kont1 = 0, i = 0, j;
 	EGOERA  egoera = JOLASTEN;
+
+    //Estrukturak eta kontagailua hasieratu
+
 	kont1 = olatuak.kont;
 	structure.action = hasieratuAction(1, 1);
 	olatuak.money = structure.money;
 
 	do {
 		kont1++;
+
 		for (i = 0; i < 30; i++) {
+            //Etsaiak bizirik badaude, targetingaren eta etsaiaren posizioa berdindu.
 			if (olatuak.enemyDeath[i] == 0 && kont1 > 1) olatuak.enemy[i] = hasieratuEnemyPos(olatuak, i);
+            //Olatu berri bat hasi behar bada, etsaien bizitzak eta izoztuta dauden eta hilda dauden adierazten duten bektoreak hasieratu.
 			if (kont1 == 2 || kont1 == 10001 || kont1 == 20001 || kont1 == 27001 || kont1 == 37001 || kont1 == 57001 || kont1 == 77001 || kont1 == 97001 || kont1 == 104001 || kont1 == 124001 || kont1 == 144001 || kont1 == 164001 || kont1 == 184001 || kont1 == 204001 || kont1 == 224001) {
 				olatuak.enemyLife[i] = hasieratuBizitzak(i);
 				olatuak.enemyFreeze[i] = 0;
 				olatuak.enemyDeath[i] = 0;
 			}
 		}
-
+ //Lehenengo olatua
 		if (kont1 <= 10000 && kont1 > 1) {
+            // Geratzen den denboraren kontagailua
 			kontagailua(timeLeft1 / 100, 970, 25);
+
 			Olatua1(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.enemyDeath);
+            //Lehenengo bihurgunera iritsi arte, aurrera mugitu
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
 			if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
 			if (olatuak.aux5.x < 190) olatuak.P3.pos.x = olatuak.aux5.x;
@@ -564,11 +578,12 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft14--;
 		}
 		irudiakMarraztu();
+        //Kontagailuak
 		textuaIdatzi(900, 25, "Time Left");
 		kontagailua(lifeTotal, 950, 55);
 		kontagailua(olatuak.money, 950, 90);
 		pantailaBerriztu();
-
+        //Auxiliarren gehiketa egin
 		olatuak.aux = ERREALITATE_FISIKOA_mugimendua(olatuak.P1.pos, structure.action.frozen[0].stop);
 		olatuak.aux2 = ERREALITATE_FISIKOA2_mugimendua(olatuak.P1.pos, structure.action.frozen[0].stop);
 		olatuak.aux3 = ERREALITATE_FISIKOA_mugimendua(olatuak.P2.pos, structure.action.frozen[1].stop);
@@ -629,7 +644,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 		olatuak.aux58 = ERREALITATE_FISIKOA4_mugimendua(olatuak.P29.pos, structure.action.frozen[28].stop);
 		olatuak.aux59 = ERREALITATE_FISIKOA3_mugimendua(olatuak.P30.pos, structure.action.frozen[29].stop);
 		olatuak.aux60 = ERREALITATE_FISIKOA4_mugimendua(olatuak.P30.pos, structure.action.frozen[29].stop);
-
+        // Gainontzeko bihurguneak
 		if (olatuak.aux.x == 190) olatuak.P1.pos.y = olatuak.aux.y;
 		if (olatuak.aux3.x == 190) olatuak.P2.pos.y = olatuak.aux3.y;
 		if (olatuak.aux5.x == 190) olatuak.P3.pos.y = olatuak.aux5.y;
@@ -815,7 +830,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 		if (olatuak.aux55.x >= 900 && olatuak.aux55.x < 1109 && olatuak.aux55.y < 300) olatuak.P28.pos.x = olatuak.aux55.x;
 		if (olatuak.aux57.x >= 900 && olatuak.aux57.x < 1109 && olatuak.aux57.y < 300) olatuak.P29.pos.x = olatuak.aux57.x;
 		if (olatuak.aux59.x >= 900 && olatuak.aux59.x < 1109 && olatuak.aux59.y < 300) olatuak.P30.pos.x = olatuak.aux59.x;
-
+           // Jokalariaren amaierako bizitza kalkulatu (kenketa egin)
 		for (j = 0; j < 30; j++) {
 			olatuak.damage = 0;
 			if (olatuak.enemy[j].x == 1107 && j < 10) olatuak.damage += 2;
@@ -823,23 +838,28 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			else if (olatuak.enemy[j].x == 1107 && j >= 20) olatuak.damage += 1;
 			if (olatuak.damage != 0) lifeTotal -= olatuak.damage;
 		}
-
+        //Dorreen funtzioa
 		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy, structure.action);
+        //Dorrek egindako mina "aplikatu" (kenketa egin) eta etsaiak hiltzerakoak irabazitako dirua gehitu
 		for (i = 0; i < 30; i++) {
 			olatuak = stageDamage(olatuak, structure.action, i);
 			if (olatuak.enemyFreeze[i] != 0 || structure.action.frozen[i].stop == 1) structure.action.frozen[i] = freeze(structure.action.frozen[i]);
 			if (olatuak.enemyDeath[i] == 0 && kont1 != 1) olatuak.enemyDeath[i] = enemyDeath(olatuak.enemyLife[i]);
-			if (olatuak.enemyDeath[i] == 1) {
+			if (olatuak.enemyDeath[i] == 1) { //hilda badago
+                //pantailatik kanpo bidali
 				olatuak.enemy[i] = restartPosition(olatuak.enemy[i], i, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P17, olatuak.P18, olatuak.P19, olatuak.P20, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30);
+                //Dirua gehitu
 				olatuak.money += giveMoney(i);
 				structure.action.damage[i] = 0;
+                //Etsaia hilda dagoela adierazten duen aldagaiari 1 balioa eman
 				olatuak.enemyDeath[i]++;
 			}
 		}
+        //Diru totala estruktura batetik bestera pasa
 		olatuak.money += structure.action.money;
-
+        //Olatua amaitu bada, etsaiak hasierako posiziora bidali
 		if (lifeTotal <= 0 || kont1 == 10000 || kont1 == 20000 || kont1 == 27000 || kont1 == 37000 || kont1 == 57000 || kont1 == 77000 || kont1 == 97000 || kont1 == 104000 || kont1 == 124000 || kont1 == 144000 || kont1 == 164000 || kont1 == 184000 || kont1 == 204000 || kont1 == 224000)
-		{
+		{ 
 			olatuak.P1.pos.x = -30;
 			olatuak.P1.pos.y = 440;
 			irudiaMugitu(olatuak.P1.id, olatuak.P2.pos.x, olatuak.P1.pos.y);
@@ -931,7 +951,9 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			olatuak.P30.pos.y = 440;
 			irudiaMugitu(olatuak.P30.id, olatuak.P30.pos.x, olatuak.P30.pos.y);
 			pantailaBerriztu();
+            //olatua amaitu
 			olatuak.defentsa = 0;
+            //kontagailua eta jokalariaren bizitza "olatuak" estrukturara pasa
 			olatuak.kont = kont1;
 			olatuak.damage = lifeTotal;
 		}

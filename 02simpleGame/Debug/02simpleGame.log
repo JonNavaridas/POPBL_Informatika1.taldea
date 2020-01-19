@@ -1,13 +1,111 @@
-﻿  TowerBuild.c
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,32): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,41): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(332,69): warning C4020: 'upgradeTower': hay demasiados parámetros reales
-  02simpleGame.vcxproj -> C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe
+﻿  ebentoak.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\ebentoak.c(53,32): warning C4244: '=': conversión de 'Sint32' a 'float'; posible pérdida de datos
+  graphics.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\ebentoak.c(54,31): warning C4244: '=': conversión de 'Sint32' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\graphics.c(59,35): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\graphics.c(59,39): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\graphics.c(59,43): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  imagen.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\graphics.c(59,47): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\imagen.c(66,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+  soinua.c
+  text.c
+  CC_Game.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\simpleSdlWrapper\imagen.c(67,24): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(203,70): warning C4029: la lista de parámetros formales declarada es distinta de la definición
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(205,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(206,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(211,71): warning C4029: la lista de parámetros formales declarada es distinta de la definición
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(213,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(220,71): warning C4029: la lista de parámetros formales declarada es distinta de la definición
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(222,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(223,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(228,71): warning C4029: la lista de parámetros formales declarada es distinta de la definición
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(230,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(236,71): warning C4029: la lista de parámetros formales declarada es distinta de la definición
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(238,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(239,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(244,71): warning C4029: la lista de parámetros formales declarada es distinta de la definición
+  Cucumbers_Catastrophe_Main.c
+  hasieratu.c
+  olatuak.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(246,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(572,95): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(573,97): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(574,96): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(575,97): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(576,96): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(577,97): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(578,96): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(579,97): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(580,96): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(581,98): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(582,97): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(583,98): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(584,97): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(585,98): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(586,97): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(587,98): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(588,97): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(589,98): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(590,98): warning C4020: 'ERREALITATE_FISIKOA_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(591,99): warning C4020: 'ERREALITATE_FISIKOA2_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(592,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(593,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(594,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(595,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(596,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(597,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(598,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(599,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(600,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(601,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(602,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(603,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(604,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(605,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(606,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(607,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(608,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(609,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(610,100): warning C4020: 'ERREALITATE_FISIKOA5_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(611,100): warning C4020: 'ERREALITATE_FISIKOA6_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(612,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(613,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(614,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(615,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(616,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(617,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(618,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(619,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(620,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(621,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(622,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(623,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(624,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(625,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(626,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(627,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(628,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(629,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(630,100): warning C4020: 'ERREALITATE_FISIKOA3_mugimendua': hay demasiados parámetros reales
+  TowerBuild.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\olatuak.c(631,100): warning C4020: 'ERREALITATE_FISIKOA4_mugimendua': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,32): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,41): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+  TowerFunctionality.c
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(332,69): warning C4020: 'upgradeTower': hay demasiados parámetros reales
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(57,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(57,49): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(110,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  Generando código...
+C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(110,49): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  02simpleGame.vcxproj -> C:\Users\oierb\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe

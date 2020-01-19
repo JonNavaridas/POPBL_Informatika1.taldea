@@ -59,7 +59,7 @@ UPGRADE hasieratuUpgrade(void)
     upgrade.tower10 = 0;
     return upgrade;
 }
-
+// Izozteko funtzionalitatea hasieratu
 FROZEN hasieratuFrozen(void)
 {
 	FROZEN frozen;
@@ -101,7 +101,7 @@ CREATE hasieratuCreate(void)
 	create.tower10 = -1;
 	return create;
 }
-
+// Dorreak ezabatu behar diren adierazten duen bektorea hasieratu
 TERMINATE hasieratuTerminate(void)
 {
 	TERMINATE terminate;
@@ -136,7 +136,7 @@ TOWER_STRUCTURE hasieratuEstruktura(void)
 OLATUAK hasieratuOlatuak(void)
 {
 	OLATUAK olatuak;
-
+    // Etsaien hasierako poszioak
     olatuak = hasieratuOlatuakId();
     olatuak.P1.pos.x = -10;
     olatuak.P1.pos.y = 440;
@@ -198,11 +198,12 @@ OLATUAK hasieratuOlatuak(void)
     olatuak.P29.pos.y = 440;
     olatuak.P30.pos.x = -880;
     olatuak.P30.pos.y = 440;
-
+    //Fondoaren posizioa
     olatuak.fondoa2.pos.x = 0;
     olatuak.fondoa2.pos.y = 0;
-
+    //Fondoa bistaratu
     olatuak.fondoa2.id = FONDOA_irudiaBistaratu();
+    // Etsaiak bistaratu (pantailaren kanpo daude hasieran)
     olatuak.P1.id = JOKOA_jokalariaIrudiaSortu(olatuak.P1.id);
     olatuak.P2.id = JOKOA_jokalariaIrudiaSortu(olatuak.P2.id);
     olatuak.P3.id = JOKOA_jokalariaIrudiaSortu(olatuak.P3.id);
@@ -233,7 +234,7 @@ OLATUAK hasieratuOlatuak(void)
     olatuak.P28.id = JOKOA_jokalaria3IrudiaSortu(olatuak.P28.id);
     olatuak.P29.id = JOKOA_jokalaria3IrudiaSortu(olatuak.P29.id);
     olatuak.P30.id = JOKOA_jokalaria3IrudiaSortu(olatuak.P30.id);
-
+    // Defentsa aldagaia, kontagailua (denborarena) eta olatuaren amaieran kendu behar den bizitza hasieratu
 	olatuak.defentsa = 0;
 	olatuak.kont = 0;
     olatuak.damage = 20;
@@ -245,6 +246,7 @@ POSIZIOA hasieratuEnemyPos(OLATUAK olatuak, int i)
 	POSIZIOA enemy;
 	enemy.x = 0;
 	enemy.y = 0;
+    //Targetingaren posizioak hasieratu (Dorreen funtzioan erabiltzen diren poszioak hasieratu).
 	if (i == 0) { enemy.x = olatuak.P1.pos.x; enemy.y = olatuak.P1.pos.y; }
 	else if (i == 1) { enemy.x = olatuak.P2.pos.x; enemy.y = olatuak.P2.pos.y; }
 	else if (i == 2) { enemy.x = olatuak.P3.pos.x; enemy.y = olatuak.P3.pos.y; }
@@ -277,7 +279,7 @@ POSIZIOA hasieratuEnemyPos(OLATUAK olatuak, int i)
 	else if (i == 29) { enemy.x = olatuak.P30.pos.x; enemy.y = olatuak.P30.pos.y; }
 	return enemy;
 }
-
+// Etsaien bizitzak hasieratu
 int hasieratuBizitzak(int i)
 {
 	int enemy;
@@ -286,7 +288,7 @@ int hasieratuBizitzak(int i)
 	else if (i >= 20) enemy = 80;
 	return enemy;
 }
-
+// Etsaien argazkien id-ak hasieratu
 OLATUAK hasieratuOlatuakId(void)
 {
     OLATUAK olatuak;
@@ -322,7 +324,7 @@ OLATUAK hasieratuOlatuakId(void)
     olatuak.P30.id = -1;
     return olatuak;
 }
-
+// Etsai guztien irudiak kendu
 void etsaiIrudiakKendu(OLATUAK olatuak)
 {
     irudiaKendu(olatuak.P1.id);
@@ -356,7 +358,7 @@ void etsaiIrudiakKendu(OLATUAK olatuak)
     irudiaKendu(olatuak.P29.id);
     irudiaKendu(olatuak.P30.id);
 }
-
+// Ebentu baten zain egon eta kontagailuak eguneratu
 int checkEbentu(int lifeTotal, int money)
 {
     int ebentu = 0;
