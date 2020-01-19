@@ -246,68 +246,66 @@ ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[], A
 		if (active.tower1 != 0 && i == action.target.tower[1]) {
 			action.target.tower[1] = i;
 			action = towerAttack(223, 25, active.tower1, enemy[i].x, enemy[i].y, time, upgrade.tower1, 1, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower1);
 		}
 		if (active.tower2 != 0 && i == action.target.tower[2]) {
 			action.target.tower[2] = i;
 			action = towerAttack(313, 25, active.tower2, enemy[i].x, enemy[i].y, time, upgrade.tower2, 2, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower2);
 		}
 		if (active.tower3 != 0 && i == action.target.tower[3]) {
 			action.target.tower[3] = i;
 			action = towerAttack(76, 337, active.tower3, enemy[i].x, enemy[i].y, time, upgrade.tower3, 3, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower3);
 		}
 		if (active.tower4 != 0 && i == action.target.tower[4]) {
 			action.target.tower[4] = i;
 			action = towerAttack(266, 215, active.tower4, enemy[i].x, enemy[i].y, time, upgrade.tower4, 4, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower4);
 		}
 		if (active.tower5 != 0 && i == action.target.tower[5]) {
 			action.target.tower[5] = i;
 			action = towerAttack(593, 217, active.tower5, enemy[i].x, enemy[i].y, time, upgrade.tower5, 5, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower5);
 		}
 		if (active.tower6 != 0 && i == action.target.tower[6]) {
 			action.target.tower[6] = i;
 			action = towerAttack(925, 205, active.tower6, enemy[i].x, enemy[i].y, time, upgrade.tower6, 6, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower6);
 		}
 		if (active.tower7 != 0 && i == action.target.tower[7]) {
 			action.target.tower[7] = i;
 			action = towerAttack(1030, 205, active.tower7, enemy[i].x, enemy[i].y, time, upgrade.tower7, 7, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower7);
 		}
 		if (active.tower8 != 0 && i == action.target.tower[8]) {
 			action.target.tower[8] = i;
 			action = towerAttack(170, 525, active.tower8, enemy[i].x, enemy[i].y, time, upgrade.tower8, 8, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower8);
 		}
 		if (active.tower9 != 0 && i == action.target.tower[9]) {
 			action.target.tower[9] = i;
 			action = towerAttack(735, 390, active.tower9, enemy[i].x, enemy[i].y, time, upgrade.tower9, 9, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower9);
 		}
 		if (active.tower10 != 0 && i == action.target.tower[10]) {
 			action.target.tower[10] = i;
 			action = towerAttack(980, 395, active.tower10, enemy[i].x, enemy[i].y, time, upgrade.tower10, 10, i, action);
-			totalAction = batuAction(action, totalAction, i);
+			totalAction = batuAction(action, totalAction, i, active.tower10);
 		}
 	}
 	return totalAction;
 }
 
-ACTION batuAction(ACTION action, ACTION totalAction, int i)
+ACTION batuAction(ACTION action, ACTION totalAction, int i, int tower)
 {
 	totalAction.damage[i] += action.damage[i];
 	if (totalAction.freeze[i] != 1) totalAction.freeze[i] += action.freeze[i];
 	if (totalAction.resource[i] == 0) totalAction.resource[i] = action.resource[i];
-	totalAction.money += action.money;
+	if (tower == 4) totalAction.money += action.money;
 
 	return totalAction;
 }
-
-
 
 TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, int ebentu, int on)
 {

@@ -55,7 +55,7 @@ int archerTowerTarget(float x, float y, float positionX, float positionY, int ra
 		arkatzKoloreaEzarri(255, 0, 0);
 		if ((time % 500 >= 30 && time % 500 < 50) || time % 500 == 0) {
 			zirkuluaMarraztu(bullet.x + 15, bullet.y + 30, 5);
-			if (time % 100 == 0) damage = (100 * (1 + upgrade / 10));
+			if (time % 100 == 0) damage = (1000 * (1 + upgrade / 10));
 		}
 	}
 	pantailaBerriztu();
@@ -140,7 +140,7 @@ OLATUAK stageDamage(OLATUAK olatuak, ACTION action, int enemy)
 {
 	olatuak.enemyLife[enemy] -= action.damage[enemy];
 	olatuak.enemyFreeze[enemy] = action.freeze[enemy];
-	if (action.resource != 0) olatuak = areaDamage(action.resource, olatuak, enemy);
+	if (action.resource[enemy] != 0) olatuak = areaDamage(action.resource[enemy], olatuak, enemy);
 	return olatuak;
 }
 

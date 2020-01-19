@@ -124,7 +124,7 @@ TOWER_STRUCTURE hasieratuEstruktura(void)
 	return estruktura;
 }
 
-OLATUAK hasieratuOlatuak()
+OLATUAK hasieratuOlatuak(void)
 {
 	OLATUAK olatuak;
 

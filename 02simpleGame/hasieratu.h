@@ -38,7 +38,7 @@ ACTION hasieratuAction(int on);
 CREATE hasieratuCreate(void);
 int hasieratuBizitzak(int i);
 UPGRADE hasieratuUpgrade(void);
-OLATUAK hasieratuOlatuak();
+OLATUAK hasieratuOlatuak(void);
 //int liveCheckAction(OLATUAK olatuak, int i);
 TERMINATE hasieratuTerminate(void);
 TOWER_STRUCTURE hasieratuEstruktura(void);

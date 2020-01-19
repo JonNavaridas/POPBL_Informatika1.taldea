@@ -33,7 +33,7 @@ int createBomberTower(int x, int y);
 int createMine(int x, int y);
 
 //Aciones
-ACTION batuAction(ACTION action, ACTION totalAction, int i);
+ACTION batuAction(ACTION action, ACTION totalAction, int i, int tower);
 CREATE constructTower(ACTIVE activate, CREATE created);
 
 //Mejora

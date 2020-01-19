@@ -7,26 +7,7 @@ C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(2
 C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(222,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(228,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(229,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-  hasieratu.c
   olatuak.c
-  TowerBuild.c
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(234,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,32): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(63,41): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(186,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(196,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(206,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,20): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-  TowerFunctionality.c
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerBuild.c(216,23): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(57,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(57,49): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(111,34): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(111,49): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(143,64): warning C4047: 'función': 'int' es distinto en los niveles de direccionamiento indirecto de 'int [30]'
   Generando código...
-C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\TowerFunctionality.c(143,64): warning C4024: 'areaDamage': tipos distintos para el parámetro formal y el parámetro real 1
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(234,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   02simpleGame.vcxproj -> C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe

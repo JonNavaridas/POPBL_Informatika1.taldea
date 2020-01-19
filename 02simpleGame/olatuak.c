@@ -233,6 +233,41 @@ void Olatua14(JOKO_ELEMENTUA P15, JOKO_ELEMENTUA P16, JOKO_ELEMENTUA P17, JOKO_E
     irudiaMugitu(P30.id, P30.pos.x, P30.pos.y);
 }
 
+POSIZIOA restartPosition(POSIZIOA enemy, int kont)
+{
+	if (kont == 0) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 1) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 2) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 3) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 4) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 5) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 6) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 7) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 8) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 9) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 10) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 11) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 12) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 13) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 14) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 15) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 16) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 17) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 18) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 19) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 20) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 21) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 22) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 23) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 24) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 25) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 26) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 27) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 28) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	else if (kont == 29) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; }
+	return enemy;
+}
+
 OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int lifeTotal)
 {
     int kont1 = 0, i = 0, j;
@@ -244,7 +279,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
     do {
         kont1++;
 		for (i = 0; i < 30; i++) {
-			olatuak.enemy[i] = hasieratuEnemyPos(olatuak, i);
+			if (olatuak.enemyDeath[i] == 1 && kont1 > 1) olatuak.enemy[i] = hasieratuEnemyPos(olatuak, i);
 			if (kont1 == 2 || kont1 == 10001 || kont1 == 20001 || kont1 == 27001 || kont1 == 37001 || kont1 == 57001 || kont1 == 77001 || kont1 == 97001 || kont1 == 104001 || kont1 == 124001 || kont1 == 144001 || kont1 == 164001 || kont1 == 184001 || kont1 == 204001 || kont1 == 224001) {
 				olatuak.enemyLife[i] = hasieratuBizitzak(i);
 				olatuak.enemyFreeze[i] = 0;
@@ -477,7 +512,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
         }
         irudiakMarraztu();
 
-        // Kontagailuak hemen (NO MOVER)
+        // Kontagailuak hemen
         kontagailua(kont1/100, 400, 50);
         kontagailua(lifeTotal, 950, 55);
         kontagailua(olatuak.money, 950, 90);
@@ -738,8 +773,16 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             else if (olatuak.enemy[j].x == 1107 && j >= 20) olatuak.damage += 1;
             if (olatuak.damage != 0) lifeTotal -= olatuak.damage;
         }
+
+		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy, structure.action);
+		for (i = 0; i < 30; i++) {
+			olatuak = stageDamage(olatuak, structure.action, i);
+			olatuak.enemyDeath[i] = enemyDeath(olatuak.enemyLife[i]);
+			if (olatuak.enemyDeath[i] == 1) olatuak.enemy[i] = restartPosition(olatuak.enemy[i], i);
+		}
+		olatuak.money += structure.action.money;
         
-        if (kont1 == 10000 || kont1 == 20000 || kont1 == 27000 || kont1 == 37000 || kont1 == 57000 || kont1 == 77000 || kont1 == 97000 || kont1 == 104000 || kont1 == 124000 || kont1 == 144000 || kont1 == 164000 || kont1 == 184000 || kont1 == 204000 || kont1 == 224000)
+        if (lifeTotal <= 0 || kont1 == 10000 || kont1 == 20000 || kont1 == 27000 || kont1 == 37000 || kont1 == 57000 || kont1 == 77000 || kont1 == 97000 || kont1 == 104000 || kont1 == 124000 || kont1 == 144000 || kont1 == 164000 || kont1 == 184000 || kont1 == 204000 || kont1 == 224000)
         {
             olatuak.P1.pos.x = -30;
             olatuak.P1.pos.y = 440;
@@ -805,11 +848,6 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
         	olatuak.kont = kont1;
             olatuak.damage = lifeTotal;
         }
-
-		structure.action = allTowerSet(structure.active, kont1, structure.change.upgrade, olatuak.enemy, structure.action);
-		for (i = 0; i < 30; i++) { olatuak = stageDamage(olatuak, structure.action, i); olatuak.enemyDeath[i] = enemyDeath(olatuak.enemyLife[i]); }
-		olatuak.money += structure.action.money;
-
-    } while (olatuak.defentsa == 1);
+    } while (olatuak.defentsa == 1 && lifeTotal > 0);
     return olatuak;
 }
