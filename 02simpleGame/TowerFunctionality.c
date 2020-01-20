@@ -123,7 +123,7 @@ ACTION bomberTowerTarget(float x, float y, float positionX, float positionY, int
 int mineRecolection(int time, int upgrade)
 {
 	int money = 0;
-	if (time % 200 == 0) money = 3 + upgrade;
+	if (time % 2000 == 0) money = 3 + upgrade;
 	return money;
 }
 

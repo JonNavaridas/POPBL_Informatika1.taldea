@@ -284,7 +284,7 @@ int hasieratuBizitzak(int i)
 {
 	int enemy;
 	if (i < 10) enemy = 120;
-	else if (i >= 10 && i < 20) enemy = 100;
+	else if (i >= 10 && i < 20) enemy = 600;
 	else if (i >= 20) enemy = 80;
 	return enemy;
 }

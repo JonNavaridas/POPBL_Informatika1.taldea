@@ -20,11 +20,11 @@ void howto();
 int HASIERA_irudiaBistaratu(void);
 
 EGOERA JOKOA_egoera(int kont1, int lifeTotal);
-POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa);
-POSIZIOA ERREALITATE_FISIKOA2_mugimendua(POSIZIOA posizioa);
-POSIZIOA ERREALITATE_FISIKOA3_mugimendua(POSIZIOA posizioa);
-POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa);
-POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa);
-POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa);
+POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa, int stop);
+POSIZIOA ERREALITATE_FISIKOA2_mugimendua(POSIZIOA posizioa, int stop);
+POSIZIOA ERREALITATE_FISIKOA3_mugimendua(POSIZIOA posizioa, int stop);
+POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa, int stop);
+POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa, int stop);
+POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa, int stop);
 
 #endif

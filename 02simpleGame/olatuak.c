@@ -82,7 +82,7 @@ void Olatua6(JOKO_ELEMENTUA P1, JOKO_ELEMENTUA P2, JOKO_ELEMENTUA P3, JOKO_ELEME
 	pantailaBerriztu();
 }
 
-void Olatua7(JOKO_ELEMENTUA P21, JOKO_ELEMENTUA P22, JOKO_ELEMENTUA P23, JOKO_ELEMENTUA P24, JOKO_ELEMENTUA P25, JOKO_ELEMENTUA P26, JOKO_ELEMENTUA P6, JOKO_ELEMENTUA P1, JOKO_ELEMENTUA P2, JOKO_ELEMENTUA P3, JOKO_ELEMENTUA P4, JOKO_ELEMENTUA P5, JOKO_ELEMENTUA P11, JOKO_ELEMENTUA P12, int enemy[])
+void Olatua7(JOKO_ELEMENTUA P21, JOKO_ELEMENTUA P22, JOKO_ELEMENTUA P23, JOKO_ELEMENTUA P24, JOKO_ELEMENTUA P25, JOKO_ELEMENTUA P26, JOKO_ELEMENTUA P6, JOKO_ELEMENTUA P1, JOKO_ELEMENTUA P2, JOKO_ELEMENTUA P3, JOKO_ELEMENTUA P4, JOKO_ELEMENTUA P5, int enemy[])
 {
 	if (enemy[0] == 0) irudiaMugitu(P1.id, P1.pos.x, P1.pos.y);
 	if (enemy[1] == 0) irudiaMugitu(P2.id, P2.pos.x, P2.pos.y);
@@ -299,7 +299,7 @@ int giveMoney(int enemy)
 // Olatuen funtzio nagusia
 OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int lifeTotal)
 {
-	int timeLeft1 = 10000, timeLeft2 = 10000, timeLeft3 = 7000, timeLeft4 = 10000, timeLeft5 = 20000, timeLeft6 = 20000, timeLeft7 = 20000, timeLeft8 = 7000, timeLeft9 = 20000, timeLeft10 = 20000, timeLeft11 = 20000, timeLeft12 = 20000, timeLeft13 = 20000, timeLeft14 = 20000;
+	int timeLeft1 = 10000, timeLeft2 = 10000, timeLeft3 = 7000, timeLeft4 = 10000, timeLeft5 = 20000, timeLeft6 = 20000, timeLeft7 = 10000, timeLeft8 = 7000, timeLeft9 = 20000, timeLeft10 = 20000, timeLeft11 = 20000, timeLeft12 = 20000, timeLeft13 = 20000, timeLeft14 = 20000;
 	int kont1 = 0, i = 0, j;
 	EGOERA  egoera = JOLASTEN;
 
@@ -316,7 +316,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
             //Etsaiak bizirik badaude, targetingaren eta etsaiaren posizioa berdindu.
 			if (olatuak.enemyDeath[i] == 0 && kont1 > 1) olatuak.enemy[i] = hasieratuEnemyPos(olatuak, i);
             //Olatu berri bat hasi behar bada, etsaien bizitzak eta izoztuta dauden eta hilda dauden adierazten duten bektoreak hasieratu.
-			if (kont1 == 2 || kont1 == 10001 || kont1 == 20001 || kont1 == 27001 || kont1 == 37001 || kont1 == 57001 || kont1 == 77001 || kont1 == 97001 || kont1 == 104001 || kont1 == 124001 || kont1 == 144001 || kont1 == 164001 || kont1 == 184001 || kont1 == 204001 || kont1 == 224001) {
+			if (kont1 == 2 || kont1 == 10001 || kont1 == 20001 || kont1 == 27001 || kont1 == 37001 || kont1 == 57001 || kont1 == 77001 || kont1 == 87001 || kont1 == 94001 || kont1 == 114001 || kont1 == 134001 || kont1 == 154001 || kont1 == 174001 || kont1 == 194001 || kont1 == 214001) {
 				olatuak.enemyLife[i] = hasieratuBizitzak(i);
 				olatuak.enemyFreeze[i] = 0;
 				olatuak.enemyDeath[i] = 0;
@@ -326,7 +326,6 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 		if (kont1 <= 10000 && kont1 > 1) {
             // Geratzen den denboraren kontagailua
 			kontagailua(timeLeft1 / 100, 970, 25);
-
 			Olatua1(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.enemyDeath);
             //Lehenengo bihurgunera iritsi arte, aurrera mugitu
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
@@ -368,7 +367,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 
 		else if (kont1 > 27000 && kont1 <= 37000) {
 			kontagailua(timeLeft4 / 100, 970, 25);
-			Olatua4(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.enemyDeath);
+			Olatua4(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
 			if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
 			if (olatuak.aux5.x < 190) olatuak.P3.pos.x = olatuak.aux5.x;
@@ -401,9 +400,9 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft6--;
 		}
 
-		else if (kont1 > 77000 && kont1 <= 97000) {
+		else if (kont1 > 77000 && kont1 <= 87000) {
 			kontagailua(timeLeft7 / 100, 970, 25);
-			Olatua7(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P27, olatuak.P28, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.enemyDeath);
+			Olatua7(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P6, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
 			if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
 			if (olatuak.aux5.x < 190) olatuak.P3.pos.x = olatuak.aux5.x;
@@ -421,7 +420,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft7--;
 		}
 
-		else if (kont1 > 97000 && kont1 <= 104000) {
+		else if (kont1 > 87000 && kont1 <= 94000) {
 			kontagailua(timeLeft8 / 100, 970, 25);
 			Olatua8(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.enemyDeath);
 			if (olatuak.aux41.x < 190) olatuak.P21.pos.x = olatuak.aux41.x;
@@ -437,7 +436,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft8--;
 		}
 
-		else if (kont1 > 104000 && kont1 <= 124000) {
+		else if (kont1 > 94000 && kont1 <= 114000) {
 			kontagailua(timeLeft9 / 100, 970, 25);
 			Olatua9(olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.enemyDeath);
 			if (olatuak.aux21.x < 190) olatuak.P11.pos.x = olatuak.aux21.x;
@@ -447,7 +446,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft9--;
 		}
 
-		else if (kont1 > 124000 && kont1 <= 144000) {
+		else if (kont1 > 114000 && kont1 <= 134000) {
 			kontagailua(timeLeft10 / 100, 970, 25);
 			Olatua10(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
@@ -468,7 +467,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft10--;
 		}
 
-		else if (kont1 > 144000 && kont1 <= 164000) {
+		else if (kont1 > 134000 && kont1 <= 154000) {
 			kontagailua(timeLeft11 / 100, 970, 25);
 			Olatua11(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.enemyDeath);
 			if (olatuak.aux21.x < 190) olatuak.P11.pos.x = olatuak.aux21.x;
@@ -488,7 +487,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft11--;
 		}
 
-		else if (kont1 > 164000 && kont1 <= 184000) {
+		else if (kont1 > 154000 && kont1 <= 174000) {
 			kontagailua(timeLeft12 / 100, 970, 25);
 			Olatua12(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
@@ -516,7 +515,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft12--;
 		}
 
-		else if (kont1 > 184000 && kont1 <= 204000) {
+		else if (kont1 > 174000 && kont1 <= 194000) {
 			kontagailua(timeLeft13 / 100, 970, 25);
 			Olatua13(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
@@ -542,7 +541,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 			timeLeft13--;
 		}
 
-		else if (kont1 > 204000 && kont1 < 224000) {
+		else if (kont1 > 194000 && kont1 < 214000) {
 			kontagailua(timeLeft14 / 100, 970, 25);
 			Olatua14(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P17, olatuak.P18, olatuak.P19, olatuak.P20, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
@@ -851,14 +850,14 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
                 //Dirua gehitu
 				olatuak.money += giveMoney(i);
 				structure.action.damage[i] = 0;
-                //Etsaia hilda dagoela adierazten duen aldagaiari 1 balioa eman
+                //Etsaia hilda bi alditan dagoela ez adierazteko aldagaiari 2 balioa eman
 				olatuak.enemyDeath[i]++;
 			}
 		}
         //Diru totala estruktura batetik bestera pasa
 		olatuak.money += structure.action.money;
         //Olatua amaitu bada, etsaiak hasierako posiziora bidali
-		if (lifeTotal <= 0 || kont1 == 10000 || kont1 == 20000 || kont1 == 27000 || kont1 == 37000 || kont1 == 57000 || kont1 == 77000 || kont1 == 97000 || kont1 == 104000 || kont1 == 124000 || kont1 == 144000 || kont1 == 164000 || kont1 == 184000 || kont1 == 204000 || kont1 == 224000)
+		if (lifeTotal <= 0 || kont1 == 10000 || kont1 == 20000 || kont1 == 27000 || kont1 == 37000 || kont1 == 57000 || kont1 == 77000 || kont1 == 87000 || kont1 == 94000 || kont1 == 114000 || kont1 == 134000 || kont1 == 154000 || kont1 == 174000 || kont1 == 194000 || kont1 == 214000)
 		{ 
 			olatuak.P1.pos.x = -30;
 			olatuak.P1.pos.y = 440;

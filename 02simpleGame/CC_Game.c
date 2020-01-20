@@ -166,16 +166,17 @@ EGOERA jokatu1(void)
 
 EGOERA JOKOA_egoera(int kont1, int lifeTotal) {
 	EGOERA  ret = JOLASTEN;
-    // Olatuak amaitu badira --> irabazi         Jokalariaren bizitza 0 baino txikiagoa ala berdina bada --> galdu
+    // Olatuak amaitu badira --> irabazi
 	if (kont1 == 140000) {
 		ret = IRABAZI;
 	}
+	//Jokalariaren bizitza 0 baino txikiagoa ala berdina bada-- > galdu
 	else if (lifeTotal <= 0) {
 		ret = GALDU;
 	}
 	return ret;
 }
-//Etsaien irudiak sortzeko funtzioak
+//Pepino normalen irudia sortu
 int JOKOA_jokalariaIrudiaSortu(int pepinoId)
 {
 	pepinoId = irudiaKargatu(JOKOA_PLAYER_IMAGE);
@@ -185,7 +186,7 @@ int JOKOA_jokalariaIrudiaSortu(int pepinoId)
 	pantailaBerriztu();
 	return pepinoId;
 }
-
+//Pepino handiaren irudia sortu
 int JOKOA_jokalaria2IrudiaSortu(int pepinacoId)
 {
 	pepinacoId = irudiaKargatu(JOKOA_PLAYER_IMAGE2);
@@ -195,7 +196,7 @@ int JOKOA_jokalaria2IrudiaSortu(int pepinacoId)
 	pantailaBerriztu();
 	return pepinacoId;
 }
-
+//Pepino azkarraren irudia sortu
 int JOKOA_jokalaria3IrudiaSortu(int rapinilloId)
 {
 	rapinilloId = irudiaKargatu(JOKOA_PLAYER_IMAGE3);
@@ -205,7 +206,7 @@ int JOKOA_jokalaria3IrudiaSortu(int rapinilloId)
 	pantailaBerriztu();
 	return rapinilloId;
 }
-// Auxiliarren gehiketa egiten duten funtzioak
+// Auxiliarren gehiketa egiten duten funtzioak (Pepino normala)
 POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y - 0.25;
@@ -213,7 +214,7 @@ POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa, int stop) {
 	}
 	return posizioa;
 }
-
+// Auxiliarren gehiketa egiten duten funtzioak (Pepino normala)
 POSIZIOA ERREALITATE_FISIKOA2_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y + 0.25;
@@ -221,8 +222,7 @@ POSIZIOA ERREALITATE_FISIKOA2_mugimendua(POSIZIOA posizioa, int stop) {
 	}
 	return posizioa;
 }
-
-
+// Auxiliarren gehiketa egiten duten funtzioak (Pepino azkarra)
 POSIZIOA ERREALITATE_FISIKOA3_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y - 0.5;
@@ -230,7 +230,7 @@ POSIZIOA ERREALITATE_FISIKOA3_mugimendua(POSIZIOA posizioa, int stop) {
 	}
 	return posizioa;
 }
-
+// Auxiliarren gehiketa egiten duten funtzioak (Pepino azkarra)
 POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y + 0.5;
@@ -238,7 +238,7 @@ POSIZIOA ERREALITATE_FISIKOA4_mugimendua(POSIZIOA posizioa, int stop) {
 	}
 	return posizioa;
 }
-
+// Auxiliarren gehiketa egiten duten funtzioak (Pepino handia)
 POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y - 0.125;
@@ -246,7 +246,7 @@ POSIZIOA ERREALITATE_FISIKOA5_mugimendua(POSIZIOA posizioa, int stop) {
 	}
 	return posizioa;
 }
-
+// Auxiliarren gehiketa egiten duten funtzioak (Pepino handia)
 POSIZIOA ERREALITATE_FISIKOA6_mugimendua(POSIZIOA posizioa, int stop) {
 	if (stop != 1) {
 		posizioa.y = posizioa.y + 0.125;
