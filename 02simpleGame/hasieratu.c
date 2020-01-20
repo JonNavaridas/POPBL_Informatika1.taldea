@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-//Poner las areas a cero
+// Poner las areas a cero
 AREA hasieratuAreak(void)
 {
     AREA area;
@@ -27,7 +27,7 @@ AREA hasieratuAreak(void)
     area.place10 = 0;
     return area;
 }
-//Poner activo a cero
+// Dorre aktiboak zerora jarri (desaktibatuta)
 ACTIVE hasieratuActive(void)
 {
     ACTIVE active;
@@ -43,7 +43,7 @@ ACTIVE hasieratuActive(void)
     active.tower10 = 0;
     return active;
 }
-//Poner las mejoras a cero
+// Hobekuntzak zerora jarri
 UPGRADE hasieratuUpgrade(void)
 {
     UPGRADE upgrade;
@@ -68,7 +68,7 @@ FROZEN hasieratuFrozen(void)
 	return frozen;
 }
 
-//Hasieratu dorreen akzioak
+// Hasieratu dorreen akzioak
 ACTION hasieratuAction(int onTarget, int onFrozen)
 {
 	int i;
@@ -85,7 +85,7 @@ ACTION hasieratuAction(int onTarget, int onFrozen)
 	return action;
 }
 
-//Hasieratu dorreen sorkuntza
+// Hasieratu dorreen sorkuntza
 CREATE hasieratuCreate(void)
 {
 	CREATE create;
@@ -118,7 +118,7 @@ TERMINATE hasieratuTerminate(void)
 	return terminate;
 }
 
-//Hasieratu dorreen funtzionalitatea
+// Hasieratu dorreen funtzionalitatea
 TOWER_STRUCTURE hasieratuEstruktura(void)
 {
 	TOWER_STRUCTURE estruktura;

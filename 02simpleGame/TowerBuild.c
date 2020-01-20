@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-//Funcionamiento de la construccion (la funcion del main)
+// Funtzio nagusia
 TOWER_STRUCTURE towerBuild(TOWER_STRUCTURE structure, int time, int ebentu, POSIZIOA enemy[])
 {
 	int menu = 0, built = 0;
@@ -18,32 +18,33 @@ TOWER_STRUCTURE towerBuild(TOWER_STRUCTURE structure, int time, int ebentu, POSI
 
 	enemyPos.x = 0;
 	enemyPos.y = 0;
-
+	// Menu bat jarrita dagoen bilatu
 	if (structure.area.place1 == 1 || structure.area.place2 == 1 || structure.area.place3 == 1 || structure.area.place4 == 1 || structure.area.place5 == 1 || structure.area.place6 == 1 || structure.area.place7 == 1 || structure.area.place8 == 1 || structure.area.place9 == 1 || structure.area.place10 == 1) {
 		menu = 1;
 	}
-
+	// Klikatutako area detektatu
 	if (ebentu != TECLA_SPACE && ebentu != TECLA_UP && ebentu != TECLA_DOWN && ebentu != TECLA_LEFT && ebentu != TECLA_RIGHT && menu == 0) { structure.area = selectArea(ebentu); }
-	towerPos = setArea(structure.area);
-	built = checkTowerBuild(structure.area, structure.create);
+	towerPos = setArea(structure.area); // Arearen posizioa ezarri
+	built = checkTowerBuild(structure.area, structure.create);// Dorre bat jarrita dagoen bilatu
 	
     if (structure.area.place1 == 1 || structure.area.place2 == 1 || structure.area.place3 == 1 || structure.area.place4 == 1 || structure.area.place5 == 1 || structure.area.place6 == 1 || structure.area.place7 == 1 || structure.area.place8 == 1 || structure.area.place9 == 1 || structure.area.place10 == 1) {
-		if (built == 0) {
-			structure.menu = createMenu(structure.menu, structure.area, structure.money, ebentu, menu);
-			structure.money -= reduceMoney(structure.menu.tower, 0);
+		if (built == 0) { // Dorre bat sortu
+			structure.menu = createMenu(structure.menu, structure.area, structure.money, ebentu, menu); // Sortu menua
+			structure.money -= reduceMoney(structure.menu.tower, 0); // Dorrea sortzerakoan dirua kendu
 			structure.active = acitvateTower(towerPos, structure.menu.tower, structure.active, structure.menu.id);
 			if (structure.menu.tower != 0) { structure.area = hasieratuAreak(); }
 		}
-		if (built == 1) {
-			structure = createUpgradeMenu(towerPos, structure, ebentu, menu);
-			structure = destroyTower(structure);
+		if (built == 1) { // Dorre bat hobetu
+			structure = createUpgradeMenu(towerPos, structure, ebentu, menu); // Hobetzeko menua ipini
+			structure = destroyTower(structure); // Dorrea kendu
 		}
-        if (ebentu == TECLA_SPACE) { 
+        if (ebentu == TECLA_SPACE) { // Menu bat kendu
             irudiaKendu(structure.menu.id);
             pantailaBerriztu();
 			structure.area = hasieratuAreak();
         }
 	}
+	// Dorrea eraiki
 	structure.create = constructTower(structure.active, structure.create);
 
 	return structure;
@@ -58,13 +59,13 @@ AREA selectArea(int ebentu)
 	sagua.y = 0;
 
 	towerPlace = hasieratuAreak();
-	if (ebentu == SAGU_BOTOIA_EZKERRA) {
+	if (ebentu == SAGU_BOTOIA_EZKERRA) { // Klik bat bilatu
 		sagua = saguarenPosizioa();
 		towerPlace = setAreas(sagua.x, sagua.y, towerPlace);
 	}
 	return towerPlace;
 }
-//Si ha pulsado en alguna area importante se activa
+// Area batean klikatu den bilatu
 AREA setAreas(int x, int y, AREA towerPlace)
 {
 	if (x >= 197 && x <= 237 && y >= 55 && y < 95) towerPlace.place1 = 1;
@@ -80,13 +81,13 @@ AREA setAreas(int x, int y, AREA towerPlace)
 
 	return towerPlace;
 }
-//Crea el menu y devuelve un valor de torre si el jugador ha decidico comprar una
+// Menua sortu eta eraikiko den dorrea bilatu
 MENU_PARTS createMenu(MENU_PARTS menu, AREA place, int money, int ebentu, int on)
 {
 	POSIZIOA towerPos;
 	menu.tower = 0;
 
-	if (on != 1) {
+	if (on != 1) { // Menua sortu
 		towerPos = setArea(place);
 		menu.id = irudiaKargatu(BUY_MENU);
 		irudiaMugitu(menu.id, towerPos.x, towerPos.y);
@@ -95,18 +96,18 @@ MENU_PARTS createMenu(MENU_PARTS menu, AREA place, int money, int ebentu, int on
 	}
 
 	if (ebentu == TECLA_UP || ebentu == TECLA_DOWN || ebentu == TECLA_LEFT || ebentu == TECLA_RIGHT) {
-		//Torre arquero
+		// Archer tower
 		if (money >= 40 && ebentu == TECLA_UP) { menu.tower = 1; }
-		//Torre mago
+		// Mage tower
 		else if (money >= 60 && ebentu == TECLA_LEFT) { menu.tower = 2; }
-		//Torre bombardera
+		// Bomber tower
 		else if (money >= 100 && ebentu == TECLA_RIGHT) { menu.tower = 3; }
-		//Mina
+		// Mine
 		else if (money >= 80 && ebentu == TECLA_DOWN) { menu.tower = 4; }
 	}
 	return menu;
 }
-//Establecer la posicion de cada torre
+// Dorre bakoitzaren posizioa ezarri
 POSIZIOA setArea(AREA place)
 {
 	POSIZIOA pos;
@@ -126,7 +127,7 @@ POSIZIOA setArea(AREA place)
 
 	return pos;
 }
-
+// Dorreak aktibatu
 ACTIVE acitvateTower(POSIZIOA pos, int tower, ACTIVE active, int id)
 {
 	if (pos.x == 158 && pos.y == 14) { active.tower1 = tower; }
@@ -143,7 +144,7 @@ ACTIVE acitvateTower(POSIZIOA pos, int tower, ACTIVE active, int id)
 	pantailaBerriztu();
 	return active;
 }
-
+// Dorreak eraiki
 CREATE constructTower(ACTIVE activate, CREATE created)
 {
 	if (activate.tower1 != 0 && created.tower1 == -1) created.tower1 = createTower(activate.tower1, 156, 5);
@@ -158,7 +159,7 @@ CREATE constructTower(ACTIVE activate, CREATE created)
     if (activate.tower10 != 0 && created.tower10 == -1) created.tower10 = createTower(activate.tower10, 925, 380);
 	return created;
 }
-
+// Dorre mota bakoitza sortu
 int createTower(int towerType, int x, int y)
 {
 	int created = 0;
@@ -168,7 +169,7 @@ int createTower(int towerType, int x, int y)
     else if (towerType == 4) created = createMine(x, y);
 	return created;
 }
-
+// Dirua kendu
 int reduceMoney(int tower, int upgrade)
 {
 	int reduceMoney = 0;
@@ -178,7 +179,7 @@ int reduceMoney(int tower, int upgrade)
     else if (tower == 4) reduceMoney = 80 + (16 * upgrade);
 	return reduceMoney;
 }
-
+// Archer tower eraiki (Irudia jarri)
 int createArcherTower(int x, int y)
 {
 	int id = -1;
@@ -188,7 +189,7 @@ int createArcherTower(int x, int y)
 	pantailaBerriztu();
 	return id;
 }
-
+// Mage tower eraiki (Irudia jarri)
 int createMageTower(int x, int y)
 {
 	int id = -1;
@@ -198,7 +199,7 @@ int createMageTower(int x, int y)
 	pantailaBerriztu();
 	return id;
 }
-
+// Bomber tower (Irudia jarri)
 int createBomberTower(int x, int y)
 {
 	int id = -1;
@@ -208,7 +209,7 @@ int createBomberTower(int x, int y)
 	pantailaBerriztu();
 	return id;
 }
-
+// Mine sortu (Irudia jarri)
 int createMine(int x, int y)
 {
 	int id = -1;
@@ -218,7 +219,7 @@ int createMine(int x, int y)
 	pantailaBerriztu();
 	return id;
 }
-
+// Dorrea sortuta dagoen begiratu
 int checkTowerBuild(AREA area, CREATE created)
 {
 	int on = 0;
@@ -234,7 +235,7 @@ int checkTowerBuild(AREA area, CREATE created)
 	else if (area.place10 != 0 && created.tower10 != -1) on = 1;
 	return on;
 }
-
+// Dorreen erasoak
 ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[], ACTION action)
 {
 	int i, j;
@@ -243,61 +244,61 @@ ACTION allTowerSet(ACTIVE active, int time, UPGRADE upgrade, POSIZIOA enemy[], A
 	for (i = 0; i < 30; i++) totalAction.frozen[i] = action.frozen[i];
 
 	for (i = 0; i < 30; i++) {
-		for (j = 1; j <= 10; j++) { if (action.target.tower[j] == -1) action.target.tower[j] = i; }
+		for (j = 1; j <= 10; j++) { if (action.target.tower[j] == -1) action.target.tower[j] = i; } // Etsai bat bilatu
 		if (active.tower1 != 0 && i == action.target.tower[1]) {
 			action.target.tower[1] = i;
-			action = towerAttack(223, 25, active.tower1, enemy[i].x, enemy[i].y, time, upgrade.tower1, 1, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower1);
+			action = towerAttack(223, 25, active.tower1, enemy[i].x, enemy[i].y, time, upgrade.tower1, 1, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower1); // Dorreen akzioak batu
 		}
 		if (active.tower2 != 0 && i == action.target.tower[2]) {
 			action.target.tower[2] = i;
-			action = towerAttack(313, 25, active.tower2, enemy[i].x, enemy[i].y, time, upgrade.tower2, 2, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower2);
+			action = towerAttack(313, 25, active.tower2, enemy[i].x, enemy[i].y, time, upgrade.tower2, 2, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower2); // Dorreen akzioak batu
 		}
 		if (active.tower3 != 0 && i == action.target.tower[3]) {
 			action.target.tower[3] = i;
-			action = towerAttack(76, 337, active.tower3, enemy[i].x, enemy[i].y, time, upgrade.tower3, 3, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower3);
+			action = towerAttack(76, 337, active.tower3, enemy[i].x, enemy[i].y, time, upgrade.tower3, 3, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower3); // Dorreen akzioak batu
 		}
 		if (active.tower4 != 0 && i == action.target.tower[4]) {
 			action.target.tower[4] = i;
-			action = towerAttack(266, 215, active.tower4, enemy[i].x, enemy[i].y, time, upgrade.tower4, 4, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower4);
+			action = towerAttack(266, 215, active.tower4, enemy[i].x, enemy[i].y, time, upgrade.tower4, 4, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower4); // Dorreen akzioak batu
 		}
 		if (active.tower5 != 0 && i == action.target.tower[5]) {
 			action.target.tower[5] = i;
-			action = towerAttack(593, 217, active.tower5, enemy[i].x, enemy[i].y, time, upgrade.tower5, 5, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower5);
+			action = towerAttack(593, 217, active.tower5, enemy[i].x, enemy[i].y, time, upgrade.tower5, 5, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower5); // Dorreen akzioak batu
 		}
 		if (active.tower6 != 0 && i == action.target.tower[6]) {
 			action.target.tower[6] = i;
-			action = towerAttack(925, 205, active.tower6, enemy[i].x, enemy[i].y, time, upgrade.tower6, 6, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower6);
+			action = towerAttack(925, 205, active.tower6, enemy[i].x, enemy[i].y, time, upgrade.tower6, 6, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower6); // Dorreen akzioak batu
 		}
 		if (active.tower7 != 0 && i == action.target.tower[7]) {
 			action.target.tower[7] = i;
-			action = towerAttack(1030, 205, active.tower7, enemy[i].x, enemy[i].y, time, upgrade.tower7, 7, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower7);
+			action = towerAttack(1030, 205, active.tower7, enemy[i].x, enemy[i].y, time, upgrade.tower7, 7, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower7); // Dorreen akzioak batu
 		}
 		if (active.tower8 != 0 && i == action.target.tower[8]) {
 			action.target.tower[8] = i;
-			action = towerAttack(170, 525, active.tower8, enemy[i].x, enemy[i].y, time, upgrade.tower8, 8, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower8);
+			action = towerAttack(170, 525, active.tower8, enemy[i].x, enemy[i].y, time, upgrade.tower8, 8, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower8); // Dorreen akzioak batu
 		}
 		if (active.tower9 != 0 && i == action.target.tower[9]) {
 			action.target.tower[9] = i;
-			action = towerAttack(735, 390, active.tower9, enemy[i].x, enemy[i].y, time, upgrade.tower9, 9, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower9);
+			action = towerAttack(735, 390, active.tower9, enemy[i].x, enemy[i].y, time, upgrade.tower9, 9, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower9); // Dorreen akzioak batu
 		}
 		if (active.tower10 != 0 && i == action.target.tower[10]) {
 			action.target.tower[10] = i;
-			action = towerAttack(980, 395, active.tower10, enemy[i].x, enemy[i].y, time, upgrade.tower10, 10, i, action);
-			totalAction = batuAction(action, totalAction, i, active.tower10);
+			action = towerAttack(980, 395, active.tower10, enemy[i].x, enemy[i].y, time, upgrade.tower10, 10, i, action); // Dorrearen erasoa
+			totalAction = batuAction(action, totalAction, i, active.tower10); // Dorreen akzioak batu
 		}
 	}
 	return totalAction;
 }
-
+// Akzio desberdinak batu
 ACTION batuAction(ACTION action, ACTION totalAction, int i, int tower)
 {
 	totalAction.damage[i] += action.damage[i];
@@ -307,28 +308,28 @@ ACTION batuAction(ACTION action, ACTION totalAction, int i, int tower)
 
 	return totalAction;
 }
-
+// Hobekuntza menua sortu
 TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, int ebentu, int on)
 {
 	int posible = 0;
-	posible = towerUpgradeCheck(towerPos, structure.change.upgrade, structure);
+	posible = towerUpgradeCheck(towerPos, structure.change.upgrade, structure); // Begiratu hobetu daitekeen
 
-	if (on == 0) {
+	if (on == 0) { // Menua jarri
 		structure.menu.id = irudiaKargatu(UPGRADE_SELL_MENU);
 		irudiaMugitu(structure.menu.id, towerPos.x, towerPos.y);
 		irudiakMarraztu();
 		pantailaBerriztu();
 	}
-	if (on == 1 && (ebentu == TECLA_LEFT || ebentu == TECLA_RIGHT)) {
+	if (on == 1 && (ebentu == TECLA_LEFT || ebentu == TECLA_RIGHT)) { // Menua kendu
 		irudiaKendu(structure.menu.id);
 	}
 
 	if (ebentu == TECLA_LEFT || ebentu == TECLA_RIGHT) {
-		if (ebentu == TECLA_LEFT) {  //Eliminar
+		if (ebentu == TECLA_LEFT) {  // Dorrea kendu
 			structure.change.terminate = terminateTower(structure.area); 
 			structure.money += returnMoney(structure.active, structure.change.terminate);
 		}
-		if (posible != 0 && ebentu == TECLA_RIGHT) { //Mejorar
+		if (posible != 0 && ebentu == TECLA_RIGHT) { // Dorrea hobetu
 			structure = upgradeTower(posible, structure, structure.menu.tower);
 			structure.money -= reduceMoneyUpgrade(structure.menu.tower, structure.change.upgrade);
 		}
@@ -336,7 +337,7 @@ TOWER_STRUCTURE createUpgradeMenu(POSIZIOA towerPos, TOWER_STRUCTURE structure, 
 	}
 	return structure;
 }
-
+// Dorrea hobetu ahal den begiratu
 int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade, TOWER_STRUCTURE structure)
 {
 	int posible = 0;
@@ -354,7 +355,7 @@ int towerUpgradeCheck(POSIZIOA pos, UPGRADE upgrade, TOWER_STRUCTURE structure)
 
 	return posible;
 }
-
+// Dorrea hobetu
 TOWER_STRUCTURE upgradeTower(int posible, TOWER_STRUCTURE structure)
 {
 	int on = 0;
@@ -371,7 +372,7 @@ TOWER_STRUCTURE upgradeTower(int posible, TOWER_STRUCTURE structure)
 	if (on == 1) { structure.area = hasieratuAreak(); }
 	return structure;
 }
-
+// Dirua kendu hobekuntza egiterakoan
 int reduceMoneyUpgrade(int tower, UPGRADE towerUpgrade)
 {
 	int money = 0;
@@ -387,7 +388,7 @@ int reduceMoneyUpgrade(int tower, UPGRADE towerUpgrade)
 	else if (towerUpgrade.tower10 != 0) money = reduceMoney(tower, towerUpgrade.tower10);
 	return money;
 }
-
+// Dorrea kentzeko agindua eman
 TERMINATE terminateTower(AREA area)
 {
 	TERMINATE terminate;
@@ -404,7 +405,7 @@ TERMINATE terminateTower(AREA area)
 	else if (area.place10 == 1) terminate.tower10 = 1;
 	return terminate;
 }
-
+// Dorrea kendu
 TOWER_STRUCTURE destroyTower(TOWER_STRUCTURE structure)
 {
 	int on = 0;
@@ -421,7 +422,7 @@ TOWER_STRUCTURE destroyTower(TOWER_STRUCTURE structure)
 	if (on == 1) { structure.area = hasieratuAreak(); structure.change.terminate = hasieratuTerminate(); pantailaBerriztu(); }
 	return structure;
 }
-
+// Dirua itzuli dorre bat kentzerakoa 
 int returnMoney(ACTIVE active, TERMINATE terminate)
 {
 	int money = 0;
@@ -437,7 +438,7 @@ int returnMoney(ACTIVE active, TERMINATE terminate)
 	else if (terminate.tower10 != 0) money = checkTowerType(active.tower10);
 	return money;
 }
-
+// Zein dorre mota den begiratu
 int checkTowerType(int tower)
 {
 	int money = 0;

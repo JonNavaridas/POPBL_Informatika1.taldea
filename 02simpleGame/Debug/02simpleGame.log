@@ -1,2 +1,11 @@
-﻿  olatuak.c
+﻿  CC_Game.c
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(212,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(213,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(220,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(228,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(229,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(236,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(244,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(245,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\02simpleGame\CC_Game.c(252,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   02simpleGame.vcxproj -> C:\Users\Jon\Documents\GitHub\POPBL_Informatika1.taldea\Debug\02simpleGame.exe

@@ -11,7 +11,6 @@
 #include <windows.h>
 
 //Olatuetan irudiak mugitzen dituzten funtzioak (Olatua1 - Olatua14)
-
 void Olatua1(JOKO_ELEMENTUA P1, JOKO_ELEMENTUA P2, JOKO_ELEMENTUA P3, JOKO_ELEMENTUA P4, JOKO_ELEMENTUA P5, JOKO_ELEMENTUA P6, int enemy[])
 {
     // Etsaia hilda ez badago --> irudia mugitu
@@ -251,7 +250,6 @@ void Olatua14(JOKO_ELEMENTUA P15, JOKO_ELEMENTUA P16, JOKO_ELEMENTUA P17, JOKO_E
 }
 
 //Etsaiak hiltzen badira, funtzio honek pantailatik kanpo bidaltzen ditu, targetingaren posizioa aldatuz eta irudia posizio horretara mugituz.
-
 POSIZIOA restartPosition(POSIZIOA enemy, int kont, JOKO_ELEMENTUA id1, JOKO_ELEMENTUA id2, JOKO_ELEMENTUA id3, JOKO_ELEMENTUA id4, JOKO_ELEMENTUA id5, JOKO_ELEMENTUA id6, JOKO_ELEMENTUA id7, JOKO_ELEMENTUA id8, JOKO_ELEMENTUA id9, JOKO_ELEMENTUA id10, JOKO_ELEMENTUA id11, JOKO_ELEMENTUA id12, JOKO_ELEMENTUA id13, JOKO_ELEMENTUA id14, JOKO_ELEMENTUA id15, JOKO_ELEMENTUA id16, JOKO_ELEMENTUA id17, JOKO_ELEMENTUA id18, JOKO_ELEMENTUA id19, JOKO_ELEMENTUA id20, JOKO_ELEMENTUA id21, JOKO_ELEMENTUA id22, JOKO_ELEMENTUA id23, JOKO_ELEMENTUA id24, JOKO_ELEMENTUA id25, JOKO_ELEMENTUA id26, JOKO_ELEMENTUA id27, JOKO_ELEMENTUA id28, JOKO_ELEMENTUA id29, JOKO_ELEMENTUA id30)
 {
 	if (kont == 0) { enemy.x = SCREEN_WIDTH + 1; enemy.y = 440; irudiaMugitu(id1.id, enemy.x, enemy.y); }
