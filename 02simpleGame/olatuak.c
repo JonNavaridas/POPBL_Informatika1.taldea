@@ -448,7 +448,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 
 		else if (kont1 > 114000 && kont1 <= 134000) {
 			kontagailua(timeLeft10 / 100, 970, 25);
-			Olatua10(olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.enemyDeath);
+			Olatua10(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
 			if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
 			if (olatuak.aux5.x < 190) olatuak.P3.pos.x = olatuak.aux5.x;
@@ -517,7 +517,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 
 		else if (kont1 > 174000 && kont1 <= 194000) {
 			kontagailua(timeLeft13 / 100, 970, 25);
-			Olatua13(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
+			Olatua13(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P15, olatuak.P16, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
 			if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
 			if (olatuak.aux5.x < 190) olatuak.P3.pos.x = olatuak.aux5.x;
@@ -543,7 +543,7 @@ OLATUAK etsaiak(OLATUAK olatuak, int ebentu, TOWER_STRUCTURE structure, int life
 
 		else if (kont1 > 194000 && kont1 < 214000) {
 			kontagailua(timeLeft14 / 100, 970, 25);
-			Olatua14(olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P15, olatuak.P16, olatuak.P17, olatuak.P18, olatuak.P19, olatuak.P20, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
+			Olatua14(olatuak.P15, olatuak.P16, olatuak.P17, olatuak.P18, olatuak.P19, olatuak.P20, olatuak.P21, olatuak.P22, olatuak.P23, olatuak.P24, olatuak.P25, olatuak.P26, olatuak.P27, olatuak.P28, olatuak.P29, olatuak.P30, olatuak.P11, olatuak.P12, olatuak.P13, olatuak.P14, olatuak.P1, olatuak.P2, olatuak.P3, olatuak.P4, olatuak.P5, olatuak.P6, olatuak.P7, olatuak.P8, olatuak.P9, olatuak.P10, olatuak.enemyDeath);
 			if (olatuak.aux.x < 190) olatuak.P1.pos.x = olatuak.aux.x;
 			if (olatuak.aux3.x < 190) olatuak.P2.pos.x = olatuak.aux3.x;
 			if (olatuak.aux5.x < 190) olatuak.P3.pos.x = olatuak.aux5.x;
